@@ -21,15 +21,15 @@
         {{ link.label }}
       </RouterLink>
     </nav>
-    <div class="p-3 border-t" style="border-color: var(--color-border);">
-      <RomajiToggle />
+    <div class="p-3 border-t space-y-1" style="border-color: var(--color-border);">
+      <ThemeToggle />
     </div>
   </aside>
 </template>
 
 <script setup>
 import { useRoute } from 'vue-router'
-import RomajiToggle from './RomajiToggle.vue'
+import ThemeToggle from './ThemeToggle.vue'
 
 const route = useRoute()
 
