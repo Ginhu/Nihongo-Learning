@@ -1,5 +1,26 @@
 <template>
   <div class="max-w-lg mx-auto px-4 py-6">
+
+    <!-- Level-up overlay -->
+    <Teleport to="body">
+      <div
+        v-if="showLevelUp"
+        class="fixed inset-0 z-50 flex items-center justify-center"
+        style="background: rgba(0,0,0,0.88);"
+        aria-live="assertive"
+        role="status"
+      >
+        <div class="anim-levelup text-center px-8">
+          <div class="text-5xl mb-4">⭐</div>
+          <div class="text-3xl font-black text-white mb-3">Level Up!</div>
+          <div class="font-black" style="font-size: 72px; line-height: 1; color: var(--color-accent);">
+            {{ levelUpData.level }}
+          </div>
+          <div class="text-xl font-semibold text-white mt-3">{{ levelUpData.title }}</div>
+        </div>
+      </div>
+    </Teleport>
+
     <!-- End screen -->
     <QuizEndScreen
       v-if="showEndScreen && sessionResult"
@@ -53,12 +74,12 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useQuizStore } from '@/stores/quiz'
 import { useProgressStore } from '@/stores/progress'
 import { useSettingsStore } from '@/stores/settings'
-import { playCorrect, playWrong } from '@/utils/sound'
+import { playCorrect, playWrong, playLevelUp } from '@/utils/sound'
 import { generateQuestions } from '@/utils/quiz-generator'
 import QuizQuestion from '@/components/quiz/QuizQuestion.vue'
 import QuizAnswerGrid from '@/components/quiz/QuizAnswerGrid.vue'
@@ -74,6 +95,14 @@ const selectedAnswer = ref(null)
 const showEndScreen = ref(false)
 const sessionResult = ref(null)
 let advanceTimer = null
+let levelUpTimer = null
+const showLevelUp = ref(false)
+const levelUpData = ref({ level: 1, title: '' })
+
+onUnmounted(() => {
+  clearTimeout(advanceTimer)
+  clearTimeout(levelUpTimer)
+})
 
 const currentQuestion = computed(() => quizStore.questions[quizStore.currentIndex] ?? null)
 
@@ -117,7 +146,18 @@ function endSession() {
     result.answers
   )
   sessionResult.value = { ...result, xpGained, newLevel }
-  showEndScreen.value = true
+
+  if (newLevel) {
+    levelUpData.value = { level: newLevel, title: progressStore.levelTitle }
+    showLevelUp.value = true
+    if (settings.soundEnabled) playLevelUp()
+    levelUpTimer = setTimeout(() => {
+      showLevelUp.value = false
+      showEndScreen.value = true
+    }, 2000)
+  } else {
+    showEndScreen.value = true
+  }
 }
 
 function handleRetry() {
