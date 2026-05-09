@@ -1,0 +1,1 @@
+import{_ as a,o as t,c as r,a as e}from"./index-CwizT014.js";const c={},s={class:"p-6"};function l(n,o){return t(),r("div",s,[...o[0]||(o[0]=[e("h1",{class:"text-2xl font-bold"},"Vocabulary",-1),e("p",{style:{color:"var(--color-text-muted)"}},"Vocabulary browser — coming in feat/vocabulary.",-1)])])}const d=a(c,[["render",l]]);export{d as default};
