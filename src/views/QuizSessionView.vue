@@ -39,6 +39,8 @@
         :current="quizStore.currentIndex + 1"
         :total="quizStore.questions.length"
         :score="quizStore.score"
+        :onyomi="currentQuestion.onyomi"
+        :kunyomi="currentQuestion.kunyomi"
       />
 
       <QuizAnswerGrid

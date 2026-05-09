@@ -35,7 +35,8 @@ function buildKanaQuestions(data, direction, optionCount, length) {
 function buildKanjiQuestions(data, direction, optionCount, jlptFilter, length) {
   let filtered = jlptFilter === 'all' ? data : data.filter(k => k.jlpt === jlptFilter)
   if (filtered.length === 0) filtered = data
-  const pool = shuffle(filtered).slice(0, length)
+  const shuffled = shuffle(filtered)
+  const pool = length == null ? shuffled : shuffled.slice(0, length)
 
   return pool.map(item => {
     let prompt, correct, wrongPool
@@ -59,7 +60,9 @@ function buildKanjiQuestions(data, direction, optionCount, jlptFilter, length) {
     return {
       prompt,
       correctAnswer: correct,
-      options: shuffle([correct, ...wrongs])
+      options: shuffle([correct, ...wrongs]),
+      onyomi: item.onyomi ?? [],
+      kunyomi: item.kunyomi ?? []
     }
   })
 }

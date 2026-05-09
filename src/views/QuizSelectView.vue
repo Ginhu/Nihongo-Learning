@@ -10,15 +10,22 @@
       <span class="text-sm font-medium">Questions:</span>
       <div class="flex gap-2">
         <button
-          v-for="n in [10, 20, 30]"
+          v-for="n in (selectedMode === 'kanji' ? [15, 30, 45, 60] : [15, 30, 45, 60, 71])"
           :key="n"
           class="px-3 py-1 rounded-lg text-sm font-medium border transition-colors"
-          :class="[settings.quizLength === n
+          :class="[settings.quizLength === n && !kanjiUseAll
             ? 'bg-primary text-white border-primary'
             : 'hover:bg-primary/10']"
           style="border-color: var(--color-border);"
-          @click="settings.quizLength = n"
+          @click="settings.quizLength = n; kanjiUseAll = false"
         >{{ n }}</button>
+        <button
+          v-if="selectedMode === 'kanji'"
+          class="px-3 py-1 rounded-lg text-sm font-medium border transition-colors"
+          :class="[kanjiUseAll ? 'bg-primary text-white border-primary' : 'hover:bg-primary/10']"
+          style="border-color: var(--color-border);"
+          @click="kanjiUseAll = true"
+        >All</button>
       </div>
     </div>
 
@@ -43,7 +50,7 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useSettingsStore } from '@/stores/settings'
 import { useQuizStore } from '@/stores/quiz'
@@ -55,6 +62,11 @@ const settings = useSettingsStore()
 const quizStore = useQuizStore()
 
 const selectedMode = ref(null)
+const kanjiUseAll = ref(false)
+
+watch(selectedMode, (mode) => {
+  if (mode === 'kanji') kanjiUseAll.value = false
+})
 
 const cards = reactive([
   {
@@ -87,12 +99,13 @@ const cards = reactive([
 ])
 
 function startQuiz(card) {
+  const length = (card.mode === 'kanji' && kanjiUseAll.value) ? null : settings.quizLength
   const questions = generateQuestions({
     mode: card.mode,
     direction: card.direction,
     difficulty: card.difficulty,
     jlptFilter: card.jlpt,
-    length: settings.quizLength
+    length
   })
 
   if (questions.length === 0) return
