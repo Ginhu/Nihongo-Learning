@@ -1,1 +1,0 @@
-import{_ as o,o as t,c as r,a as s}from"./index-CwizT014.js";const c={},a={class:"p-6"};function n(l,e){return t(),r("div",a,[...e[0]||(e[0]=[s("h1",{class:"text-2xl font-bold"},"Progress",-1),s("p",{style:{color:"var(--color-text-muted)"}},"Stats & progress — coming in feat/progress.",-1)])])}const d=o(c,[["render",n]]);export{d as default};
