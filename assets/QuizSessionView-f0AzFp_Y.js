@@ -1,0 +1,1 @@
+import{_ as t,o as s,c,a as o}from"./index-Dk2lwxdq.js";const n={},i={class:"p-6"};function r(a,e){return s(),c("div",i,[...e[0]||(e[0]=[o("h1",{class:"text-2xl font-bold"},"Quiz Session",-1),o("p",{style:{color:"var(--color-text-muted)"}},"Active quiz — coming in feat/quiz.",-1)])])}const _=t(n,[["render",r]]);export{_ as default};

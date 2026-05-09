@@ -1,0 +1,1 @@
+import{_ as a,o as t,c as o,a as s}from"./index-Dk2lwxdq.js";const c={},r={class:"p-6"};function l(n,e){return t(),o("div",r,[...e[0]||(e[0]=[s("h1",{class:"text-2xl font-bold"},"Flashcards",-1),s("p",{style:{color:"var(--color-text-muted)"}},"Flashcard review — coming in feat/flashcards.",-1)])])}const f=a(c,[["render",l]]);export{f as default};
