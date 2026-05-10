@@ -20,6 +20,7 @@ export const useProgressStore = defineStore('progress', () => {
   const characterStats = ref(saved.characterStats ?? {})
   const flashcardKnown = ref(saved.flashcardKnown ?? [])
   const favoritedKanji = ref(saved.favoritedKanji ?? [])
+  const favoritedVocabulary = ref(saved.favoritedVocabulary ?? [])
 
   const levelTitle = computed(() => LEVEL_TITLES[Math.min(level.value, 10)])
 
@@ -78,6 +79,12 @@ export const useProgressStore = defineStore('progress', () => {
     else favoritedKanji.value.splice(idx, 1)
   }
 
+  function toggleFavoriteVocabulary(expression) {
+    const idx = favoritedVocabulary.value.indexOf(expression)
+    if (idx === -1) favoritedVocabulary.value.push(expression)
+    else favoritedVocabulary.value.splice(idx, 1)
+  }
+
   function checkStreak() {
     const today = new Date().toISOString().slice(0, 10)
     if (lastPlayedDate.value === today) return
@@ -95,20 +102,21 @@ export const useProgressStore = defineStore('progress', () => {
       quizHistory: quizHistory.value,
       characterStats: characterStats.value,
       flashcardKnown: flashcardKnown.value,
-      favoritedKanji: favoritedKanji.value
+      favoritedKanji: favoritedKanji.value,
+      favoritedVocabulary: favoritedVocabulary.value
     }))
   }
 
   watch(
-    [xp, level, streak, lastPlayedDate, quizHistory, characterStats, flashcardKnown, favoritedKanji],
+    [xp, level, streak, lastPlayedDate, quizHistory, characterStats, flashcardKnown, favoritedKanji, favoritedVocabulary],
     persist,
     { deep: true }
   )
 
   return {
     xp, level, streak, lastPlayedDate,
-    quizHistory, characterStats, flashcardKnown, favoritedKanji,
+    quizHistory, characterStats, flashcardKnown, favoritedKanji, favoritedVocabulary,
     levelTitle, weakCharacters,
-    addXp, recordQuizResult, recordFlashcardKnown, toggleFavoriteKanji, checkStreak
+    addXp, recordQuizResult, recordFlashcardKnown, toggleFavoriteKanji, toggleFavoriteVocabulary, checkStreak
   }
 })
