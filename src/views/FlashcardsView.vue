@@ -104,6 +104,7 @@ import { ref, computed } from 'vue'
 import { useProgressStore } from '@/stores/progress'
 import n5Vocabulary from '@/data/n5_vocabulary.js'
 import n4Vocabulary from '@/data/n4_vocabulary.js'
+import kanjiData from '@/data/kanji.js'
 import DeckSelector from '@/components/flashcard/DeckSelector.vue'
 import FlashCard from '@/components/flashcard/FlashCard.vue'
 
@@ -111,13 +112,22 @@ const progress = useProgressStore()
 
 const activeDeck = ref('vocab-n5')
 const currentIndex = ref(0)
-const shuffledOrder = ref(null) // null = use natural order; array = shuffled indices
+const shuffledOrder = ref(null)
 let touchStartX = 0
+
+const kanjiN5 = kanjiData.filter(k => k.jlpt === 'N5')
+const kanjiN4 = kanjiData.filter(k => k.jlpt === 'N4')
 
 const deckMap = {
   'vocab-n5': n5Vocabulary,
   'vocab-n4': n4Vocabulary,
+  'kanji-n5': kanjiN5,
+  'kanji-n4': kanjiN4,
 }
+
+const deckType = computed(() =>
+  activeDeck.value.startsWith('kanji-') ? 'kanji' : 'vocabulary'
+)
 
 const favoritedVocabularyInDeck = computed(() =>
   [...n5Vocabulary, ...n4Vocabulary].filter(w =>
@@ -125,7 +135,12 @@ const favoritedVocabularyInDeck = computed(() =>
   )
 )
 
+const favoritedKanjiInDeck = computed(() =>
+  kanjiData.filter(k => progress.favoritedKanji.includes(k.kanji))
+)
+
 const rawDeck = computed(() => {
+  if (activeDeck.value === 'kanji-favorites') return favoritedKanjiInDeck.value
   if (activeDeck.value === 'favorites') return favoritedVocabularyInDeck.value
   return deckMap[activeDeck.value] ?? []
 })
@@ -135,11 +150,10 @@ const deck = computed(() => {
   return shuffledOrder.value.map(i => rawDeck.value[i]).filter(Boolean)
 })
 
-const deckType = computed(() => 'vocabulary')
-
 const currentCard = computed(() => deck.value[currentIndex.value])
 
 function cardId(card) {
+  if (deckType.value === 'kanji') return card.kanji
   return `${card.expression}::${card.reading}`
 }
 
@@ -150,12 +164,14 @@ const isCurrentKnown = computed(() => {
 
 const isCurrentFavorited = computed(() => {
   if (!currentCard.value) return false
+  if (deckType.value === 'kanji') return progress.favoritedKanji.includes(currentCard.value.kanji)
   return progress.favoritedVocabulary.includes(cardId(currentCard.value))
 })
 
 function toggleFavorite() {
   if (!currentCard.value) return
-  progress.toggleFavoriteVocabulary(cardId(currentCard.value))
+  if (deckType.value === 'kanji') progress.toggleFavoriteKanji(currentCard.value.kanji)
+  else progress.toggleFavoriteVocabulary(cardId(currentCard.value))
 }
 
 const knownCount = computed(() =>
@@ -210,5 +226,4 @@ function onTouchEnd(e) {
   if (dx < -50) next()
   else if (dx > 50) prev()
 }
-
 </script>
