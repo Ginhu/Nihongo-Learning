@@ -3,14 +3,14 @@
 
     <DeckSelector
       :active-deck="activeDeck"
-      :has-favorites="favoritedKanjiInDeck.length > 0 || activeDeck === 'favorites'"
+      :has-favorites="favoritedVocabularyInDeck.length > 0 || activeDeck === 'favorites'"
       @select="switchDeck"
     />
 
     <div v-if="deck.length === 0" class="text-center py-16" style="color: var(--color-text-muted);">
       <div class="text-4xl mb-3">📭</div>
       <p>No cards in this deck yet.</p>
-      <p v-if="activeDeck === 'favorites'" class="text-sm mt-1">Add kanji from the Vocabulary page.</p>
+      <p v-if="activeDeck === 'favorites'" class="text-sm mt-1">Favorite vocabulary words to see them here.</p>
     </div>
 
     <template v-else>
@@ -68,6 +68,19 @@
         </button>
       </div>
 
+      <div class="flex justify-center">
+        <button
+          class="px-6 py-2 rounded-xl border text-sm font-semibold transition-colors"
+          :class="isCurrentFavorited
+            ? 'border-primary bg-primary/20 text-primary'
+            : 'hover:bg-primary/10'"
+          style="border-color: var(--color-border);"
+          @click="toggleFavorite"
+        >
+          {{ isCurrentFavorited ? '♥ Favorited' : '♡ Favorite' }}
+        </button>
+      </div>
+
       <div class="flex gap-3 justify-center">
         <button
           class="px-8 py-3 rounded-xl border font-semibold transition-colors hover:bg-primary/10 disabled:opacity-30"
@@ -89,32 +102,31 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { useProgressStore } from '@/stores/progress'
-import hiragana from '@/data/hiragana.js'
-import katakana from '@/data/katakana.js'
-import kanji from '@/data/kanji.js'
+import n5Vocabulary from '@/data/n5_vocabulary.js'
+import n4Vocabulary from '@/data/n4_vocabulary.js'
 import DeckSelector from '@/components/flashcard/DeckSelector.vue'
 import FlashCard from '@/components/flashcard/FlashCard.vue'
 
 const progress = useProgressStore()
 
-const activeDeck = ref('hiragana')
+const activeDeck = ref('vocab-n5')
 const currentIndex = ref(0)
 const shuffledOrder = ref(null) // null = use natural order; array = shuffled indices
 let touchStartX = 0
 
 const deckMap = {
-  hiragana:   hiragana,
-  katakana:   katakana,
-  'kanji-n5': kanji.filter(k => k.jlpt === 'N5'),
-  'kanji-n4': kanji.filter(k => k.jlpt === 'N4'),
+  'vocab-n5': n5Vocabulary,
+  'vocab-n4': n4Vocabulary,
 }
 
-const favoritedKanjiInDeck = computed(() =>
-  kanji.filter(k => progress.favoritedKanji.includes(k.kanji))
+const favoritedVocabularyInDeck = computed(() =>
+  [...n5Vocabulary, ...n4Vocabulary].filter(w =>
+    progress.favoritedVocabulary.includes(w.expression)
+  )
 )
 
 const rawDeck = computed(() => {
-  if (activeDeck.value === 'favorites') return favoritedKanjiInDeck.value
+  if (activeDeck.value === 'favorites') return favoritedVocabularyInDeck.value
   return deckMap[activeDeck.value] ?? []
 })
 
@@ -123,16 +135,12 @@ const deck = computed(() => {
   return shuffledOrder.value.map(i => rawDeck.value[i]).filter(Boolean)
 })
 
-const deckType = computed(() => {
-  if (activeDeck.value === 'hiragana') return 'hiragana'
-  if (activeDeck.value === 'katakana') return 'katakana'
-  return 'kanji'
-})
+const deckType = computed(() => 'vocabulary')
 
 const currentCard = computed(() => deck.value[currentIndex.value])
 
 function cardId(card) {
-  return deckType.value === 'kanji' ? card.kanji : card.kana
+  return card.expression
 }
 
 const isCurrentKnown = computed(() => {
@@ -140,11 +148,20 @@ const isCurrentKnown = computed(() => {
   return progress.flashcardKnown.includes(cardId(currentCard.value))
 })
 
+const isCurrentFavorited = computed(() => {
+  if (!currentCard.value) return false
+  return progress.favoritedVocabulary.includes(currentCard.value.expression)
+})
+
+function toggleFavorite() {
+  if (!currentCard.value) return
+  progress.toggleFavoriteVocabulary(currentCard.value.expression)
+}
+
 const knownCount = computed(() =>
-  deck.value.filter(card => {
-    const id = deckType.value === 'kanji' ? card.kanji : card.kana
-    return progress.flashcardKnown.includes(id)
-  }).length
+  deck.value.filter(card =>
+    progress.flashcardKnown.includes(card.expression)
+  ).length
 )
 
 const knownPercent = computed(() =>
