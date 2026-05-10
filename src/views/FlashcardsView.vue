@@ -4,6 +4,7 @@
     <DeckSelector
       :active-deck="activeDeck"
       :has-favorites="favoritedVocabularyInDeck.length > 0 || activeDeck === 'favorites'"
+      :has-kanji-favorites="favoritedKanjiInDeck.length > 0 || activeDeck === 'kanji-favorites'"
       @select="switchDeck"
     />
 
@@ -11,6 +12,7 @@
       <div class="text-4xl mb-3">📭</div>
       <p>No cards in this deck yet.</p>
       <p v-if="activeDeck === 'favorites'" class="text-sm mt-1">Favorite vocabulary words to see them here.</p>
+      <p v-else-if="activeDeck === 'kanji-favorites'" class="text-sm mt-1">Favorite kanji to see them here.</p>
     </div>
 
     <template v-else>
@@ -68,7 +70,7 @@
         </button>
       </div>
 
-      <div v-if="activeDeck !== 'favorites'" class="flex justify-center">
+      <div v-if="activeDeck !== 'favorites' && activeDeck !== 'kanji-favorites'" class="flex justify-center">
         <button
           class="px-6 py-2 rounded-xl border text-sm font-semibold transition-colors"
           :class="isCurrentFavorited
