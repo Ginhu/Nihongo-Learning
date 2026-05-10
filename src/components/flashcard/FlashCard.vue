@@ -12,7 +12,7 @@
         </div>
 
         <div
-          v-if="settings.romajiVisible && frontHint"
+          v-if="frontHint && (type === 'vocabulary' || settings.romajiVisible)"
           class="mt-4 text-lg font-medium"
           style="color: var(--color-text-muted);"
         >
@@ -55,6 +55,21 @@
           </div>
         </template>
 
+        <template v-else-if="type === 'vocabulary'">
+          <div
+            class="font-bold text-center select-none"
+            style="font-size: clamp(32px, 8vw, 56px); line-height: 1.2;"
+          >
+            {{ card.expression }}
+          </div>
+          <div class="mt-3 text-xl font-medium" style="color: var(--color-text-muted);">
+            {{ card.reading }}
+          </div>
+          <div class="mt-6 text-2xl font-semibold text-center">
+            {{ card.meaning }}
+          </div>
+        </template>
+
         <template v-else>
           <div class="font-bold select-none" style="font-size: clamp(48px, 12vw, 80px); line-height: 1;">
             {{ card.kana }}
@@ -86,11 +101,14 @@ const flipped = ref(false)
 
 watch(() => props.card, () => { flipped.value = false })
 
-const frontChar = computed(() =>
-  props.type === 'kanji' ? props.card.kanji : props.card.kana
-)
+const frontChar = computed(() => {
+  if (props.type === 'vocabulary') return props.card.expression
+  if (props.type === 'kanji') return props.card.kanji
+  return props.card.kana
+})
 
 const frontHint = computed(() => {
+  if (props.type === 'vocabulary') return props.card.reading ?? null
   if (props.type === 'kanji') return null
   return props.card.romaji ?? null
 })
