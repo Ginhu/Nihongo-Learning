@@ -7,7 +7,12 @@
         class="card-face w-full flex flex-col items-center justify-center p-8 border"
         :style="{ height: sceneHeight + 'px', background: 'var(--color-surface)', borderColor: 'var(--color-border)' }"
       >
-        <div class="font-bold select-none text-center" style="font-size: clamp(72px, 18vw, 130px); line-height: 1;">
+        <div
+          class="font-bold select-none text-center"
+          :style="type === 'vocabulary'
+            ? 'font-size: clamp(32px, 8vw, 56px); line-height: 1.2;'
+            : 'font-size: clamp(72px, 18vw, 130px); line-height: 1;'"
+        >
           {{ frontChar }}
         </div>
 

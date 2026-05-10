@@ -68,7 +68,7 @@
         </button>
       </div>
 
-      <div class="flex justify-center">
+      <div v-if="activeDeck !== 'favorites'" class="flex justify-center">
         <button
           class="px-6 py-2 rounded-xl border text-sm font-semibold transition-colors"
           :class="isCurrentFavorited
@@ -121,7 +121,7 @@ const deckMap = {
 
 const favoritedVocabularyInDeck = computed(() =>
   [...n5Vocabulary, ...n4Vocabulary].filter(w =>
-    progress.favoritedVocabulary.includes(w.expression)
+    progress.favoritedVocabulary.includes(`${w.expression}::${w.reading}`)
   )
 )
 
@@ -140,7 +140,7 @@ const deckType = computed(() => 'vocabulary')
 const currentCard = computed(() => deck.value[currentIndex.value])
 
 function cardId(card) {
-  return card.expression
+  return `${card.expression}::${card.reading}`
 }
 
 const isCurrentKnown = computed(() => {
@@ -150,17 +150,17 @@ const isCurrentKnown = computed(() => {
 
 const isCurrentFavorited = computed(() => {
   if (!currentCard.value) return false
-  return progress.favoritedVocabulary.includes(currentCard.value.expression)
+  return progress.favoritedVocabulary.includes(cardId(currentCard.value))
 })
 
 function toggleFavorite() {
   if (!currentCard.value) return
-  progress.toggleFavoriteVocabulary(currentCard.value.expression)
+  progress.toggleFavoriteVocabulary(cardId(currentCard.value))
 }
 
 const knownCount = computed(() =>
   deck.value.filter(card =>
-    progress.flashcardKnown.includes(card.expression)
+    progress.flashcardKnown.includes(cardId(card))
   ).length
 )
 
