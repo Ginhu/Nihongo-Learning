@@ -4,7 +4,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/Nihongo-Learning/',
+  base: process.env.VITE_BASE_PATH ?? '/Nihongo-Learning/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
