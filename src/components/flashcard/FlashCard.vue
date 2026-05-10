@@ -31,7 +31,6 @@
       <div
         class="card-face card-face--back w-full flex flex-col items-center justify-start p-8 border overflow-y-auto"
         :style="{ height: sceneHeight + 'px', background: 'var(--color-surface)', borderColor: 'var(--color-border)' }"
-        @click.stop
       >
         <template v-if="type === 'kanji'">
           <div class="font-bold text-4xl mb-2">{{ card.kanji }}</div>
