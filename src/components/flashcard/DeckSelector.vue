@@ -26,10 +26,8 @@ const props = defineProps({
 defineEmits(['select'])
 
 const decks = [
-  { id: 'hiragana',  label: 'Hiragana' },
-  { id: 'katakana',  label: 'Katakana' },
-  { id: 'kanji-n5',  label: 'Kanji N5' },
-  { id: 'kanji-n4',  label: 'Kanji N4' },
+  { id: 'vocab-n5',  label: 'Vocab N5' },
+  { id: 'vocab-n4',  label: 'Vocab N4' },
   { id: 'favorites', label: '★ Favorites' }
 ]
 
