@@ -69,6 +69,9 @@
           <div class="mt-3 text-xl font-medium" style="color: var(--color-text-muted);">
             {{ card.reading }}
           </div>
+          <div v-if="card.romaji" class="mt-1 text-sm" style="color: var(--color-text-muted);">
+            {{ card.romaji }}
+          </div>
           <div class="mt-6 text-2xl font-semibold text-center">
             {{ card.meaning }}
           </div>
