@@ -41,7 +41,6 @@
       </div>
 
       <div
-        ref="cardContainer"
         @touchstart.passive="onTouchStart"
         @touchend.passive="onTouchEnd"
       >
@@ -141,8 +140,9 @@ const batchSize = !queryCount || queryCount === 'all' ? Infinity : Number(queryC
 const shuffledPool  = ref([])
 const batchOffset   = ref(0)
 const currentIndex  = ref(0)
-const batchKnown    = ref(0)
-const batchPractice = ref(0)
+const batchResults  = ref({})  // cardId -> true (known) | false (practice)
+const batchKnown    = computed(() => Object.values(batchResults.value).filter(v => v === true).length)
+const batchPractice = computed(() => Object.values(batchResults.value).filter(v => v === false).length)
 const showModal     = ref(false)
 let touchStartX = 0
 
@@ -157,14 +157,14 @@ function fisherYates(arr) {
 
 function buildPool() {
   if (queryLevel === 'kanji-favorites') {
-    return [...kanjiN5Data, ...kanjiN4Data].filter(k =>
+    return fisherYates([...kanjiN5Data, ...kanjiN4Data].filter(k =>
       progress.favoritedKanji.includes(k.kanji)
-    )
+    ))
   }
   if (queryLevel === 'favorites') {
-    return [...n5Vocabulary, ...n4Vocabulary].filter(w =>
+    return fisherYates([...n5Vocabulary, ...n4Vocabulary].filter(w =>
       progress.favoritedVocabulary.includes(`${w.expression}::${w.reading}`)
-    )
+    ))
   }
   if (isKanji) {
     const pool = queryLevel === 'N5' ? [...kanjiN5Data]
@@ -236,8 +236,7 @@ function next() {
 function markCard(known) {
   if (!currentCard.value) return
   progress.recordFlashcardKnown(cardId(currentCard.value), known)
-  if (known) batchKnown.value++
-  else batchPractice.value++
+  batchResults.value = { ...batchResults.value, [cardId(currentCard.value)]: known }
 
   if (currentIndex.value === currentBatch.value.length - 1) {
     showModal.value = true
@@ -249,8 +248,7 @@ function markCard(known) {
 function continueSession() {
   batchOffset.value += batchSize
   currentIndex.value = 0
-  batchKnown.value = 0
-  batchPractice.value = 0
+  batchResults.value = {}
   showModal.value = false
 }
 
@@ -258,8 +256,7 @@ function reshufflePool() {
   shuffledPool.value = buildPool()
   batchOffset.value = 0
   currentIndex.value = 0
-  batchKnown.value = 0
-  batchPractice.value = 0
+  batchResults.value = {}
   showModal.value = false
 }
 
