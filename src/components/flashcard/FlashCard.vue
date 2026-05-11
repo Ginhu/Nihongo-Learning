@@ -62,30 +62,30 @@
         <template v-else-if="type === 'vocabulary'">
           <div
             class="font-bold text-center select-none"
-            style="font-size: clamp(32px, 8vw, 56px); line-height: 1.2;"
+            style="font-size: clamp(28px, 7vw, 48px); line-height: 1.2;"
           >
             {{ card.expression }}
           </div>
-          <div class="mt-3 text-xl font-medium" style="color: var(--color-text-muted);">
+          <div class="mt-2 text-lg font-medium" style="color: var(--color-text-muted);">
             {{ card.reading }}
           </div>
-          <div v-if="card.romaji" class="mt-1 text-sm" style="color: var(--color-text-muted);">
+          <div v-if="card.romaji" class="mt-0.5 text-sm" style="color: var(--color-text-muted);">
             {{ card.romaji }}
           </div>
-          <div class="mt-6 text-2xl font-semibold text-center">
+          <div class="mt-3 text-xl font-semibold text-center">
             {{ card.meaning }}
           </div>
-          <div class="mt-4 flex gap-2 justify-center flex-wrap">
+          <div class="mt-3 flex gap-2 justify-center flex-wrap">
             <span
               v-if="card.pos"
-              class="px-2.5 py-1 rounded-full text-xs font-medium capitalize"
+              class="px-2.5 py-0.5 rounded-full text-xs font-medium capitalize"
               style="background: var(--color-surface-2); color: var(--color-text-muted);"
             >
               {{ card.pos }}
             </span>
             <span
               v-if="card.jlpt"
-              class="px-2.5 py-1 rounded-full text-xs font-semibold border"
+              class="px-2.5 py-0.5 rounded-full text-xs font-semibold border"
               style="border-color: var(--color-accent); color: var(--color-accent);"
             >
               {{ card.jlpt }}
@@ -103,7 +103,7 @@
           </div>
         </template>
 
-        <div class="mt-6 text-xs" style="color: var(--color-text-muted);">tap to flip back</div>
+        <div :class="type === 'vocabulary' ? 'mt-2' : 'mt-6'" class="text-xs" style="color: var(--color-text-muted);">tap to flip back</div>
       </div>
     </div>
   </div>
