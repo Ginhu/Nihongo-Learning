@@ -3,16 +3,27 @@
 
     <DeckSelector
       :active-deck="activeDeck"
+      :selected-level="selectedLevel"
       :has-favorites="favoritedVocabularyInDeck.length > 0 || activeDeck === 'favorites'"
       :has-kanji-favorites="favoritedKanjiInDeck.length > 0 || activeDeck === 'kanji-favorites'"
-      @select="switchDeck"
+      @select="onSelectSpecialDeck"
+      @select-level="onSelectLevel"
     />
 
-    <div v-if="deck.length === 0" class="text-center py-16" style="color: var(--color-text-muted);">
+    <CategoryFilter
+      v-if="selectedLevel && !activeDeck"
+      :available-categories="availableCategories"
+      :selected-categories="selectedCategories"
+      :category-counts="categoryCounts"
+      @update:selected-categories="onCategoriesChange"
+    />
+
+    <div v-if="currentBatch.length === 0" class="text-center py-16" style="color: var(--color-text-muted);">
       <div class="text-4xl mb-3">📭</div>
       <p>No cards in this deck yet.</p>
       <p v-if="activeDeck === 'favorites'" class="text-sm mt-1">Favorite vocabulary words to see them here.</p>
       <p v-else-if="activeDeck === 'kanji-favorites'" class="text-sm mt-1">Favorite kanji to see them here.</p>
+      <p v-else-if="selectedLevel && selectedCategories.length > 0" class="text-sm mt-1">No words found for the selected categories.</p>
     </div>
 
     <template v-else>
@@ -25,16 +36,16 @@
           />
         </div>
         <span class="text-sm font-medium whitespace-nowrap" style="color: var(--color-text-muted);">
-          {{ knownCount }} / {{ deck.length }} known
+          {{ knownCount }} / {{ currentBatch.length }} known
         </span>
       </div>
 
       <div class="flex items-center justify-between text-sm" style="color: var(--color-text-muted);">
-        <span>Card {{ currentIndex + 1 }} of {{ deck.length }}</span>
+        <span>Card {{ currentIndex + 1 }} of {{ currentBatch.length }}</span>
         <button
           class="text-xs px-2 py-1 rounded border transition-colors hover:bg-primary/10"
           style="border-color: var(--color-border);"
-          @click="shuffle"
+          @click="reshufflePool"
         >Shuffle</button>
       </div>
 
@@ -93,42 +104,62 @@
         <button
           class="px-8 py-3 rounded-xl border font-semibold transition-colors hover:bg-primary/10 disabled:opacity-30"
           style="border-color: var(--color-border);"
-          :disabled="currentIndex === deck.length - 1"
+          :disabled="currentIndex === currentBatch.length - 1"
           @click="next"
         >Next →</button>
       </div>
+
+      <!-- Continue / exhausted message — shown on last card of batch -->
+      <template v-if="currentIndex === currentBatch.length - 1">
+        <div v-if="hasMore" class="flex justify-center">
+          <button
+            class="px-8 py-3 rounded-xl font-semibold text-sm transition-colors"
+            style="background: var(--color-primary); color: white;"
+            @click="continueSession"
+          >
+            Continue → next {{ nextBatchSize }} words
+          </button>
+        </div>
+        <div
+          v-else-if="batchOffset > 0"
+          class="text-center text-sm py-2"
+          style="color: var(--color-text-muted);"
+        >
+          🎉 You've completed all cards in this selection!
+        </div>
+      </template>
     </template>
   </div>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useProgressStore } from '@/stores/progress'
 import n5Vocabulary from '@/data/n5_vocabulary.js'
 import n4Vocabulary from '@/data/n4_vocabulary.js'
 import kanjiData from '@/data/kanji.js'
 import DeckSelector from '@/components/flashcard/DeckSelector.vue'
+import CategoryFilter from '@/components/flashcard/CategoryFilter.vue'
 import FlashCard from '@/components/flashcard/FlashCard.vue'
 
 const progress = useProgressStore()
 
-const activeDeck = ref('vocab-n5')
+// 'kanji-n5' | 'kanji-n4' | 'kanji-favorites' | 'favorites' | null
+const activeDeck = ref(null)
+// null = mixed mode; 'N5' | 'N4' = level mode
+const selectedLevel = ref(null)
+const selectedCategories = ref([])
+const batchOffset = ref(0)
+const shuffledPool = ref([])
 const currentIndex = ref(0)
-const shuffledOrder = ref(null)
 let touchStartX = 0
 
 const kanjiN5 = kanjiData.filter(k => k.jlpt === 'N5')
 const kanjiN4 = kanjiData.filter(k => k.jlpt === 'N4')
-
-const deckMap = {
-  'vocab-n5': n5Vocabulary,
-  'vocab-n4': n4Vocabulary,
-  'kanji-n5': kanjiN5,
-  'kanji-n4': kanjiN4,
-}
+const vocabByLevel = { N5: n5Vocabulary, N4: n4Vocabulary }
 
 const deckType = computed(() =>
-  activeDeck.value.startsWith('kanji-') ? 'kanji' : 'vocabulary'
+  activeDeck.value?.startsWith('kanji') ? 'kanji' : 'vocabulary'
 )
 
 const favoritedVocabularyInDeck = computed(() =>
@@ -141,18 +172,84 @@ const favoritedKanjiInDeck = computed(() =>
   kanjiData.filter(k => progress.favoritedKanji.includes(k.kanji))
 )
 
-const rawDeck = computed(() => {
-  if (activeDeck.value === 'kanji-favorites') return favoritedKanjiInDeck.value
-  if (activeDeck.value === 'favorites') return favoritedVocabularyInDeck.value
-  return deckMap[activeDeck.value] ?? []
+const availableCategories = computed(() => {
+  if (!selectedLevel.value) return []
+  const words = vocabByLevel[selectedLevel.value]
+  return [...new Set(words.map(w => w.category))].sort()
 })
 
-const deck = computed(() => {
-  if (!shuffledOrder.value) return rawDeck.value
-  return shuffledOrder.value.map(i => rawDeck.value[i]).filter(Boolean)
+const categoryCounts = computed(() => {
+  if (!selectedLevel.value) return {}
+  const words = vocabByLevel[selectedLevel.value]
+  return words.reduce((acc, w) => {
+    acc[w.category] = (acc[w.category] ?? 0) + 1
+    return acc
+  }, {})
 })
 
-const currentCard = computed(() => deck.value[currentIndex.value])
+function fisherYates(arr) {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+function sample(arr, n) {
+  return fisherYates(arr).slice(0, n)
+}
+
+function buildPool() {
+  if (activeDeck.value === 'kanji-n5') return fisherYates(kanjiN5)
+  if (activeDeck.value === 'kanji-n4') return fisherYates(kanjiN4)
+  if (activeDeck.value === 'kanji-favorites') return [...favoritedKanjiInDeck.value]
+  if (activeDeck.value === 'favorites') return [...favoritedVocabularyInDeck.value]
+
+  if (!selectedLevel.value) {
+    return [...sample(n5Vocabulary, 10), ...sample(n4Vocabulary, 10)]
+  }
+
+  let words = vocabByLevel[selectedLevel.value]
+  if (selectedCategories.value.length > 0) {
+    words = words.filter(w => selectedCategories.value.includes(w.category))
+  }
+  return fisherYates(words)
+}
+
+watch(
+  [activeDeck, selectedLevel, selectedCategories,
+   () => progress.favoritedVocabulary.length,
+   () => progress.favoritedKanji.length],
+  () => {
+    shuffledPool.value = buildPool()
+    batchOffset.value = 0
+    currentIndex.value = 0
+  },
+  { immediate: true }
+)
+
+const isSpecialDeck = computed(() =>
+  activeDeck.value === 'favorites' || activeDeck.value?.startsWith('kanji')
+)
+
+const isMixedMode = computed(() => !activeDeck.value && !selectedLevel.value)
+
+const currentBatch = computed(() => {
+  if (isSpecialDeck.value || isMixedMode.value) return shuffledPool.value
+  return shuffledPool.value.slice(batchOffset.value, batchOffset.value + 20)
+})
+
+const hasMore = computed(() =>
+  !isSpecialDeck.value && !isMixedMode.value &&
+  batchOffset.value + 20 < shuffledPool.value.length
+)
+
+const nextBatchSize = computed(() =>
+  Math.min(20, shuffledPool.value.length - batchOffset.value - 20)
+)
+
+const currentCard = computed(() => currentBatch.value[currentIndex.value])
 
 function cardId(card) {
   if (deckType.value === 'kanji') return card.kanji
@@ -177,19 +274,42 @@ function toggleFavorite() {
 }
 
 const knownCount = computed(() =>
-  deck.value.filter(card =>
+  currentBatch.value.filter(card =>
     progress.flashcardKnown.includes(cardId(card))
   ).length
 )
 
 const knownPercent = computed(() =>
-  deck.value.length > 0 ? Math.round((knownCount.value / deck.value.length) * 100) : 0
+  currentBatch.value.length > 0
+    ? Math.round((knownCount.value / currentBatch.value.length) * 100)
+    : 0
 )
 
-function switchDeck(deckId) {
+function onSelectLevel(level) {
+  activeDeck.value = null
+  selectedLevel.value = level
+  selectedCategories.value = []
+}
+
+function onSelectSpecialDeck(deckId) {
+  selectedLevel.value = null
+  selectedCategories.value = []
   activeDeck.value = deckId
+}
+
+function onCategoriesChange(cats) {
+  selectedCategories.value = cats
+}
+
+function reshufflePool() {
+  shuffledPool.value = buildPool()
+  batchOffset.value = 0
   currentIndex.value = 0
-  shuffledOrder.value = null
+}
+
+function continueSession() {
+  batchOffset.value += 20
+  currentIndex.value = 0
 }
 
 function prev() {
@@ -197,26 +317,15 @@ function prev() {
 }
 
 function next() {
-  if (currentIndex.value < deck.value.length - 1) currentIndex.value++
+  if (currentIndex.value < currentBatch.value.length - 1) currentIndex.value++
 }
 
 function markCard(known) {
   if (!currentCard.value) return
   progress.recordFlashcardKnown(cardId(currentCard.value), known)
-  if (currentIndex.value < deck.value.length - 1) {
+  if (currentIndex.value < currentBatch.value.length - 1) {
     setTimeout(() => { currentIndex.value++ }, 300)
   }
-}
-
-function shuffle() {
-  const n = rawDeck.value.length
-  const order = Array.from({ length: n }, (_, i) => i)
-  for (let i = n - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [order[i], order[j]] = [order[j], order[i]]
-  }
-  shuffledOrder.value = order
-  currentIndex.value = 0
 }
 
 function onTouchStart(e) {
