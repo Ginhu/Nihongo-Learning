@@ -3,2051 +3,4008 @@ export default [
   {
     "expression": "間",
     "reading": "あいだ",
-    "meaning": "interval; space (between times)"
+    "romaji": "aida",
+    "meaning": "interval; space (between times)",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "time_and_calendar"
   },
   {
     "expression": "期間",
     "reading": "きかん",
-    "meaning": "period; duration"
+    "romaji": "kikan",
+    "meaning": "period; duration",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "time_and_calendar"
   },
   {
     "expression": "以前",
     "reading": "いぜん",
-    "meaning": "before; formerly; ago"
+    "romaji": "izen",
+    "meaning": "before; formerly; ago",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "time_and_calendar"
   },
   {
     "expression": "以後",
     "reading": "いご",
-    "meaning": "from now on; after this"
+    "romaji": "igo",
+    "meaning": "from now on; after this",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "time_and_calendar"
   },
   {
     "expression": "最近",
     "reading": "さいきん",
-    "meaning": "recently; lately"
+    "romaji": "saikin",
+    "meaning": "recently; lately",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "time_and_calendar"
   },
   {
     "expression": "将来",
     "reading": "しょうらい",
-    "meaning": "future; prospects"
+    "romaji": "shourai",
+    "meaning": "future; prospects",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "time_and_calendar"
   },
   {
     "expression": "昔",
     "reading": "むかし",
-    "meaning": "old times; the past"
+    "romaji": "mukashi",
+    "meaning": "old times; the past",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "time_and_calendar"
   },
   {
     "expression": "当時",
     "reading": "とうじ",
-    "meaning": "at that time; at the time"
+    "romaji": "touji",
+    "meaning": "at that time; at the time",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "time_and_calendar"
   },
   {
     "expression": "途中",
     "reading": "とちゅう",
-    "meaning": "on the way; midway"
+    "romaji": "tochuu",
+    "meaning": "on the way; midway",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "time_and_calendar"
   },
   {
     "expression": "〜間",
     "reading": "〜かん",
-    "meaning": "for ~ (duration counter)"
+    "romaji": "~kan",
+    "meaning": "for ~ (duration counter)",
+    "pos": "suffix",
+    "jlpt": "N4",
+    "category": "time_and_calendar"
   },
   {
     "expression": "〜ごろ",
     "reading": "〜ごろ",
-    "meaning": "around ~; about ~"
+    "romaji": "~goro",
+    "meaning": "around ~; about ~",
+    "pos": "suffix",
+    "jlpt": "N4",
+    "category": "time_and_calendar"
   },
   {
     "expression": "時代",
     "reading": "じだい",
-    "meaning": "era; period; age"
+    "romaji": "jidai",
+    "meaning": "era; period; age",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "time_and_calendar"
   },
   {
     "expression": "予定",
     "reading": "よてい",
-    "meaning": "plan; schedule"
+    "romaji": "yotei",
+    "meaning": "plan; schedule",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "time_and_calendar"
   },
   {
     "expression": "急ぎ",
     "reading": "いそぎ",
-    "meaning": "hurry; urgency"
+    "romaji": "isogi",
+    "meaning": "hurry; urgency",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "time_and_calendar"
   },
   {
     "expression": "〜番目",
     "reading": "〜ばんめ",
-    "meaning": "the ~th (ordinal)"
+    "romaji": "~banme",
+    "meaning": "the ~th (ordinal)",
+    "pos": "suffix",
+    "jlpt": "N4",
+    "category": "numbers_and_counting"
   },
   {
     "expression": "〜倍",
     "reading": "〜ばい",
-    "meaning": "~ times (multiplier)"
+    "romaji": "~bai",
+    "meaning": "~ times (multiplier)",
+    "pos": "suffix",
+    "jlpt": "N4",
+    "category": "numbers_and_counting"
   },
   {
     "expression": "〜回",
     "reading": "〜かい",
-    "meaning": "~ times (counter for frequency)"
+    "romaji": "~kai",
+    "meaning": "~ times (counter for frequency)",
+    "pos": "counter",
+    "jlpt": "N4",
+    "category": "numbers_and_counting"
   },
   {
     "expression": "〜度",
     "reading": "〜ど",
-    "meaning": "~ degrees; ~ times"
+    "romaji": "~do",
+    "meaning": "~ degrees; ~ times",
+    "pos": "counter",
+    "jlpt": "N4",
+    "category": "numbers_and_counting"
   },
   {
     "expression": "全部",
     "reading": "ぜんぶ",
-    "meaning": "all; everything; total"
+    "romaji": "zenbu",
+    "meaning": "all; everything; total",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "numbers_and_counting"
   },
   {
     "expression": "半分",
     "reading": "はんぶん",
-    "meaning": "half"
+    "romaji": "hanbun",
+    "meaning": "half",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "numbers_and_counting"
   },
   {
     "expression": "数",
     "reading": "かず",
-    "meaning": "number; amount"
+    "romaji": "kazu",
+    "meaning": "number; amount",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "numbers_and_counting"
   },
   {
     "expression": "合計",
     "reading": "ごうけい",
-    "meaning": "total; sum"
+    "romaji": "goukei",
+    "meaning": "total; sum",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "numbers_and_counting"
   },
   {
     "expression": "〜以上",
     "reading": "〜いじょう",
-    "meaning": "~ or more; at least ~"
+    "romaji": "~ijou",
+    "meaning": "~ or more; at least ~",
+    "pos": "suffix",
+    "jlpt": "N4",
+    "category": "numbers_and_counting"
   },
   {
     "expression": "〜以下",
     "reading": "〜いか",
-    "meaning": "~ or less; at most ~"
+    "romaji": "~ika",
+    "meaning": "~ or less; at most ~",
+    "pos": "suffix",
+    "jlpt": "N4",
+    "category": "numbers_and_counting"
   },
   {
     "expression": "主人",
     "reading": "しゅじん",
-    "meaning": "(my) husband; master"
+    "romaji": "shujin",
+    "meaning": "(my) husband; master",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family",
+    "tags": [
+      "humble"
+    ]
   },
   {
     "expression": "奥さん",
     "reading": "おくさん",
-    "meaning": "(your/his) wife"
+    "romaji": "okusan",
+    "meaning": "(your/his) wife",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family",
+    "tags": [
+      "polite"
+    ]
   },
   {
     "expression": "夫",
     "reading": "おっと",
-    "meaning": "husband"
+    "romaji": "otto",
+    "meaning": "husband",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "妻",
     "reading": "つま",
-    "meaning": "wife"
+    "romaji": "tsuma",
+    "meaning": "wife",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "親",
     "reading": "おや",
-    "meaning": "parent(s)"
+    "romaji": "oya",
+    "meaning": "parent(s)",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "お子さん",
     "reading": "おこさん",
-    "meaning": "(your) child (polite)"
+    "romaji": "okosan",
+    "meaning": "(your) child (polite)",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family",
+    "tags": [
+      "polite"
+    ]
   },
   {
     "expression": "赤ちゃん",
     "reading": "あかちゃん",
-    "meaning": "baby; infant"
+    "romaji": "akachan",
+    "meaning": "baby; infant",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "大人",
     "reading": "おとな",
-    "meaning": "adult"
+    "romaji": "otona",
+    "meaning": "adult",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "若者",
     "reading": "わかもの",
-    "meaning": "young person; youth"
+    "romaji": "wakamono",
+    "meaning": "young person; youth",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "お嬢さん",
     "reading": "おじょうさん",
-    "meaning": "daughter (polite); young lady"
+    "romaji": "ojousan",
+    "meaning": "daughter (polite); young lady",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family",
+    "tags": [
+      "polite"
+    ]
   },
   {
     "expression": "息子",
     "reading": "むすこ",
-    "meaning": "son"
+    "romaji": "musuko",
+    "meaning": "son",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "娘",
     "reading": "むすめ",
-    "meaning": "daughter"
+    "romaji": "musume",
+    "meaning": "daughter",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "お客さん",
     "reading": "おきゃくさん",
-    "meaning": "customer; guest (polite)"
+    "romaji": "okyakusan",
+    "meaning": "customer; guest (polite)",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family",
+    "tags": [
+      "polite"
+    ]
   },
   {
     "expression": "同僚",
     "reading": "どうりょう",
-    "meaning": "colleague; coworker"
+    "romaji": "douryou",
+    "meaning": "colleague; coworker",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "上司",
     "reading": "じょうし",
-    "meaning": "boss; superior"
+    "romaji": "joushi",
+    "meaning": "boss; superior",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "部下",
     "reading": "ぶか",
-    "meaning": "subordinate"
+    "romaji": "buka",
+    "meaning": "subordinate",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "運転手",
     "reading": "うんてんしゅ",
-    "meaning": "driver; chauffeur"
+    "romaji": "untenshu",
+    "meaning": "driver; chauffeur",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "看護師",
     "reading": "かんごし",
-    "meaning": "nurse"
+    "romaji": "kangoshi",
+    "meaning": "nurse",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "店員",
     "reading": "てんいん",
-    "meaning": "shop assistant; store clerk"
+    "romaji": "ten'in",
+    "meaning": "shop assistant; store clerk",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "警察官",
     "reading": "けいさつかん",
-    "meaning": "police officer"
+    "romaji": "keisatsukan",
+    "meaning": "police officer",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "外国人",
     "reading": "がいこくじん",
-    "meaning": "foreigner"
+    "romaji": "gaikokujin",
+    "meaning": "foreigner",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "有名人",
     "reading": "ゆうめいじん",
-    "meaning": "celebrity; famous person"
+    "romaji": "yuumeijin",
+    "meaning": "celebrity; famous person",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "people_and_family"
   },
   {
     "expression": "背中",
     "reading": "せなか",
-    "meaning": "back (of body)"
+    "romaji": "senaka",
+    "meaning": "back (of body)",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "首",
     "reading": "くび",
-    "meaning": "neck"
+    "romaji": "kubi",
+    "meaning": "neck",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "肩",
     "reading": "かた",
-    "meaning": "shoulder"
+    "romaji": "kata",
+    "meaning": "shoulder",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "胸",
     "reading": "むね",
-    "meaning": "chest; breast"
+    "romaji": "mune",
+    "meaning": "chest; breast",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "腰",
     "reading": "こし",
-    "meaning": "waist; lower back"
+    "romaji": "koshi",
+    "meaning": "waist; lower back",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "指",
     "reading": "ゆび",
-    "meaning": "finger; toe"
+    "romaji": "yubi",
+    "meaning": "finger; toe",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "皮膚",
     "reading": "ひふ",
-    "meaning": "skin"
+    "romaji": "hifu",
+    "meaning": "skin",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "血",
     "reading": "ち",
-    "meaning": "blood"
+    "romaji": "chi",
+    "meaning": "blood",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "熱",
     "reading": "ねつ",
-    "meaning": "fever; heat"
+    "romaji": "netsu",
+    "meaning": "fever; heat",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "風邪",
     "reading": "かぜ",
-    "meaning": "cold (illness)"
+    "romaji": "kaze",
+    "meaning": "cold (illness)",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "頭痛",
     "reading": "ずつう",
-    "meaning": "headache"
+    "romaji": "zutsuu",
+    "meaning": "headache",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "怪我",
     "reading": "けが",
-    "meaning": "injury; wound"
+    "romaji": "kega",
+    "meaning": "injury; wound",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "手術",
     "reading": "しゅじゅつ",
-    "meaning": "surgery; operation"
+    "romaji": "shujutsu",
+    "meaning": "surgery; operation",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "入院",
     "reading": "にゅういん",
-    "meaning": "hospitalization"
+    "romaji": "nyuuin",
+    "meaning": "hospitalization",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "体重",
     "reading": "たいじゅう",
-    "meaning": "body weight"
+    "romaji": "taijuu",
+    "meaning": "body weight",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "健康",
     "reading": "けんこう",
-    "meaning": "health"
+    "romaji": "kenkou",
+    "meaning": "health",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "具合",
     "reading": "ぐあい",
-    "meaning": "condition; how one feels"
+    "romaji": "guai",
+    "meaning": "condition; how one feels",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "丈夫",
     "reading": "じょうぶ",
-    "meaning": "strong; sturdy; robust"
+    "romaji": "joubu",
+    "meaning": "strong; sturdy; robust",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "body_and_health"
   },
   {
     "expression": "味",
     "reading": "あじ",
-    "meaning": "taste; flavor"
+    "romaji": "aji",
+    "meaning": "taste; flavor",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "料理",
     "reading": "りょうり",
-    "meaning": "cooking; dish; cuisine"
+    "romaji": "ryouri",
+    "meaning": "cooking; dish; cuisine",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "食事",
     "reading": "しょくじ",
-    "meaning": "meal; dining"
+    "romaji": "shokuji",
+    "meaning": "meal; dining",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "栄養",
     "reading": "えいよう",
-    "meaning": "nutrition; nourishment"
+    "romaji": "eiyou",
+    "meaning": "nutrition; nourishment",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "材料",
     "reading": "ざいりょう",
-    "meaning": "ingredients; materials"
+    "romaji": "zairyou",
+    "meaning": "ingredients; materials",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "スパゲッティ",
     "reading": "スパゲッティ",
-    "meaning": "spaghetti"
+    "romaji": "supagetti",
+    "meaning": "spaghetti",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "カレー",
     "reading": "カレー",
-    "meaning": "curry"
+    "romaji": "karee",
+    "meaning": "curry",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "ラーメン",
     "reading": "ラーメン",
-    "meaning": "ramen noodles"
+    "romaji": "raamen",
+    "meaning": "ramen noodles",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "寿司",
     "reading": "すし",
-    "meaning": "sushi"
+    "romaji": "sushi",
+    "meaning": "sushi",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "刺身",
     "reading": "さしみ",
-    "meaning": "sashimi; sliced raw fish"
+    "romaji": "sashimi",
+    "meaning": "sashimi; sliced raw fish",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "定食",
     "reading": "ていしょく",
-    "meaning": "set meal"
+    "romaji": "teishoku",
+    "meaning": "set meal",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "おかず",
     "reading": "おかず",
-    "meaning": "side dish"
+    "romaji": "okazu",
+    "meaning": "side dish",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "豆腐",
     "reading": "とうふ",
-    "meaning": "tofu"
+    "romaji": "toufu",
+    "meaning": "tofu",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "味噌",
     "reading": "みそ",
-    "meaning": "miso paste"
+    "romaji": "miso",
+    "meaning": "miso paste",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "チーズ",
     "reading": "チーズ",
-    "meaning": "cheese"
+    "romaji": "chiizu",
+    "meaning": "cheese",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "バター",
     "reading": "バター",
-    "meaning": "butter"
+    "romaji": "bataa",
+    "meaning": "butter",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "オレンジ",
     "reading": "オレンジ",
-    "meaning": "orange"
+    "romaji": "orenji",
+    "meaning": "orange",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "いちご",
     "reading": "いちご",
-    "meaning": "strawberry"
+    "romaji": "ichigo",
+    "meaning": "strawberry",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "food_and_drink"
   },
   {
     "expression": "注文する",
     "reading": "ちゅうもんする",
-    "meaning": "to order (food)"
+    "romaji": "chuumon suru",
+    "meaning": "to order (food)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "food_and_drink",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "生活",
     "reading": "せいかつ",
-    "meaning": "life; living; livelihood"
+    "romaji": "seikatsu",
+    "meaning": "life; living; livelihood",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "習慣",
     "reading": "しゅうかん",
-    "meaning": "habit; custom"
+    "romaji": "shuukan",
+    "meaning": "habit; custom",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "押し入れ",
     "reading": "おしいれ",
-    "meaning": "closet; Japanese-style storage space"
+    "romaji": "oshiire",
+    "meaning": "closet; Japanese-style storage space",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "屋上",
     "reading": "おくじょう",
-    "meaning": "rooftop"
+    "romaji": "okujou",
+    "meaning": "rooftop",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "壁",
     "reading": "かべ",
-    "meaning": "wall"
+    "romaji": "kabe",
+    "meaning": "wall",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "廊下",
     "reading": "ろうか",
-    "meaning": "corridor; hallway"
+    "romaji": "rouka",
+    "meaning": "corridor; hallway",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "階段",
     "reading": "かいだん",
-    "meaning": "stairs; staircase"
+    "romaji": "kaidan",
+    "meaning": "stairs; staircase",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "エレベーター",
     "reading": "エレベーター",
-    "meaning": "elevator; lift"
+    "romaji": "erebeetaa",
+    "meaning": "elevator; lift",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "エスカレーター",
     "reading": "エスカレーター",
-    "meaning": "escalator"
+    "romaji": "esukareeتaa",
+    "meaning": "escalator",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "ガス",
     "reading": "ガス",
-    "meaning": "gas"
+    "romaji": "gasu",
+    "meaning": "gas",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "水道",
     "reading": "すいどう",
-    "meaning": "tap water; water supply"
+    "romaji": "suidou",
+    "meaning": "tap water; water supply",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "ゴミ",
     "reading": "ゴミ",
-    "meaning": "garbage; trash"
+    "romaji": "gomi",
+    "meaning": "garbage; trash",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "布団",
     "reading": "ふとん",
-    "meaning": "futon; Japanese bedding"
+    "romaji": "futon",
+    "meaning": "futon; Japanese bedding",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "毛布",
     "reading": "もうふ",
-    "meaning": "blanket"
+    "romaji": "moufu",
+    "meaning": "blanket",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "枕",
     "reading": "まくら",
-    "meaning": "pillow"
+    "romaji": "makura",
+    "meaning": "pillow",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "洗濯",
     "reading": "せんたく",
-    "meaning": "laundry; washing"
+    "romaji": "sentaku",
+    "meaning": "laundry; washing",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "掃除",
     "reading": "そうじ",
-    "meaning": "cleaning; sweeping"
+    "romaji": "souji",
+    "meaning": "cleaning; sweeping",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "料金",
     "reading": "りょうきん",
-    "meaning": "fee; charge; fare"
+    "romaji": "ryoukin",
+    "meaning": "fee; charge; fare",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "家賃",
     "reading": "やちん",
-    "meaning": "rent"
+    "romaji": "yachin",
+    "meaning": "rent",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "下宿",
     "reading": "げしゅく",
-    "meaning": "boarding house; lodging"
+    "romaji": "geshuku",
+    "meaning": "boarding house; lodging",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "鍵",
     "reading": "かぎ",
-    "meaning": "key; lock"
+    "romaji": "kagi",
+    "meaning": "key; lock",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "引っ越し",
     "reading": "ひっこし",
-    "meaning": "moving (to a new home)"
+    "romaji": "hikkoshi",
+    "meaning": "moving (to a new home)",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "home_and_daily_life"
   },
   {
     "expression": "洋服",
     "reading": "ようふく",
-    "meaning": "Western-style clothing"
+    "romaji": "youfuku",
+    "meaning": "Western-style clothing",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "clothing_and_appearance"
   },
   {
     "expression": "制服",
     "reading": "せいふく",
-    "meaning": "uniform"
+    "romaji": "seifuku",
+    "meaning": "uniform",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "clothing_and_appearance"
   },
   {
     "expression": "スーツ",
     "reading": "スーツ",
-    "meaning": "suit (formal)"
+    "romaji": "suutsu",
+    "meaning": "suit (formal)",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "clothing_and_appearance"
   },
   {
     "expression": "手袋",
     "reading": "てぶくろ",
-    "meaning": "gloves"
+    "romaji": "tebukuro",
+    "meaning": "gloves",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "clothing_and_appearance"
   },
   {
     "expression": "マフラー",
     "reading": "マフラー",
-    "meaning": "scarf; muffler"
+    "romaji": "mafuraa",
+    "meaning": "scarf; muffler",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "clothing_and_appearance"
   },
   {
     "expression": "ネクタイ",
     "reading": "ネクタイ",
-    "meaning": "necktie"
+    "romaji": "nekutai",
+    "meaning": "necktie",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "clothing_and_appearance"
   },
   {
     "expression": "アクセサリー",
     "reading": "アクセサリー",
-    "meaning": "accessory; jewelry"
+    "romaji": "akusesarii",
+    "meaning": "accessory; jewelry",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "clothing_and_appearance"
   },
   {
     "expression": "かっこう",
     "reading": "かっこう",
-    "meaning": "appearance; style; look"
+    "romaji": "kakkou",
+    "meaning": "appearance; style; look",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "clothing_and_appearance"
   },
   {
     "expression": "形",
     "reading": "かたち",
-    "meaning": "shape; form"
+    "romaji": "katachi",
+    "meaning": "shape; form",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "clothing_and_appearance"
   },
   {
     "expression": "サイズ",
     "reading": "サイズ",
-    "meaning": "size"
+    "romaji": "saizu",
+    "meaning": "size",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "clothing_and_appearance"
   },
   {
     "expression": "着替える",
     "reading": "きがえる",
-    "meaning": "to change clothes"
+    "romaji": "kigaeru",
+    "meaning": "to change clothes",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "clothing_and_appearance",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "似合う",
     "reading": "にあう",
-    "meaning": "to suit; to look good on"
+    "romaji": "niau",
+    "meaning": "to suit; to look good on",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "clothing_and_appearance",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "脱ぐ",
     "reading": "ぬぐ",
-    "meaning": "to take off (clothes)"
+    "romaji": "nugu",
+    "meaning": "to take off (clothes)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "clothing_and_appearance",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "教育",
     "reading": "きょういく",
-    "meaning": "education"
+    "romaji": "kyouiku",
+    "meaning": "education",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "講義",
     "reading": "こうぎ",
-    "meaning": "lecture"
+    "romaji": "kougi",
+    "meaning": "lecture",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "研究",
     "reading": "けんきゅう",
-    "meaning": "research; study"
+    "romaji": "kenkyuu",
+    "meaning": "research; study",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "発表",
     "reading": "はっぴょう",
-    "meaning": "announcement; presentation"
+    "romaji": "happyou",
+    "meaning": "announcement; presentation",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "卒業",
     "reading": "そつぎょう",
-    "meaning": "graduation"
+    "romaji": "sotsugyou",
+    "meaning": "graduation",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "入学",
     "reading": "にゅうがく",
-    "meaning": "school enrollment; matriculation"
+    "romaji": "nyuugaku",
+    "meaning": "school enrollment; matriculation",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "合格",
     "reading": "ごうかく",
-    "meaning": "passing (an exam); acceptance"
+    "romaji": "goukaku",
+    "meaning": "passing (an exam); acceptance",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "成績",
     "reading": "せいせき",
-    "meaning": "grades; results; record"
+    "romaji": "seiseki",
+    "meaning": "grades; results; record",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "単語",
     "reading": "たんご",
-    "meaning": "word; vocabulary item"
+    "romaji": "tango",
+    "meaning": "word; vocabulary item",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "文法",
     "reading": "ぶんぽう",
-    "meaning": "grammar"
+    "romaji": "bunpou",
+    "meaning": "grammar",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "文章",
     "reading": "ぶんしょう",
-    "meaning": "sentence; text; writing"
+    "romaji": "bunshou",
+    "meaning": "sentence; text; writing",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "辞書",
     "reading": "じしょ",
-    "meaning": "dictionary"
+    "romaji": "jisho",
+    "meaning": "dictionary",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "教科書",
     "reading": "きょうかしょ",
-    "meaning": "textbook"
+    "romaji": "kyoukasho",
+    "meaning": "textbook",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "予習",
     "reading": "よしゅう",
-    "meaning": "preparation; previewing lessons"
+    "romaji": "yoshuu",
+    "meaning": "preparation; previewing lessons",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "復習",
     "reading": "ふくしゅう",
-    "meaning": "review; revision"
+    "romaji": "fukushuu",
+    "meaning": "review; revision",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "奨学金",
     "reading": "しょうがくきん",
-    "meaning": "scholarship"
+    "romaji": "shougakukin",
+    "meaning": "scholarship",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "専門",
     "reading": "せんもん",
-    "meaning": "specialty; major; expert field"
+    "romaji": "senmon",
+    "meaning": "specialty; major; expert field",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "翻訳",
     "reading": "ほんやく",
-    "meaning": "translation"
+    "romaji": "honyaku",
+    "meaning": "translation",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "school_and_education"
   },
   {
     "expression": "説明する",
     "reading": "せつめいする",
-    "meaning": "to explain"
+    "romaji": "setsumei suru",
+    "meaning": "to explain",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "school_and_education",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "比べる",
     "reading": "くらべる",
-    "meaning": "to compare"
+    "romaji": "kuraberu",
+    "meaning": "to compare",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "school_and_education",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "調べる",
     "reading": "しらべる",
-    "meaning": "to investigate; to look up"
+    "romaji": "shiraberu",
+    "meaning": "to investigate; to look up",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "school_and_education",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "仕事",
     "reading": "しごと",
-    "meaning": "work; job"
+    "romaji": "shigoto",
+    "meaning": "work; job",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "職業",
     "reading": "しょくぎょう",
-    "meaning": "occupation; profession"
+    "romaji": "shokugyou",
+    "meaning": "occupation; profession",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "会議",
     "reading": "かいぎ",
-    "meaning": "meeting; conference"
+    "romaji": "kaigi",
+    "meaning": "meeting; conference",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "会議室",
     "reading": "かいぎしつ",
-    "meaning": "conference room"
+    "romaji": "kaigishitsu",
+    "meaning": "conference room",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "課長",
     "reading": "かちょう",
-    "meaning": "section chief; department head"
+    "romaji": "kachou",
+    "meaning": "section chief; department head",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "社長",
     "reading": "しゃちょう",
-    "meaning": "company president"
+    "romaji": "shachou",
+    "meaning": "company president",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "部長",
     "reading": "ぶちょう",
-    "meaning": "department manager"
+    "romaji": "buchou",
+    "meaning": "department manager",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "工場",
     "reading": "こうじょう",
-    "meaning": "factory; plant"
+    "romaji": "koujou",
+    "meaning": "factory; plant",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "工業",
     "reading": "こうぎょう",
-    "meaning": "industry; manufacturing"
+    "romaji": "kougyou",
+    "meaning": "industry; manufacturing",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "農業",
     "reading": "のうぎょう",
-    "meaning": "agriculture; farming"
+    "romaji": "nougyou",
+    "meaning": "agriculture; farming",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "経済",
     "reading": "けいざい",
-    "meaning": "economy; finance"
+    "romaji": "keizai",
+    "meaning": "economy; finance",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "産業",
     "reading": "さんぎょう",
-    "meaning": "industry"
+    "romaji": "sangyou",
+    "meaning": "industry",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "給料",
     "reading": "きゅうりょう",
-    "meaning": "salary; wages"
+    "romaji": "kyuuryou",
+    "meaning": "salary; wages",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "残業",
     "reading": "ざんぎょう",
-    "meaning": "overtime work"
+    "romaji": "zangyou",
+    "meaning": "overtime work",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "退職",
     "reading": "たいしょく",
-    "meaning": "retirement; resignation"
+    "romaji": "taishoku",
+    "meaning": "retirement; resignation",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "就職",
     "reading": "しゅうしょく",
-    "meaning": "getting a job; finding employment"
+    "romaji": "shuushoku",
+    "meaning": "getting a job; finding employment",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "受付",
     "reading": "うけつけ",
-    "meaning": "reception; front desk"
+    "romaji": "uketsuke",
+    "meaning": "reception; front desk",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "work_and_business"
   },
   {
     "expression": "申し込む",
     "reading": "もうしこむ",
-    "meaning": "to apply; to register"
+    "romaji": "moushikomu",
+    "meaning": "to apply; to register",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "work_and_business",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "働く",
     "reading": "はたらく",
-    "meaning": "to work"
+    "romaji": "hataraku",
+    "meaning": "to work",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "work_and_business",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "連絡する",
     "reading": "れんらくする",
-    "meaning": "to contact; to get in touch"
+    "romaji": "renraku suru",
+    "meaning": "to contact; to get in touch",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "work_and_business",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "確認する",
     "reading": "かくにんする",
-    "meaning": "to confirm; to verify"
+    "romaji": "kakunin suru",
+    "meaning": "to confirm; to verify",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "work_and_business",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "報告する",
     "reading": "ほうこくする",
-    "meaning": "to report"
+    "romaji": "houkoku suru",
+    "meaning": "to report",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "work_and_business",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "提出する",
     "reading": "ていしゅつする",
-    "meaning": "to submit; to hand in"
+    "romaji": "teishutsu suru",
+    "meaning": "to submit; to hand in",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "work_and_business",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "売り場",
     "reading": "うりば",
-    "meaning": "sales floor; department"
+    "romaji": "uriba",
+    "meaning": "sales floor; department",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "shopping_and_money"
   },
   {
     "expression": "商品",
     "reading": "しょうひん",
-    "meaning": "product; goods"
+    "romaji": "shouhin",
+    "meaning": "product; goods",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "shopping_and_money"
   },
   {
     "expression": "品物",
     "reading": "しなもの",
-    "meaning": "goods; article"
+    "romaji": "shinamono",
+    "meaning": "goods; article",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "shopping_and_money"
   },
   {
     "expression": "割引",
     "reading": "わりびき",
-    "meaning": "discount"
+    "romaji": "waribiki",
+    "meaning": "discount",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "shopping_and_money"
   },
   {
     "expression": "消費税",
     "reading": "しょうひぜい",
-    "meaning": "consumption tax; VAT"
+    "romaji": "shouhizei",
+    "meaning": "consumption tax; VAT",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "shopping_and_money"
   },
   {
     "expression": "レシート",
     "reading": "レシート",
-    "meaning": "receipt"
+    "romaji": "reshiito",
+    "meaning": "receipt",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "shopping_and_money"
   },
   {
     "expression": "領収書",
     "reading": "りょうしゅうしょ",
-    "meaning": "official receipt"
+    "romaji": "ryoushuusho",
+    "meaning": "official receipt",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "shopping_and_money"
   },
   {
     "expression": "貯金",
     "reading": "ちょきん",
-    "meaning": "savings; bank deposit"
+    "romaji": "chokin",
+    "meaning": "savings; bank deposit",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "shopping_and_money"
   },
   {
     "expression": "支払い",
     "reading": "しはらい",
-    "meaning": "payment"
+    "romaji": "shiharai",
+    "meaning": "payment",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "shopping_and_money"
   },
   {
     "expression": "返す",
     "reading": "かえす",
-    "meaning": "to return; to give back"
+    "romaji": "kaesu",
+    "meaning": "to return; to give back",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "shopping_and_money",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "払う",
     "reading": "はらう",
-    "meaning": "to pay"
+    "romaji": "harau",
+    "meaning": "to pay",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "shopping_and_money",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "選ぶ",
     "reading": "えらぶ",
-    "meaning": "to choose; to select"
+    "romaji": "erabu",
+    "meaning": "to choose; to select",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "shopping_and_money",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "包む",
     "reading": "つつむ",
-    "meaning": "to wrap"
+    "romaji": "tsutsumu",
+    "meaning": "to wrap",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "shopping_and_money",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "交通",
     "reading": "こうつう",
-    "meaning": "traffic; transportation"
+    "romaji": "koutsu",
+    "meaning": "traffic; transportation",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "transportation"
   },
   {
     "expression": "乗り換え",
     "reading": "のりかえ",
-    "meaning": "transfer; change (trains)"
+    "romaji": "norikae",
+    "meaning": "transfer; change (trains)",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "transportation"
   },
   {
     "expression": "急行",
     "reading": "きゅうこう",
-    "meaning": "express (train)"
+    "romaji": "kyuukou",
+    "meaning": "express (train)",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "transportation"
   },
   {
     "expression": "特急",
     "reading": "とっきゅう",
-    "meaning": "limited express"
+    "romaji": "tokkyuu",
+    "meaning": "limited express",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "transportation"
   },
   {
     "expression": "汽車",
     "reading": "きしゃ",
-    "meaning": "steam train"
+    "romaji": "kisha",
+    "meaning": "steam train",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "transportation"
   },
   {
     "expression": "オートバイ",
     "reading": "オートバイ",
-    "meaning": "motorcycle"
+    "romaji": "ootobai",
+    "meaning": "motorcycle",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "transportation"
   },
   {
     "expression": "ガソリン",
     "reading": "ガソリン",
-    "meaning": "gasoline; petrol"
+    "romaji": "gasorin",
+    "meaning": "gasoline; petrol",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "transportation"
   },
   {
     "expression": "ガソリンスタンド",
     "reading": "ガソリンスタンド",
-    "meaning": "gas station"
+    "romaji": "gasorin sutando",
+    "meaning": "gas station",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "transportation"
   },
   {
     "expression": "駐車場",
     "reading": "ちゅうしゃじょう",
-    "meaning": "parking lot"
+    "romaji": "chuushajou",
+    "meaning": "parking lot",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "transportation"
   },
   {
     "expression": "地図",
     "reading": "ちず",
-    "meaning": "map"
+    "romaji": "chizu",
+    "meaning": "map",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "transportation"
   },
   {
     "expression": "方向",
     "reading": "ほうこう",
-    "meaning": "direction; orientation"
+    "romaji": "houkou",
+    "meaning": "direction; orientation",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "transportation"
   },
   {
     "expression": "距離",
     "reading": "きょり",
-    "meaning": "distance"
+    "romaji": "kyori",
+    "meaning": "distance",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "transportation"
   },
   {
     "expression": "運転する",
     "reading": "うんてんする",
-    "meaning": "to drive"
+    "romaji": "unten suru",
+    "meaning": "to drive",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "transportation",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "止める",
     "reading": "とめる",
-    "meaning": "to stop (something); to park"
+    "romaji": "tomeru",
+    "meaning": "to stop (something); to park",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "transportation",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "自然",
     "reading": "しぜん",
-    "meaning": "nature"
+    "romaji": "shizen",
+    "meaning": "nature",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "気候",
     "reading": "きこう",
-    "meaning": "climate"
+    "romaji": "kikou",
+    "meaning": "climate",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "台風",
     "reading": "たいふう",
-    "meaning": "typhoon"
+    "romaji": "taifuu",
+    "meaning": "typhoon",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "地震",
     "reading": "じしん",
-    "meaning": "earthquake"
+    "romaji": "jishin",
+    "meaning": "earthquake",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "洪水",
     "reading": "こうずい",
-    "meaning": "flood"
+    "romaji": "kouzui",
+    "meaning": "flood",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "霧",
     "reading": "きり",
-    "meaning": "fog; mist"
+    "romaji": "kiri",
+    "meaning": "fog; mist",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "嵐",
     "reading": "あらし",
-    "meaning": "storm"
+    "romaji": "arashi",
+    "meaning": "storm",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "砂漠",
     "reading": "さばく",
-    "meaning": "desert"
+    "romaji": "sabaku",
+    "meaning": "desert",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "森",
     "reading": "もり",
-    "meaning": "forest; woods"
+    "romaji": "mori",
+    "meaning": "forest; woods",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "島",
     "reading": "しま",
-    "meaning": "island"
+    "romaji": "shima",
+    "meaning": "island",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "岩",
     "reading": "いわ",
-    "meaning": "rock; boulder"
+    "romaji": "iwa",
+    "meaning": "rock; boulder",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "石",
     "reading": "いし",
-    "meaning": "stone; pebble"
+    "romaji": "ishi",
+    "meaning": "stone; pebble",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "草",
     "reading": "くさ",
-    "meaning": "grass"
+    "romaji": "kusa",
+    "meaning": "grass",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "葉",
     "reading": "は",
-    "meaning": "leaf"
+    "romaji": "ha",
+    "meaning": "leaf",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "枝",
     "reading": "えだ",
-    "meaning": "branch; twig"
+    "romaji": "eda",
+    "meaning": "branch; twig",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "根",
     "reading": "ね",
-    "meaning": "root"
+    "romaji": "ne",
+    "meaning": "root",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "植物",
     "reading": "しょくぶつ",
-    "meaning": "plant; vegetation"
+    "romaji": "shokubutsu",
+    "meaning": "plant; vegetation",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "虫",
     "reading": "むし",
-    "meaning": "insect; bug"
+    "romaji": "mushi",
+    "meaning": "insect; bug",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "鳥",
     "reading": "とり",
-    "meaning": "bird"
+    "romaji": "tori",
+    "meaning": "bird",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "馬",
     "reading": "うま",
-    "meaning": "horse"
+    "romaji": "uma",
+    "meaning": "horse",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "牛",
     "reading": "うし",
-    "meaning": "cow; cattle"
+    "romaji": "ushi",
+    "meaning": "cow; cattle",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "豚",
     "reading": "ぶた",
-    "meaning": "pig"
+    "romaji": "buta",
+    "meaning": "pig",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "nature_and_weather"
   },
   {
     "expression": "晴れる",
     "reading": "はれる",
-    "meaning": "to clear up (weather)"
+    "romaji": "hareru",
+    "meaning": "to clear up (weather)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "nature_and_weather",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "近所",
     "reading": "きんじょ",
-    "meaning": "neighborhood; vicinity"
+    "romaji": "kinjo",
+    "meaning": "neighborhood; vicinity",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "郊外",
     "reading": "こうがい",
-    "meaning": "suburbs; outskirts"
+    "romaji": "kougai",
+    "meaning": "suburbs; outskirts",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "田舎",
     "reading": "いなか",
-    "meaning": "countryside; rural area"
+    "romaji": "inaka",
+    "meaning": "countryside; rural area",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "都市",
     "reading": "とし",
-    "meaning": "city; urban area"
+    "romaji": "toshi",
+    "meaning": "city; urban area",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "海岸",
     "reading": "かいがん",
-    "meaning": "coast; seashore"
+    "romaji": "kaigan",
+    "meaning": "coast; seashore",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "温泉",
     "reading": "おんせん",
-    "meaning": "hot spring"
+    "romaji": "onsen",
+    "meaning": "hot spring",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "博物館",
     "reading": "はくぶつかん",
-    "meaning": "museum"
+    "romaji": "hakubutsukan",
+    "meaning": "museum",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "美術館",
     "reading": "びじゅつかん",
-    "meaning": "art museum"
+    "romaji": "bijutsukan",
+    "meaning": "art museum",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "動物園",
     "reading": "どうぶつえん",
-    "meaning": "zoo"
+    "romaji": "doubutsuen",
+    "meaning": "zoo",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "神社",
     "reading": "じんじゃ",
-    "meaning": "Shinto shrine"
+    "romaji": "jinja",
+    "meaning": "Shinto shrine",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "お寺",
     "reading": "おてら",
-    "meaning": "Buddhist temple"
+    "romaji": "otera",
+    "meaning": "Buddhist temple",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "教会",
     "reading": "きょうかい",
-    "meaning": "church"
+    "romaji": "kyoukai",
+    "meaning": "church",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "会場",
     "reading": "かいじょう",
-    "meaning": "venue; hall; meeting place"
+    "romaji": "kaijou",
+    "meaning": "venue; hall; meeting place",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "場所",
     "reading": "ばしょ",
-    "meaning": "place; location; spot"
+    "romaji": "basho",
+    "meaning": "place; location; spot",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "位置",
     "reading": "いち",
-    "meaning": "position; location"
+    "romaji": "ichi",
+    "meaning": "position; location",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "方向",
     "reading": "ほうこう",
-    "meaning": "direction"
+    "romaji": "houkou",
+    "meaning": "direction",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "角",
     "reading": "かど",
-    "meaning": "corner (of street)"
+    "romaji": "kado",
+    "meaning": "corner (of street)",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "交差点",
     "reading": "こうさてん",
-    "meaning": "intersection; crossroads"
+    "romaji": "kousaten",
+    "meaning": "intersection; crossroads",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "アジア",
     "reading": "アジア",
-    "meaning": "Asia"
+    "romaji": "ajia",
+    "meaning": "Asia",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "ヨーロッパ",
     "reading": "ヨーロッパ",
-    "meaning": "Europe"
+    "romaji": "yooroppa",
+    "meaning": "Europe",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "location_and_direction"
   },
   {
     "expression": "運ぶ",
     "reading": "はこぶ",
-    "meaning": "to carry; to transport"
+    "romaji": "hakobu",
+    "meaning": "to carry; to transport",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_motion",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "送る",
     "reading": "おくる",
-    "meaning": "to send; to escort"
+    "romaji": "okuru",
+    "meaning": "to send; to escort",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_motion",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "迎える",
     "reading": "むかえる",
-    "meaning": "to meet; to welcome; to pick up"
+    "romaji": "mukaeru",
+    "meaning": "to meet; to welcome; to pick up",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_motion",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "連れる",
     "reading": "つれる",
-    "meaning": "to take along; to bring (person)"
+    "romaji": "tsureru",
+    "meaning": "to take along; to bring (person)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_motion",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "飛ぶ",
     "reading": "とぶ",
-    "meaning": "to fly; to jump"
+    "romaji": "tobu",
+    "meaning": "to fly; to jump",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_motion",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "落ちる",
     "reading": "おちる",
-    "meaning": "to fall; to drop"
+    "romaji": "ochiru",
+    "meaning": "to fall; to drop",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_motion",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "落とす",
     "reading": "おとす",
-    "meaning": "to drop (something)"
+    "romaji": "otosu",
+    "meaning": "to drop (something)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_motion",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "引っ越す",
     "reading": "ひっこす",
-    "meaning": "to move (to a new home)"
+    "romaji": "hikkosu",
+    "meaning": "to move (to a new home)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_motion",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "通る",
     "reading": "とおる",
-    "meaning": "to pass through; to go along"
+    "romaji": "tooru",
+    "meaning": "to pass through; to go along",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_motion",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "通う",
     "reading": "かよう",
-    "meaning": "to commute; to attend regularly"
+    "romaji": "kayou",
+    "meaning": "to commute; to attend regularly",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_motion",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "集まる",
     "reading": "あつまる",
-    "meaning": "to gather; to assemble (intrans.)"
+    "romaji": "atsumaru",
+    "meaning": "to gather; to assemble (intrans.)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_motion",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "集める",
     "reading": "あつめる",
-    "meaning": "to collect; to gather (trans.)"
+    "romaji": "atsumeru",
+    "meaning": "to collect; to gather (trans.)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_motion",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "散歩する",
     "reading": "さんぽする",
-    "meaning": "to take a walk"
+    "romaji": "sanpo suru",
+    "meaning": "to take a walk",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_motion",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "着く",
     "reading": "つく",
-    "meaning": "to arrive"
+    "romaji": "tsuku",
+    "meaning": "to arrive",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "出かける",
     "reading": "でかける",
-    "meaning": "to go out; to leave"
+    "romaji": "dekakeru",
+    "meaning": "to go out; to leave",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "片付ける",
     "reading": "かたづける",
-    "meaning": "to tidy up; to put away"
+    "romaji": "katazukeru",
+    "meaning": "to tidy up; to put away",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "直す",
     "reading": "なおす",
-    "meaning": "to fix; to repair; to correct"
+    "romaji": "naosu",
+    "meaning": "to fix; to repair; to correct",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "壊れる",
     "reading": "こわれる",
-    "meaning": "to break; to be broken (intrans.)"
+    "romaji": "kowareru",
+    "meaning": "to break; to be broken (intrans.)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "壊す",
     "reading": "こわす",
-    "meaning": "to break; to destroy (trans.)"
+    "romaji": "kowasu",
+    "meaning": "to break; to destroy (trans.)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "拾う",
     "reading": "ひろう",
-    "meaning": "to pick up; to find"
+    "romaji": "hirou",
+    "meaning": "to pick up; to find",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "捨てる",
     "reading": "すてる",
-    "meaning": "to throw away; to discard"
+    "romaji": "suteru",
+    "meaning": "to throw away; to discard",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "掛ける",
     "reading": "かける",
-    "meaning": "to hang; to put on (glasses); to call (phone)"
+    "romaji": "kakeru",
+    "meaning": "to hang; to put on (glasses); to call (phone)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "触る",
     "reading": "さわる",
-    "meaning": "to touch; to feel"
+    "romaji": "sawaru",
+    "meaning": "to touch; to feel",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "押す",
     "reading": "おす",
-    "meaning": "to push; to press"
+    "romaji": "osu",
+    "meaning": "to push; to press",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "引く",
     "reading": "ひく",
-    "meaning": "to pull; to draw"
+    "romaji": "hiku",
+    "meaning": "to pull; to draw",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "撮る",
     "reading": "とる",
-    "meaning": "to take (a photo)"
+    "romaji": "toru",
+    "meaning": "to take (a photo)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "結婚する",
     "reading": "けっこんする",
-    "meaning": "to get married"
+    "romaji": "kekkon suru",
+    "meaning": "to get married",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "離婚する",
     "reading": "りこんする",
-    "meaning": "to get divorced"
+    "romaji": "rikon suru",
+    "meaning": "to get divorced",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "泊まる",
     "reading": "とまる",
-    "meaning": "to stay overnight; to lodge"
+    "romaji": "tomaru",
+    "meaning": "to stay overnight; to lodge",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "招待する",
     "reading": "しょうたいする",
-    "meaning": "to invite"
+    "romaji": "shoutai suru",
+    "meaning": "to invite",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "紹介する",
     "reading": "しょうかいする",
-    "meaning": "to introduce"
+    "romaji": "shoukai suru",
+    "meaning": "to introduce",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "参加する",
     "reading": "さんかする",
-    "meaning": "to participate; to join"
+    "romaji": "sanka suru",
+    "meaning": "to participate; to join",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "準備する",
     "reading": "じゅんびする",
-    "meaning": "to prepare; to get ready"
+    "romaji": "junbi suru",
+    "meaning": "to prepare; to get ready",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_daily_actions",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "あげる",
     "reading": "あげる",
-    "meaning": "to give (to equal/lower)"
+    "romaji": "ageru",
+    "meaning": "to give (to equal/lower)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_giving_receiving",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "くれる",
     "reading": "くれる",
-    "meaning": "to give (speaker receives)"
+    "romaji": "kureru",
+    "meaning": "to give (speaker receives)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_giving_receiving",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "もらう",
     "reading": "もらう",
-    "meaning": "to receive; to get"
+    "romaji": "morau",
+    "meaning": "to receive; to get",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_giving_receiving",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "さしあげる",
     "reading": "さしあげる",
-    "meaning": "to give (humble, upward)"
+    "romaji": "sashiageru",
+    "meaning": "to give (humble, upward)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_giving_receiving",
+    "tags": [
+      "ichidan",
+      "humble"
+    ]
   },
   {
     "expression": "いただく",
     "reading": "いただく",
-    "meaning": "to receive (humble); to have (food)"
+    "romaji": "itadaku",
+    "meaning": "to receive (humble); to have (food)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_giving_receiving",
+    "tags": [
+      "godan",
+      "humble"
+    ]
   },
   {
     "expression": "やる",
     "reading": "やる",
-    "meaning": "to give (to plants/animals/inferiors); to do (casual)"
+    "romaji": "yaru",
+    "meaning": "to give (to plants/animals/inferiors); to do (casual)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_giving_receiving",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "贈る",
     "reading": "おくる",
-    "meaning": "to present; to give as a gift"
+    "romaji": "okuru",
+    "meaning": "to present; to give as a gift",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_giving_receiving",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "お土産",
     "reading": "おみやげ",
-    "meaning": "souvenir; gift (from trip)"
+    "romaji": "omiyage",
+    "meaning": "souvenir; gift (from trip)",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "verbs_giving_receiving"
   },
   {
     "expression": "贈り物",
     "reading": "おくりもの",
-    "meaning": "gift; present"
+    "romaji": "okurimono",
+    "meaning": "gift; present",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "verbs_giving_receiving"
   },
   {
     "expression": "お祝い",
     "reading": "おいわい",
-    "meaning": "congratulation; celebration gift"
+    "romaji": "oiwai",
+    "meaning": "congratulation; celebration gift",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "verbs_giving_receiving"
   },
   {
     "expression": "考える",
     "reading": "かんがえる",
-    "meaning": "to think; to consider"
+    "romaji": "kangaeru",
+    "meaning": "to think; to consider",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_mental_and_state",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "決める",
     "reading": "きめる",
-    "meaning": "to decide"
+    "romaji": "kimeru",
+    "meaning": "to decide",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_mental_and_state",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "決まる",
     "reading": "きまる",
-    "meaning": "to be decided (intrans.)"
+    "romaji": "kimaru",
+    "meaning": "to be decided (intrans.)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_mental_and_state",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "信じる",
     "reading": "しんじる",
-    "meaning": "to believe; to trust"
+    "romaji": "shinjiru",
+    "meaning": "to believe; to trust",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_mental_and_state",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "心配する",
     "reading": "しんぱいする",
-    "meaning": "to worry"
+    "romaji": "shinpai suru",
+    "meaning": "to worry",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_mental_and_state",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "諦める",
     "reading": "あきらめる",
-    "meaning": "to give up; to abandon"
+    "romaji": "akirameru",
+    "meaning": "to give up; to abandon",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_mental_and_state",
+    "tags": [
+      "ichidan"
+    ]
   },
   {
     "expression": "驚く",
     "reading": "おどろく",
-    "meaning": "to be surprised; to be astonished"
+    "romaji": "odoroku",
+    "meaning": "to be surprised; to be astonished",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_mental_and_state",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "喜ぶ",
     "reading": "よろこぶ",
-    "meaning": "to be delighted; to rejoice"
+    "romaji": "yorokobu",
+    "meaning": "to be delighted; to rejoice",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_mental_and_state",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "困る",
     "reading": "こまる",
-    "meaning": "to be troubled; to be at a loss"
+    "romaji": "komaru",
+    "meaning": "to be troubled; to be at a loss",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_mental_and_state",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "安心する",
     "reading": "あんしんする",
-    "meaning": "to feel relieved; to feel at ease"
+    "romaji": "anshin suru",
+    "meaning": "to feel relieved; to feel at ease",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_mental_and_state",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "心配する",
     "reading": "しんぱいする",
-    "meaning": "to be worried; to be anxious"
+    "romaji": "shinpai suru",
+    "meaning": "to be worried; to be anxious",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_mental_and_state",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "感動する",
     "reading": "かんどうする",
-    "meaning": "to be moved (emotionally)"
+    "romaji": "kandou suru",
+    "meaning": "to be moved (emotionally)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_mental_and_state",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "笑う",
     "reading": "わらう",
-    "meaning": "to laugh; to smile"
+    "romaji": "warau",
+    "meaning": "to laugh; to smile",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_mental_and_state",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "泣く",
     "reading": "なく",
-    "meaning": "to cry; to weep"
+    "romaji": "naku",
+    "meaning": "to cry; to weep",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_mental_and_state",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "怒る",
     "reading": "おこる",
-    "meaning": "to get angry"
+    "romaji": "okoru",
+    "meaning": "to get angry",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_mental_and_state",
+    "tags": [
+      "godan"
+    ]
   },
   {
     "expression": "開く",
     "reading": "あく",
-    "meaning": "to open (intransitive)"
+    "romaji": "aku",
+    "meaning": "to open (intransitive)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "godan",
+      "intransitive"
+    ]
   },
   {
     "expression": "開ける",
     "reading": "あける",
-    "meaning": "to open (transitive)"
+    "romaji": "akeru",
+    "meaning": "to open (transitive)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "ichidan",
+      "transitive"
+    ]
   },
   {
     "expression": "閉まる",
     "reading": "しまる",
-    "meaning": "to close; to shut (intransitive)"
+    "romaji": "shimaru",
+    "meaning": "to close; to shut (intransitive)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "godan",
+      "intransitive"
+    ]
   },
   {
     "expression": "閉める",
     "reading": "しめる",
-    "meaning": "to close (transitive)"
+    "romaji": "shimeru",
+    "meaning": "to close (transitive)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "ichidan",
+      "transitive"
+    ]
   },
   {
     "expression": "付く",
     "reading": "つく",
-    "meaning": "to be attached; to turn on (intrans.)"
+    "romaji": "tsuku",
+    "meaning": "to be attached; to turn on (intrans.)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "godan",
+      "intransitive"
+    ]
   },
   {
     "expression": "付ける",
     "reading": "つける",
-    "meaning": "to attach; to turn on (trans.)"
+    "romaji": "tsukeru",
+    "meaning": "to attach; to turn on (trans.)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "ichidan",
+      "transitive"
+    ]
   },
   {
     "expression": "消える",
     "reading": "きえる",
-    "meaning": "to disappear; to go out (intrans.)"
+    "romaji": "kieru",
+    "meaning": "to disappear; to go out (intrans.)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "ichidan",
+      "intransitive"
+    ]
   },
   {
     "expression": "消す",
     "reading": "けす",
-    "meaning": "to erase; to turn off (trans.)"
+    "romaji": "kesu",
+    "meaning": "to erase; to turn off (trans.)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "godan",
+      "transitive"
+    ]
   },
   {
     "expression": "始まる",
     "reading": "はじまる",
-    "meaning": "to begin (intransitive)"
+    "romaji": "hajimaru",
+    "meaning": "to begin (intransitive)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "godan",
+      "intransitive"
+    ]
   },
   {
     "expression": "始める",
     "reading": "はじめる",
-    "meaning": "to begin (transitive)"
+    "romaji": "hajimeru",
+    "meaning": "to begin (transitive)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "ichidan",
+      "transitive"
+    ]
   },
   {
     "expression": "終わる",
     "reading": "おわる",
-    "meaning": "to end (intransitive)"
+    "romaji": "owaru",
+    "meaning": "to end (intransitive)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "godan",
+      "intransitive"
+    ]
   },
   {
     "expression": "終える",
     "reading": "おえる",
-    "meaning": "to finish (transitive)"
+    "romaji": "oeru",
+    "meaning": "to finish (transitive)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "ichidan",
+      "transitive"
+    ]
   },
   {
     "expression": "変わる",
     "reading": "かわる",
-    "meaning": "to change (intransitive)"
+    "romaji": "kawaru",
+    "meaning": "to change (intransitive)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "godan",
+      "intransitive"
+    ]
   },
   {
     "expression": "変える",
     "reading": "かえる",
-    "meaning": "to change (transitive)"
+    "romaji": "kaeru",
+    "meaning": "to change (transitive)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "ichidan",
+      "transitive"
+    ]
   },
   {
     "expression": "増える",
     "reading": "ふえる",
-    "meaning": "to increase (intransitive)"
+    "romaji": "fueru",
+    "meaning": "to increase (intransitive)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "ichidan",
+      "intransitive"
+    ]
   },
   {
     "expression": "増やす",
     "reading": "ふやす",
-    "meaning": "to increase (transitive)"
+    "romaji": "fuyasu",
+    "meaning": "to increase (transitive)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "godan",
+      "transitive"
+    ]
   },
   {
     "expression": "減る",
     "reading": "へる",
-    "meaning": "to decrease (intransitive)"
+    "romaji": "heru",
+    "meaning": "to decrease (intransitive)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "godan",
+      "intransitive"
+    ]
   },
   {
     "expression": "減らす",
     "reading": "へらす",
-    "meaning": "to decrease (transitive)"
+    "romaji": "herasu",
+    "meaning": "to decrease (transitive)",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "verbs_transitive_intransitive",
+    "tags": [
+      "godan",
+      "transitive"
+    ]
   },
   {
     "expression": "固い",
     "reading": "かたい",
-    "meaning": "hard; firm; stiff"
+    "romaji": "katai",
+    "meaning": "hard; firm; stiff",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "柔らかい",
     "reading": "やわらかい",
-    "meaning": "soft; tender"
+    "romaji": "yawarakai",
+    "meaning": "soft; tender",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "細い",
     "reading": "ほそい",
-    "meaning": "thin; narrow; slender"
+    "romaji": "hosoi",
+    "meaning": "thin; narrow; slender",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "太い",
     "reading": "ふとい",
-    "meaning": "thick; fat"
+    "romaji": "futoi",
+    "meaning": "thick; fat",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "深い",
     "reading": "ふかい",
-    "meaning": "deep"
+    "romaji": "fukai",
+    "meaning": "deep",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "浅い",
     "reading": "あさい",
-    "meaning": "shallow"
+    "romaji": "asai",
+    "meaning": "shallow",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "強い",
     "reading": "つよい",
-    "meaning": "strong"
+    "romaji": "tsuyoi",
+    "meaning": "strong",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "弱い",
     "reading": "よわい",
-    "meaning": "weak"
+    "romaji": "yowai",
+    "meaning": "weak",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "厚い",
     "reading": "あつい",
-    "meaning": "thick (object)"
+    "romaji": "atsui",
+    "meaning": "thick (object)",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "薄い",
     "reading": "うすい",
-    "meaning": "thin (object); light (color)"
+    "romaji": "usui",
+    "meaning": "thin (object); light (color)",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "珍しい",
     "reading": "めずらしい",
-    "meaning": "rare; unusual"
+    "romaji": "mezurashii",
+    "meaning": "rare; unusual",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "懐かしい",
     "reading": "なつかしい",
-    "meaning": "nostalgic; dear (memory)"
+    "romaji": "natsukashii",
+    "meaning": "nostalgic; dear (memory)",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "正しい",
     "reading": "ただしい",
-    "meaning": "correct; right"
+    "romaji": "tadashii",
+    "meaning": "correct; right",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "おかしい",
     "reading": "おかしい",
-    "meaning": "strange; funny; odd"
+    "romaji": "okashii",
+    "meaning": "strange; funny; odd",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "恥ずかしい",
     "reading": "はずかしい",
-    "meaning": "embarrassing; shy"
+    "romaji": "hazukashii",
+    "meaning": "embarrassing; shy",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "怖い",
     "reading": "こわい",
-    "meaning": "scary; frightening"
+    "romaji": "kowai",
+    "meaning": "scary; frightening",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "危ない",
     "reading": "あぶない",
-    "meaning": "dangerous; watch out!"
+    "romaji": "abunai",
+    "meaning": "dangerous; watch out!",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "嬉しい",
     "reading": "うれしい",
-    "meaning": "happy; pleased"
+    "romaji": "ureshii",
+    "meaning": "happy; pleased",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "辛い",
     "reading": "つらい",
-    "meaning": "painful; hard; tough"
+    "romaji": "tsurai",
+    "meaning": "painful; hard; tough",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "眠い",
     "reading": "ねむい",
-    "meaning": "sleepy; drowsy"
+    "romaji": "nemui",
+    "meaning": "sleepy; drowsy",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "adjectives_i"
   },
   {
     "expression": "安全",
     "reading": "あんぜん",
-    "meaning": "safe"
+    "romaji": "anzen",
+    "meaning": "safe",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "危険",
     "reading": "きけん",
-    "meaning": "dangerous"
+    "romaji": "kiken",
+    "meaning": "dangerous",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "複雑",
     "reading": "ふくざつ",
-    "meaning": "complicated; complex"
+    "romaji": "fukuzatsu",
+    "meaning": "complicated; complex",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "簡単",
     "reading": "かんたん",
-    "meaning": "easy; simple"
+    "romaji": "kantan",
+    "meaning": "easy; simple",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "正直",
     "reading": "しょうじき",
-    "meaning": "honest"
+    "romaji": "shoujiki",
+    "meaning": "honest",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "真剣",
     "reading": "しんけん",
-    "meaning": "serious; earnest"
+    "romaji": "shinken",
+    "meaning": "serious; earnest",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "熱心",
     "reading": "ねっしん",
-    "meaning": "enthusiastic; eager"
+    "romaji": "nesshin",
+    "meaning": "enthusiastic; eager",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "自由",
     "reading": "じゆう",
-    "meaning": "free; freedom"
+    "romaji": "jiyuu",
+    "meaning": "free; freedom",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "無理",
     "reading": "むり",
-    "meaning": "impossible; unreasonable"
+    "romaji": "muri",
+    "meaning": "impossible; unreasonable",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "十分",
     "reading": "じゅうぶん",
-    "meaning": "sufficient; enough"
+    "romaji": "juubun",
+    "meaning": "sufficient; enough",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "一生懸命",
     "reading": "いっしょうけんめい",
-    "meaning": "with all one's effort"
+    "romaji": "isshoukenmei",
+    "meaning": "with all one's effort",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "丁寧",
     "reading": "ていねい",
-    "meaning": "polite; careful"
+    "romaji": "teinei",
+    "meaning": "polite; careful",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "立派",
     "reading": "りっぱ",
-    "meaning": "splendid; fine; admirable"
+    "romaji": "rippa",
+    "meaning": "splendid; fine; admirable",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "素直",
     "reading": "すなお",
-    "meaning": "obedient; honest; gentle"
+    "romaji": "sunao",
+    "meaning": "obedient; honest; gentle",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "残念",
     "reading": "ざんねん",
-    "meaning": "disappointing; unfortunate"
+    "romaji": "zannen",
+    "meaning": "disappointing; unfortunate",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "幸せ",
     "reading": "しあわせ",
-    "meaning": "happy; blessed; happiness"
+    "romaji": "shiawase",
+    "meaning": "happy; blessed; happiness",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "不思議",
     "reading": "ふしぎ",
-    "meaning": "mysterious; strange; wonder"
+    "romaji": "fushigi",
+    "meaning": "mysterious; strange; wonder",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "大事",
     "reading": "だいじ",
-    "meaning": "important; precious"
+    "romaji": "daiji",
+    "meaning": "important; precious",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "様々",
     "reading": "さまざま",
-    "meaning": "various; diverse"
+    "romaji": "samazama",
+    "meaning": "various; diverse",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "特別",
     "reading": "とくべつ",
-    "meaning": "special"
+    "romaji": "tokubetsu",
+    "meaning": "special",
+    "pos": "na-adj",
+    "jlpt": "N4",
+    "category": "adjectives_na"
   },
   {
     "expression": "ずっと",
     "reading": "ずっと",
-    "meaning": "all along; continuously; much more"
+    "romaji": "zutto",
+    "meaning": "all along; continuously; much more",
+    "pos": "adverb",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "だんだん",
     "reading": "だんだん",
-    "meaning": "gradually; little by little"
+    "romaji": "dandan",
+    "meaning": "gradually; little by little",
+    "pos": "adverb",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "やっと",
     "reading": "やっと",
-    "meaning": "finally; at last"
+    "romaji": "yatto",
+    "meaning": "finally; at last",
+    "pos": "adverb",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "なかなか",
     "reading": "なかなか",
-    "meaning": "considerably; not easily (with neg.)"
+    "romaji": "nakanaka",
+    "meaning": "considerably; not easily (with neg.)",
+    "pos": "adverb",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "きっと",
     "reading": "きっと",
-    "meaning": "surely; certainly"
+    "romaji": "kitto",
+    "meaning": "surely; certainly",
+    "pos": "adverb",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "たぶん",
     "reading": "たぶん",
-    "meaning": "probably; perhaps"
+    "romaji": "tabun",
+    "meaning": "probably; perhaps",
+    "pos": "adverb",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "もし",
     "reading": "もし",
-    "meaning": "if; in case"
+    "romaji": "moshi",
+    "meaning": "if; in case",
+    "pos": "adverb",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "ぜひ",
     "reading": "ぜひ",
-    "meaning": "by all means; please (strong request)"
+    "romaji": "zehi",
+    "meaning": "by all means; please (strong request)",
+    "pos": "adverb",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "特に",
     "reading": "とくに",
-    "meaning": "especially; particularly"
+    "romaji": "toku ni",
+    "meaning": "especially; particularly",
+    "pos": "adverb",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "主に",
     "reading": "おもに",
-    "meaning": "mainly; primarily"
+    "romaji": "omoni",
+    "meaning": "mainly; primarily",
+    "pos": "adverb",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "すでに",
     "reading": "すでに",
-    "meaning": "already; by now"
+    "romaji": "sudeni",
+    "meaning": "already; by now",
+    "pos": "adverb",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "先に",
     "reading": "さきに",
-    "meaning": "ahead; first; previously"
+    "romaji": "saki ni",
+    "meaning": "ahead; first; previously",
+    "pos": "adverb",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "例えば",
     "reading": "たとえば",
-    "meaning": "for example"
+    "romaji": "tatoeba",
+    "meaning": "for example",
+    "pos": "conjunction",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "つまり",
     "reading": "つまり",
-    "meaning": "in other words; that is to say"
+    "romaji": "tsumari",
+    "meaning": "in other words; that is to say",
+    "pos": "conjunction",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "しかし",
     "reading": "しかし",
-    "meaning": "however; but"
+    "romaji": "shikashi",
+    "meaning": "however; but",
+    "pos": "conjunction",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "それに",
     "reading": "それに",
-    "meaning": "besides; moreover"
+    "romaji": "sore ni",
+    "meaning": "besides; moreover",
+    "pos": "conjunction",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "だから",
     "reading": "だから",
-    "meaning": "therefore; so"
+    "romaji": "dakara",
+    "meaning": "therefore; so",
+    "pos": "conjunction",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "でも",
     "reading": "でも",
-    "meaning": "but; however (casual)"
+    "romaji": "demo",
+    "meaning": "but; however (casual)",
+    "pos": "conjunction",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "ところで",
     "reading": "ところで",
-    "meaning": "by the way"
+    "romaji": "tokoro de",
+    "meaning": "by the way",
+    "pos": "conjunction",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "一方",
     "reading": "いっぽう",
-    "meaning": "on the other hand; meanwhile"
+    "romaji": "ippou",
+    "meaning": "on the other hand; meanwhile",
+    "pos": "conjunction",
+    "jlpt": "N4",
+    "category": "adverbs_and_conjunctions"
   },
   {
     "expression": "感情",
     "reading": "かんじょう",
-    "meaning": "emotion; feeling"
+    "romaji": "kanjou",
+    "meaning": "emotion; feeling",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "気持ち",
     "reading": "きもち",
-    "meaning": "feeling; mood"
+    "romaji": "kimochi",
+    "meaning": "feeling; mood",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "気分",
     "reading": "きぶん",
-    "meaning": "feeling; mood; spirits"
+    "romaji": "kibun",
+    "meaning": "feeling; mood; spirits",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "安心",
     "reading": "あんしん",
-    "meaning": "relief; peace of mind"
+    "romaji": "anshin",
+    "meaning": "relief; peace of mind",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "心配",
     "reading": "しんぱい",
-    "meaning": "worry; anxiety; concern"
+    "romaji": "shinpai",
+    "meaning": "worry; anxiety; concern",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "不安",
     "reading": "ふあん",
-    "meaning": "anxiety; unease"
+    "romaji": "fuan",
+    "meaning": "anxiety; unease",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "興味",
     "reading": "きょうみ",
-    "meaning": "interest; concern"
+    "romaji": "kyoumi",
+    "meaning": "interest; concern",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "希望",
     "reading": "きぼう",
-    "meaning": "hope; wish"
+    "romaji": "kibou",
+    "meaning": "hope; wish",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "夢",
     "reading": "ゆめ",
-    "meaning": "dream"
+    "romaji": "yume",
+    "meaning": "dream",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "自信",
     "reading": "じしん",
-    "meaning": "self-confidence"
+    "romaji": "jishin",
+    "meaning": "self-confidence",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "後悔",
     "reading": "こうかい",
-    "meaning": "regret"
+    "romaji": "koukai",
+    "meaning": "regret",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "怒り",
     "reading": "いかり",
-    "meaning": "anger"
+    "romaji": "ikari",
+    "meaning": "anger",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "喜び",
     "reading": "よろこび",
-    "meaning": "joy; delight"
+    "romaji": "yorokobi",
+    "meaning": "joy; delight",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "悲しみ",
     "reading": "かなしみ",
-    "meaning": "sadness; sorrow"
+    "romaji": "kanashimi",
+    "meaning": "sadness; sorrow",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "恥",
     "reading": "はじ",
-    "meaning": "shame; embarrassment"
+    "romaji": "haji",
+    "meaning": "shame; embarrassment",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "寂しい",
     "reading": "さびしい",
-    "meaning": "lonely; lonesome"
+    "romaji": "sabishii",
+    "meaning": "lonely; lonesome",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "羨ましい",
     "reading": "うらやましい",
-    "meaning": "envious; jealous"
+    "romaji": "urayamashii",
+    "meaning": "envious; jealous",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "懐かしい",
     "reading": "なつかしい",
-    "meaning": "nostalgic"
+    "romaji": "natsukashii",
+    "meaning": "nostalgic",
+    "pos": "i-adj",
+    "jlpt": "N4",
+    "category": "emotions_and_feelings"
   },
   {
     "expression": "社会",
     "reading": "しゃかい",
-    "meaning": "society; community"
+    "romaji": "shakai",
+    "meaning": "society; community",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "government_and_society"
   },
   {
     "expression": "国",
     "reading": "くに",
-    "meaning": "country; nation"
+    "romaji": "kuni",
+    "meaning": "country; nation",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "government_and_society"
   },
   {
     "expression": "政府",
     "reading": "せいふ",
-    "meaning": "government"
+    "romaji": "seifu",
+    "meaning": "government",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "government_and_society"
   },
   {
     "expression": "法律",
     "reading": "ほうりつ",
-    "meaning": "law"
+    "romaji": "houritsu",
+    "meaning": "law",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "government_and_society"
   },
   {
     "expression": "規則",
     "reading": "きそく",
-    "meaning": "rules; regulations"
+    "romaji": "kisoku",
+    "meaning": "rules; regulations",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "government_and_society"
   },
   {
     "expression": "問題",
     "reading": "もんだい",
-    "meaning": "problem; issue"
+    "romaji": "mondai",
+    "meaning": "problem; issue",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "government_and_society"
   },
   {
     "expression": "原因",
     "reading": "げんいん",
-    "meaning": "cause; reason"
+    "romaji": "gen'in",
+    "meaning": "cause; reason",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "government_and_society"
   },
   {
     "expression": "結果",
     "reading": "けっか",
-    "meaning": "result; outcome"
+    "romaji": "kekka",
+    "meaning": "result; outcome",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "government_and_society"
   },
   {
     "expression": "意見",
     "reading": "いけん",
-    "meaning": "opinion"
+    "romaji": "iken",
+    "meaning": "opinion",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "government_and_society"
   },
   {
     "expression": "選挙",
     "reading": "せんきょ",
-    "meaning": "election"
+    "romaji": "senkyo",
+    "meaning": "election",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "government_and_society"
   },
   {
     "expression": "文化",
     "reading": "ぶんか",
-    "meaning": "culture"
+    "romaji": "bunka",
+    "meaning": "culture",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "arts_and_culture"
   },
   {
     "expression": "伝統",
     "reading": "でんとう",
-    "meaning": "tradition"
+    "romaji": "dentou",
+    "meaning": "tradition",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "arts_and_culture"
   },
   {
     "expression": "お祭り",
     "reading": "おまつり",
-    "meaning": "festival"
+    "romaji": "omatsuri",
+    "meaning": "festival",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "arts_and_culture"
   },
   {
     "expression": "芸術",
     "reading": "げいじゅつ",
-    "meaning": "art"
+    "romaji": "geijutsu",
+    "meaning": "art",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "arts_and_culture"
   },
   {
     "expression": "絵画",
     "reading": "かいが",
-    "meaning": "painting; picture"
+    "romaji": "kaiga",
+    "meaning": "painting; picture",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "arts_and_culture"
   },
   {
     "expression": "彫刻",
     "reading": "ちょうこく",
-    "meaning": "sculpture"
+    "romaji": "choukoku",
+    "meaning": "sculpture",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "arts_and_culture"
   },
   {
     "expression": "コンサート",
     "reading": "コンサート",
-    "meaning": "concert"
+    "romaji": "konsaato",
+    "meaning": "concert",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "arts_and_culture"
   },
   {
     "expression": "演奏",
     "reading": "えんそう",
-    "meaning": "musical performance"
+    "romaji": "ensou",
+    "meaning": "musical performance",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "arts_and_culture"
   },
   {
     "expression": "劇",
     "reading": "げき",
-    "meaning": "play; drama"
+    "romaji": "geki",
+    "meaning": "play; drama",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "arts_and_culture"
   },
   {
     "expression": "小説",
     "reading": "しょうせつ",
-    "meaning": "novel"
+    "romaji": "shousetsu",
+    "meaning": "novel",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "arts_and_culture"
   },
   {
     "expression": "詩",
     "reading": "し",
-    "meaning": "poem; poetry"
+    "romaji": "shi",
+    "meaning": "poem; poetry",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "arts_and_culture"
   },
   {
     "expression": "俳句",
     "reading": "はいく",
-    "meaning": "haiku poem"
+    "romaji": "haiku",
+    "meaning": "haiku poem",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "arts_and_culture"
   },
   {
     "expression": "見物する",
     "reading": "けんぶつする",
-    "meaning": "to sightsee; to watch"
+    "romaji": "kenbutsu suru",
+    "meaning": "to sightsee; to watch",
+    "pos": "verb",
+    "jlpt": "N4",
+    "category": "arts_and_culture",
+    "tags": [
+      "suru"
+    ]
   },
   {
     "expression": "楽器",
     "reading": "がっき",
-    "meaning": "musical instrument"
+    "romaji": "gakki",
+    "meaning": "musical instrument",
+    "pos": "noun",
+    "jlpt": "N4",
+    "category": "arts_and_culture"
   }
 ]
