@@ -121,7 +121,7 @@
           </button>
         </div>
         <div
-          v-else-if="batchOffset > 0"
+          v-else
           class="text-center text-sm py-2"
           style="color: var(--color-text-muted);"
         >
