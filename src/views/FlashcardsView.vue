@@ -138,6 +138,8 @@ import { useProgressStore } from '@/stores/progress'
 import n5Vocabulary from '@/data/n5_vocabulary.js'
 import n4Vocabulary from '@/data/n4_vocabulary.js'
 import kanjiData from '@/data/kanji.js'
+import kanjiN5Data from '@/data/n5_kanji.js'
+import kanjiN4Data from '@/data/n4_kanji.js'
 import DeckSelector from '@/components/flashcard/DeckSelector.vue'
 import CategoryFilter from '@/components/flashcard/CategoryFilter.vue'
 import FlashCard from '@/components/flashcard/FlashCard.vue'
@@ -154,8 +156,8 @@ const shuffledPool = ref([])
 const currentIndex = ref(0)
 let touchStartX = 0
 
-const kanjiN5 = kanjiData.filter(k => k.jlpt === 'N5')
-const kanjiN4 = kanjiData.filter(k => k.jlpt === 'N4')
+const kanjiN5 = kanjiN5Data
+const kanjiN4 = kanjiN4Data
 const vocabByLevel = { N5: n5Vocabulary, N4: n4Vocabulary }
 
 const deckType = computed(() =>
