@@ -2,12 +2,16 @@
   <div
     class="fixed inset-0 z-50 flex items-center justify-center p-4"
     style="background: rgba(0,0,0,0.6);"
+    @click.self="$emit('back')"
   >
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="batch-result-title"
       class="w-full max-w-sm rounded-2xl p-8 flex flex-col items-center gap-6"
       style="background: var(--color-surface);"
     >
-      <div class="text-2xl font-bold text-center">Round Complete! 🎉</div>
+      <div id="batch-result-title" class="text-2xl font-bold text-center">Round Complete! 🎉</div>
 
       <div class="w-full flex flex-col gap-3">
         <div
@@ -36,7 +40,7 @@
           Continue →
         </button>
         <button
-          class="w-full py-3 rounded-xl font-semibold text-sm border transition-colors hover:bg-primary/10"
+          class="w-full py-3 rounded-xl font-semibold text-sm border transition-colors hover:opacity-80"
           style="border-color: var(--color-border);"
           @click="$emit('back')"
         >
