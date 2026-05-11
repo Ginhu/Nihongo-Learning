@@ -103,7 +103,7 @@
           </div>
         </template>
 
-        <div :class="type === 'vocabulary' ? 'mt-2' : 'mt-6'" class="text-xs" style="color: var(--color-text-muted);">tap to flip back</div>
+        <div :class="type === 'vocabulary' ? 'mt-4' : 'mt-6'" class="text-xs" style="color: var(--color-text-muted);">tap to flip back</div>
       </div>
     </div>
   </div>
