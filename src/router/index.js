@@ -20,7 +20,12 @@ const routes = [
   {
     path: '/flashcards',
     name: 'flashcards',
-    component: () => import('@/views/FlashcardsView.vue')
+    component: () => import('@/views/FlashcardSelectView.vue')
+  },
+  {
+    path: '/flashcards/session',
+    name: 'flashcards-session',
+    component: () => import('@/views/FlashcardsSessionView.vue')
   },
   {
     path: '/vocabulary',
