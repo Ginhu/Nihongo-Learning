@@ -72,6 +72,22 @@
           <div class="mt-6 text-2xl font-semibold text-center">
             {{ card.meaning }}
           </div>
+          <div class="mt-4 flex gap-2 justify-center flex-wrap">
+            <span
+              v-if="card.pos"
+              class="px-2.5 py-1 rounded-full text-xs font-medium capitalize"
+              style="background: var(--color-surface-2); color: var(--color-text-muted);"
+            >
+              {{ card.pos }}
+            </span>
+            <span
+              v-if="card.jlpt"
+              class="px-2.5 py-1 rounded-full text-xs font-semibold border"
+              style="border-color: var(--color-accent); color: var(--color-accent);"
+            >
+              {{ card.jlpt }}
+            </span>
+          </div>
         </template>
 
         <template v-else>
