@@ -12,7 +12,7 @@
         :key="link.name"
         :to="link.to"
         class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors"
-        :class="[(route.name === link.name || (link.name === 'vocabulary' && route.name === 'vocabulary-session'))
+        :class="[(route.name === link.name || (link.name === 'vocabulary' && route.name === 'vocabulary-session') || (link.name === 'flashcards' && route.name === 'flashcards-session'))
           ? 'bg-primary text-white'
           : 'hover:bg-primary/10']"
         style="color: inherit;"

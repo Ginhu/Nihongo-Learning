@@ -8,7 +8,7 @@
       :key="link.name"
       :to="link.to"
       class="flex flex-col items-center gap-0.5 flex-1 py-1 text-xs font-medium transition-colors"
-      :class="[(route.name === link.name || (link.name === 'vocabulary' && route.name === 'vocabulary-session')) ? 'text-primary' : '']"
+      :class="[(route.name === link.name || (link.name === 'vocabulary' && route.name === 'vocabulary-session') || (link.name === 'flashcards' && route.name === 'flashcards-session')) ? 'text-primary' : '']"
       style="color: inherit;"
     >
       <span class="text-xl">{{ link.icon }}</span>
