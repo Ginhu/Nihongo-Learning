@@ -12,7 +12,7 @@
         :key="link.name"
         :to="link.to"
         class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors"
-        :class="[route.name === link.name
+        :class="[(route.name === link.name || (link.name === 'vocabulary' && route.name === 'vocabulary-session') || (link.name === 'flashcards' && route.name === 'flashcards-session'))
           ? 'bg-primary text-white'
           : 'hover:bg-primary/10']"
         style="color: inherit;"
@@ -34,10 +34,11 @@ import ThemeToggle from './ThemeToggle.vue'
 const route = useRoute()
 
 const links = [
-  { name: 'home',       to: '/',           icon: '🏠', label: 'Home' },
-  { name: 'quiz-select',to: '/quiz',        icon: '🎯', label: 'Quiz' },
-  { name: 'flashcards', to: '/flashcards',  icon: '🃏', label: 'Flashcards' },
-  { name: 'vocabulary', to: '/vocabulary',  icon: '📖', label: 'Vocabulary' },
-  { name: 'progress',   to: '/progress',    icon: '📊', label: 'Progress' }
+  { name: 'home',             to: '/',                  icon: '🏠', label: 'Home' },
+  { name: 'quiz-select',      to: '/quiz',               icon: '🎯', label: 'Quiz' },
+  { name: 'flashcards',       to: '/flashcards',         icon: '🃏', label: 'Flashcards' },
+  { name: 'vocabulary',       to: '/vocabulary',         icon: '🎮', label: 'Vocabulary Quiz' },
+  { name: 'kanji-dictionary', to: '/kanji-dictionary',   icon: '📖', label: 'Kanji Dictionary' },
+  { name: 'progress',         to: '/progress',           icon: '📊', label: 'Progress' },
 ]
 </script>

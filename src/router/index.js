@@ -30,7 +30,17 @@ const routes = [
   {
     path: '/vocabulary',
     name: 'vocabulary',
-    component: () => import('@/views/VocabularyView.vue')
+    component: () => import('@/views/VocabularySelectView.vue')
+  },
+  {
+    path: '/vocabulary/session',
+    name: 'vocabulary-session',
+    component: () => import('@/views/VocabularySessionView.vue')
+  },
+  {
+    path: '/kanji-dictionary',
+    name: 'kanji-dictionary',
+    component: () => import('@/views/KanjiDictionaryView.vue')
   },
   {
     path: '/progress',

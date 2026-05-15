@@ -65,6 +65,14 @@ export const useProgressStore = defineStore('progress', () => {
     return { xpGained, newLevel }
   }
 
+  function recordVocabQuizResult(mode, score, total, xpTotal) {
+    quizHistory.value.unshift({ mode, score, total, date: new Date().toISOString() })
+    if (quizHistory.value.length > 50) quizHistory.value.pop()
+    const newLevel = addXp(xpTotal)
+    checkStreak()
+    return { xpGained: xpTotal, newLevel }
+  }
+
   function recordFlashcardKnown(id, known) {
     if (known) {
       if (!flashcardKnown.value.includes(id)) flashcardKnown.value.push(id)
@@ -117,6 +125,6 @@ export const useProgressStore = defineStore('progress', () => {
     xp, level, streak, lastPlayedDate,
     quizHistory, characterStats, flashcardKnown, favoritedKanji, favoritedVocabulary,
     levelTitle, weakCharacters,
-    addXp, recordQuizResult, recordFlashcardKnown, toggleFavoriteKanji, toggleFavoriteVocabulary, checkStreak
+    addXp, recordQuizResult, recordVocabQuizResult, recordFlashcardKnown, toggleFavoriteKanji, toggleFavoriteVocabulary, checkStreak
   }
 })
