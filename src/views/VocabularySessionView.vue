@@ -222,7 +222,7 @@ const selectedAnswer = ref(null)
 const tipsUsed       = ref(0)
 const score          = ref(0)
 const totalXp        = ref(0)
-const startTime      = Date.now()
+let startTime      = Date.now()
 
 const showEndScreen = ref(false)
 const sessionResult = ref(null)
@@ -300,6 +300,7 @@ function finishSession() {
 
 function handleRetry() {
   clearTimeout(advanceTimer)
+  startTime = Date.now()
   const fresh = buildQuestions(pool)
   questions.value    = fresh
   currentIndex.value = 0
@@ -309,6 +310,7 @@ function handleRetry() {
   score.value        = 0
   totalXp.value      = 0
   showEndScreen.value = false
+  showLevelUp.value = false
   sessionResult.value = null
 }
 
