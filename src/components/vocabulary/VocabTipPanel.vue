@@ -5,7 +5,7 @@
     <div class="flex gap-2 flex-wrap mb-3">
       <button
         v-for="(_, i) in examples"
-        :key="i"
+        :key="'tip-btn-' + i"
         :disabled="answered || i !== tipsUsed"
         class="px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors"
         :class="{
@@ -23,7 +23,7 @@
     <!-- Revealed examples -->
     <div
       v-for="i in tipsUsed"
-      :key="i"
+      :key="'tip-reveal-' + i"
       class="text-sm p-3 rounded-xl mb-2"
       style="background: var(--color-surface-2); color: var(--color-text-muted);"
     >
