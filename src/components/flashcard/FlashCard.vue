@@ -29,14 +29,14 @@
 
       <!-- Back face -->
       <div
-        class="card-face card-face--back w-full flex flex-col items-center justify-start p-8 border overflow-y-auto"
+        class="card-face card-face--back w-full flex flex-col items-center justify-center p-5 border overflow-hidden"
         :style="{ height: sceneHeight + 'px', background: 'var(--color-surface)', borderColor: 'var(--color-border)' }"
       >
         <template v-if="type === 'kanji'">
-          <div class="font-bold text-4xl mb-2">{{ card.kanji }}</div>
-          <div class="text-xl font-semibold text-center">{{ card.meaning.join(', ') }}</div>
+          <div class="font-bold text-3xl mb-1">{{ card.kanji }}</div>
+          <div class="text-base font-semibold text-center leading-tight">{{ card.meaning.join(', ') }}</div>
 
-          <div class="mt-4 w-full space-y-1 text-sm">
+          <div class="mt-2 w-full space-y-0.5 text-sm">
             <div v-if="card.onyomi.length" style="color: var(--color-text-muted);">
               <span class="font-semibold" style="color: var(--color-text);">On: </span>{{ card.onyomi.join('、') }}
             </div>
@@ -45,16 +45,16 @@
             </div>
           </div>
 
-          <div v-if="card.examples?.length" class="mt-4 w-full">
+          <div v-if="card.examples?.length" class="mt-2 w-full">
             <div
               v-for="ex in card.examples.slice(0, 2)"
               :key="ex.word"
-              class="mt-1 p-2 rounded-lg text-sm"
+              class="mt-1 p-1.5 rounded-lg text-xs"
               style="background: var(--color-surface-2);"
             >
               <span class="font-bold">{{ ex.word }}</span>
-              <span class="ml-2" style="color: var(--color-text-muted);">{{ ex.reading }}</span>
-              <span class="ml-2">— {{ ex.meaning }}</span>
+              <span class="ml-1.5" style="color: var(--color-text-muted);">{{ ex.reading }}</span>
+              <span class="ml-1.5">— {{ ex.meaning }}</span>
             </div>
           </div>
         </template>
