@@ -107,7 +107,7 @@
     <button
       class="w-full py-4 rounded-xl font-bold text-lg transition-opacity hover:opacity-90"
       style="background: var(--color-primary); color: white;"
-      :disabled="poolSize < 2"
+      :disabled="poolSize < minPoolForDifficulty"
       @click="startSession"
     >Start →</button>
 
@@ -208,6 +208,12 @@ const poolSize = computed(() => {
   return words.length
 })
 
+const minPoolForDifficulty = computed(() => {
+  if (selectedDifficulty.value === 'easy') return 2
+  if (selectedDifficulty.value === 'hard') return 6
+  return 4
+})
+
 const countOptions = computed(() => {
   const n = poolSize.value
   const opts = []
@@ -219,6 +225,7 @@ const countOptions = computed(() => {
 })
 
 watch(countOptions, (opts) => {
+  if (opts.some(o => o.value === selectedCount.value)) return
   const specific = opts.filter(o => typeof o.value === 'number' && o.value <= 20)
   selectedCount.value = specific.length > 0 ? specific[specific.length - 1].value : 'all'
 }, { immediate: true })

@@ -248,7 +248,8 @@ function handleAnswer(option) {
 }
 
 function onUseTip() {
-  if (answered.value || tipsUsed.value >= (currentQ.value.item.examples?.length ?? 0)) return
+  const maxTips = Math.min(3, currentQ.value.item.examples?.length ?? 0)
+  if (answered.value || tipsUsed.value >= maxTips) return
   tipsUsed.value++
 }
 
