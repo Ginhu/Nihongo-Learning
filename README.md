@@ -1,6 +1,6 @@
 # 日本語マスター · Nihongo Master
 
-> An interactive Japanese learning app covering hiragana, katakana, and kanji — built as a portfolio project.
+> An interactive Japanese learning app covering hiragana, katakana, kanji, and vocabulary — built as a portfolio project.
 
 [![Live on Vercel](https://img.shields.io/badge/Live%20on-Vercel-black?logo=vercel)](https://nihongo-learning.vercel.app/#/)
 [![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?logo=github)](https://ginhu.github.io/Nihongo-Learning/)
@@ -15,14 +15,19 @@
 ### Quiz
 Practice hiragana, katakana, and kanji through multiple directions — kana-to-romaji, romaji-to-kana, kanji-to-meaning, and meaning-to-kanji. Each session earns XP (+10 per correct answer, +50 bonus for a perfect run) and tracks per-character accuracy for later review.
 
-### Flashcards
-Study with 3D flip cards across five decks: Hiragana, Katakana, Kanji, Weak Characters (auto-populated from your lowest-accuracy chars), and Favorites. Cards are shuffled with Fisher-Yates and support swipe gestures. Progress is saved locally.
+### Vocabulary Quiz
+Guess the meaning of N5/N4 vocabulary words and kanji in an active multiple-choice game. Choose your type (Vocabulary or Kanji), level, direction (Word → Meaning or Meaning → Word), and difficulty (Easy: 2 options / Normal: 4 / Hard: 6). Sessions award XP with a tiered system — using tips reduces your reward. Correct answers auto-advance after 1 second; wrong answers reveal the correct option and advance after 1.5 seconds.
 
-### Vocabulary
+**Kanji tips:** Up to three sequential hints reveal example sentences for the current kanji. Each tip reduces XP earned: no tips = +10, one tip = +8, two = +4, three = +1. A perfect session (all correct) adds a +50 XP bonus.
+
+### Flashcards
+Study with 3D flip cards across vocabulary and kanji decks. Choose from JLPT N5 or N4 vocabulary (511 and 666 words), kanji N5/N4, or your personal Favorites deck. Cards are filtered by category, shuffled with Fisher-Yates, and delivered in configurable batch sizes. Swipe gestures and Known/Needs Practice tracking are supported. Results modal shows known vs. practice counts after each batch.
+
+### Kanji Dictionary
 Browse the full N5/N4 kanji set in a filterable grid. Filter by JLPT level, search by character or meaning, and tap any card to open a detail modal with on-yomi, kun-yomi, stroke count, and example sentences. Favorite kanji sync across the app.
 
 ### Progress & Gamification
-Track XP, level (1–10), and daily streak from the Progress view. Accuracy charts break down performance by script type, and a Weak Characters grid surfaces the five characters that need the most work. Completing a level triggers a level-up overlay animation.
+Track XP, level (1–10), and daily streak from the Progress view. Accuracy charts break down performance by script type, and a Weak Characters grid surfaces the five characters that need the most work. Completing a level triggers a full-screen level-up overlay animation.
 
 ### Dark Mode
 Full dark/light theme toggle with persistent preference. All colors are driven by CSS variables so every view — including modals and overlays — switches cleanly.
@@ -59,9 +64,13 @@ npm run build     # production build → dist/
 ```
 src/
 ├── assets/        # Global CSS (CSS variables, keyframes)
-├── components/    # Shared UI components (modals, cards, overlays)
-├── data/          # Static data: hiragana.js, katakana.js, kanji.js
+├── components/    # Shared UI components (quiz, flashcards, vocabulary, layout)
+├── data/          # Static data: hiragana, katakana, n5/n4 vocabulary, n5/n4 kanji
 ├── router/        # Vue Router config
 ├── stores/        # Pinia stores: settings, progress, quiz
-└── views/         # One file per route (Home, Quiz, Flashcards, Vocabulary, Progress)
+└── views/         # One file per route
+                   #   Home, QuizSelect, QuizSession,
+                   #   FlashcardSelect, FlashcardsSession,
+                   #   VocabularySelect, VocabularySession,
+                   #   KanjiDictionary, Progress
 ```
