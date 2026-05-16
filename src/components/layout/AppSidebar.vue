@@ -18,10 +18,11 @@
         style="color: inherit;"
       >
         <span class="text-lg">{{ link.icon }}</span>
-        {{ link.label }}
+        {{ $t(link.labelKey) }}
       </RouterLink>
     </nav>
     <div class="p-3 border-t space-y-1" style="border-color: var(--color-border);">
+      <LanguageToggle />
       <ThemeToggle />
     </div>
   </aside>
@@ -29,16 +30,17 @@
 
 <script setup>
 import { useRoute } from 'vue-router'
-import ThemeToggle from './ThemeToggle.vue'
+import ThemeToggle    from './ThemeToggle.vue'
+import LanguageToggle from './LanguageToggle.vue'
 
 const route = useRoute()
 
 const links = [
-  { name: 'home',             to: '/',                  icon: '🏠', label: 'Home' },
-  { name: 'quiz-select',      to: '/quiz',               icon: '🎯', label: 'Quiz' },
-  { name: 'flashcards',       to: '/flashcards',         icon: '🃏', label: 'Flashcards' },
-  { name: 'vocabulary',       to: '/vocabulary',         icon: '🎮', label: 'Vocabulary Quiz' },
-  { name: 'kanji-dictionary', to: '/kanji-dictionary',   icon: '📖', label: 'Kanji Dictionary' },
-  { name: 'progress',         to: '/progress',           icon: '📊', label: 'Progress' },
+  { name: 'home',             to: '/',                 icon: '🏠', labelKey: 'nav.home'            },
+  { name: 'quiz-select',      to: '/quiz',             icon: '🎯', labelKey: 'nav.quiz'            },
+  { name: 'flashcards',       to: '/flashcards',       icon: '🃏', labelKey: 'nav.flashcards'      },
+  { name: 'vocabulary',       to: '/vocabulary',       icon: '🎮', labelKey: 'nav.vocabularyQuiz'  },
+  { name: 'kanji-dictionary', to: '/kanji-dictionary', icon: '📖', labelKey: 'nav.kanjiDictionary' },
+  { name: 'progress',         to: '/progress',         icon: '📊', labelKey: 'nav.progress'        },
 ]
 </script>
