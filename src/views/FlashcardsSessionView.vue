@@ -45,8 +45,8 @@
         @touchend.passive="onTouchEnd"
       >
         <FlashCard
-          v-if="currentCard"
-          :card="currentCard"
+          v-if="localizedCurrentCard"
+          :card="localizedCurrentCard"
           :type="deckType"
           :scene-height="320"
         />
@@ -106,7 +106,9 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { useProgressStore } from '@/stores/progress'
+import { useLocaleData } from '@/composables/useLocaleData'
 import n5Vocabulary from '@/data/n5_vocabulary.js'
 import n4Vocabulary from '@/data/n4_vocabulary.js'
 import kanjiN5Data from '@/data/n5_kanji.js'
@@ -117,6 +119,8 @@ import BatchResultModal from '@/components/flashcard/BatchResultModal.vue'
 const route = useRoute()
 const router = useRouter()
 const progress = useProgressStore()
+const { locale } = useI18n()
+const { getMeaning } = useLocaleData()
 
 const isConfigValid = !!route.query.type
 
@@ -193,6 +197,12 @@ const hasMore = computed(() =>
 )
 
 const currentCard = computed(() => currentBatch.value[currentIndex.value])
+
+const localizedCurrentCard = computed(() => {
+  if (!currentCard.value || locale.value !== 'pt-BR') return currentCard.value
+  const meaning = getMeaning(currentCard.value, deckType)
+  return { ...currentCard.value, meaning }
+})
 
 function cardId(card) {
   if (isKanji) return card.kanji

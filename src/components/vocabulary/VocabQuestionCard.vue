@@ -20,7 +20,7 @@
     <!-- Both types, meaning→word: show the English meaning -->
     <template v-else>
       <div class="text-2xl font-semibold px-4 leading-snug" style="color: var(--color-text);">
-        {{ type === 'kanji' ? item.meaning[0] : item.meaning }}
+        {{ localizedMeaning }}
       </div>
       <div class="text-xs mt-2" style="color: var(--color-text-muted);">{{ $t('vocabQuiz.whatIsInJapanese') }}</div>
     </template>
@@ -29,9 +29,16 @@
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue'
+import { useLocaleData } from '@/composables/useLocaleData'
+
+const props = defineProps({
   item:      { type: Object,  required: true },
   type:      { type: String,  required: true }, // 'vocab' | 'kanji'
   direction: { type: String,  required: true }, // 'word-meaning' | 'meaning-word'
 })
+
+const { getFirstMeaning } = useLocaleData()
+
+const localizedMeaning = computed(() => getFirstMeaning(props.item, props.type))
 </script>

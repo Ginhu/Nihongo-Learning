@@ -66,7 +66,7 @@
         <!-- Tips (kanji only) -->
         <VocabTipPanel
           v-if="qType === 'kanji'"
-          :examples="currentQ.item.examples ?? []"
+          :examples="localizedExamples"
           :tips-used="tipsUsed"
           :answered="answered"
           @use-tip="onUseTip"
@@ -108,7 +108,9 @@
 <script setup>
 import { ref, computed, onUnmounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { useProgressStore } from '@/stores/progress'
+import { useLocaleData } from '@/composables/useLocaleData'
 import n5Vocabulary from '@/data/n5_vocabulary.js'
 import n4Vocabulary from '@/data/n4_vocabulary.js'
 import kanjiN5Data from '@/data/n5_kanji.js'
@@ -121,6 +123,8 @@ import VocabTipPanel     from '@/components/vocabulary/VocabTipPanel.vue'
 const router   = useRouter()
 const route    = useRoute()
 const progress = useProgressStore()
+const { locale } = useI18n()
+const { getFirstMeaning, getExampleMeaning } = useLocaleData()
 
 // ── Read query params ──────────────────────────────────────────────────────
 const qType       = route.query.type       ?? 'vocab'
@@ -142,7 +146,7 @@ function fisherYates(arr) {
 
 function getAnswerText(item, type, direction) {
   if (direction === 'word-meaning') {
-    return type === 'kanji' ? item.meaning[0] : item.meaning
+    return getFirstMeaning(item, type)
   }
   return type === 'kanji' ? item.kanji : `${item.expression} (${item.reading})`
 }
@@ -232,6 +236,15 @@ const levelUpData   = ref({ level: 1, title: '' })
 let advanceTimer = null
 
 const currentQ = computed(() => questions.value[currentIndex.value])
+
+const localizedExamples = computed(() => {
+  if (!currentQ.value?.item?.examples) return []
+  if (locale.value !== 'pt-BR') return currentQ.value.item.examples
+  return currentQ.value.item.examples.map(ex => ({
+    ...ex,
+    meaning: getExampleMeaning(ex, currentQ.value.item.kanji)
+  }))
+})
 
 // ── Answer handling ────────────────────────────────────────────────────────
 function handleAnswer(option) {

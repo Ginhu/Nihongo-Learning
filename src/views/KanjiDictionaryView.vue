@@ -50,7 +50,7 @@
 
     <!-- Detail modal -->
     <KanjiDetailModal
-      :kanji="selectedKanji"
+      :kanji="localizedSelectedKanji"
       :is-favorited="selectedKanji ? progress.favoritedKanji.includes(selectedKanji.kanji) : false"
       @close="selectedKanji = null"
       @toggle-favorite="onToggleFavorite"
@@ -60,12 +60,16 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useProgressStore } from '@/stores/progress'
+import { useLocaleData } from '@/composables/useLocaleData'
 import kanjiData from '@/data/kanji.js'
 import KanjiCard from '@/components/vocabulary/KanjiCard.vue'
 import KanjiDetailModal from '@/components/vocabulary/KanjiDetailModal.vue'
 
 const progress = useProgressStore()
+const { locale } = useI18n()
+const { getMeaning, getExampleMeaning } = useLocaleData()
 
 const search = ref('')
 const jlptFilter = ref('all')
@@ -84,6 +88,16 @@ const filteredKanji = computed(() => {
     )
   }
   return list
+})
+
+const localizedSelectedKanji = computed(() => {
+  if (!selectedKanji.value || locale.value !== 'pt-BR') return selectedKanji.value
+  const meaning = getMeaning(selectedKanji.value, 'kanji')
+  const examples = selectedKanji.value.examples?.map(ex => ({
+    ...ex,
+    meaning: getExampleMeaning(ex, selectedKanji.value.kanji)
+  }))
+  return { ...selectedKanji.value, meaning, examples }
 })
 
 function onToggleFavorite() {
