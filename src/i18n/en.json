@@ -68,7 +68,12 @@
     "favorited": "♥ Favorited",
     "favorite": "♡ Favorite",
     "prev": "← Prev",
-    "next": "Next →"
+    "next": "Next →",
+    "vocabulary": "Vocabulary",
+    "kanji": "Kanji",
+    "all": "All",
+    "favorites": "★ Favorites",
+    "allCount": "All ({n})"
   },
   "batchResult": {
     "roundComplete": "Round Complete! 🎉",
@@ -101,7 +106,11 @@
     "correct": "Correct:",
     "levelUp": "Level Up!",
     "noSession": "No active session.",
-    "chooseQuiz": "Choose a quiz"
+    "chooseQuiz": "Choose a quiz",
+    "all": "All",
+    "favorites": "★ Favorites",
+    "allCount": "All ({n})",
+    "difficultyHint": "Easy: 2 options · Normal: 4 options · Hard: 6 options"
   },
   "kanjiDict": {
     "searchPlaceholder": "Search by kanji or meaning...",

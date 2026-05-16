@@ -68,7 +68,12 @@
     "favorited": "♥ Favoritado",
     "favorite": "♡ Favoritar",
     "prev": "← Anterior",
-    "next": "Próximo →"
+    "next": "Próximo →",
+    "vocabulary": "Vocabulário",
+    "kanji": "Kanji",
+    "all": "Todos",
+    "favorites": "★ Favoritos",
+    "allCount": "Todos ({n})"
   },
   "batchResult": {
     "roundComplete": "Rodada Completa! 🎉",
@@ -101,7 +106,11 @@
     "correct": "Correto:",
     "levelUp": "Subiu de Nível!",
     "noSession": "Nenhuma sessão ativa.",
-    "chooseQuiz": "Escolher quiz"
+    "chooseQuiz": "Escolher quiz",
+    "all": "Todos",
+    "favorites": "★ Favoritos",
+    "allCount": "Todos ({n})",
+    "difficultyHint": "Fácil: 2 opções · Normal: 4 opções · Difícil: 6 opções"
   },
   "kanjiDict": {
     "searchPlaceholder": "Buscar por kanji ou significado...",
