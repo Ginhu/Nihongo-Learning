@@ -6,14 +6,14 @@
       style="color: var(--color-text-muted);"
       @click="router.push({ name: 'flashcards' })"
     >
-      ← Back
+      {{ $t('flashcards.back') }}
     </button>
 
     <div v-if="!isConfigValid || currentBatch.length === 0" class="text-center py-16" style="color: var(--color-text-muted);">
       <div class="text-4xl mb-3">📭</div>
-      <p>No cards in this deck yet.</p>
+      <p>{{ $t('flashcards.noCards') }}</p>
       <p v-if="queryLevel === 'favorites' || queryLevel === 'kanji-favorites'" class="text-sm mt-1">
-        Favorite some cards to see them here.
+        {{ $t('flashcards.favoriteTip') }}
       </p>
     </div>
 
@@ -27,17 +27,17 @@
           />
         </div>
         <span class="text-sm font-medium whitespace-nowrap" style="color: var(--color-text-muted);">
-          {{ knownCount }} / {{ currentBatch.length }} known
+          {{ $t('flashcards.knownOf', { known: knownCount, total: currentBatch.length }) }}
         </span>
       </div>
 
       <div class="flex items-center justify-between text-sm" style="color: var(--color-text-muted);">
-        <span>Card {{ currentIndex + 1 }} of {{ currentBatch.length }}</span>
+        <span>{{ $t('flashcards.cardOf', { current: currentIndex + 1, total: currentBatch.length }) }}</span>
         <button
           class="text-xs px-2 py-1 rounded border transition-colors hover:bg-primary/10"
           style="border-color: var(--color-border);"
           @click="reshufflePool"
-        >Shuffle</button>
+        >{{ $t('flashcards.shuffle') }}</button>
       </div>
 
       <div
@@ -58,13 +58,13 @@
           :class="isCurrentKnown ? 'hover:bg-red-500/10 hover:border-red-400' : 'border-red-400 bg-red-500/20 text-red-600'"
           style="border-color: var(--color-border);"
           @click="markCard(false)"
-        >✗ Needs Practice</button>
+        >{{ $t('flashcards.needsPractice') }}</button>
         <button
           class="flex-1 max-w-[160px] py-3 rounded-xl border font-semibold text-sm transition-colors"
           :class="isCurrentKnown ? 'border-green-500 bg-green-500/20 text-green-600' : 'hover:bg-green-500/10 hover:border-green-400'"
           style="border-color: var(--color-border);"
           @click="markCard(true)"
-        >✓ Known</button>
+        >{{ $t('flashcards.known') }}</button>
       </div>
 
       <div v-if="queryLevel !== 'favorites' && queryLevel !== 'kanji-favorites'" class="flex justify-center">
@@ -73,7 +73,7 @@
           :class="isCurrentFavorited ? 'border-primary bg-primary/20 text-primary' : 'hover:bg-primary/10'"
           style="border-color: var(--color-border);"
           @click="toggleFavorite"
-        >{{ isCurrentFavorited ? '♥ Favorited' : '♡ Favorite' }}</button>
+        >{{ isCurrentFavorited ? $t('flashcards.favorited') : $t('flashcards.favorite') }}</button>
       </div>
 
       <div class="flex gap-3 justify-center">
@@ -82,13 +82,13 @@
           style="border-color: var(--color-border);"
           :disabled="currentIndex === 0"
           @click="prev"
-        >← Prev</button>
+        >{{ $t('flashcards.prev') }}</button>
         <button
           class="px-8 py-3 rounded-xl border font-semibold transition-colors hover:bg-primary/10 disabled:opacity-30"
           style="border-color: var(--color-border);"
           :disabled="currentIndex === currentBatch.length - 1"
           @click="next"
-        >Next →</button>
+        >{{ $t('flashcards.next') }}</button>
       </div>
     </template>
 

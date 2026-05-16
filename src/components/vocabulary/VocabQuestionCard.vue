@@ -22,7 +22,7 @@
       <div class="text-2xl font-semibold px-4 leading-snug" style="color: var(--color-text);">
         {{ type === 'kanji' ? item.meaning[0] : item.meaning }}
       </div>
-      <div class="text-xs mt-2" style="color: var(--color-text-muted);">— What is this in Japanese?</div>
+      <div class="text-xs mt-2" style="color: var(--color-text-muted);">{{ $t('vocabQuiz.whatIsInJapanese') }}</div>
     </template>
 
   </div>

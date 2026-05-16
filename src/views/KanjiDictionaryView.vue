@@ -7,7 +7,7 @@
       <input
         v-model="search"
         type="text"
-        placeholder="Search by kanji or meaning..."
+        :placeholder="$t('kanjiDict.searchPlaceholder')"
         aria-label="Search kanji"
         class="flex-1 px-4 py-2 rounded-xl border text-sm outline-none focus:border-primary transition-colors"
         style="background: var(--color-surface); border-color: var(--color-border); color: var(--color-text);"
@@ -45,7 +45,7 @@
     <!-- Empty state -->
     <div v-else class="text-center py-16" style="color: var(--color-text-muted);">
       <div class="text-4xl mb-3">🔍</div>
-      <p>No kanji found{{ search ? ` for "${search}"` : '' }}.</p>
+      <p>{{ search ? $t('kanjiDict.noKanjiFoundFor', { search }) : $t('kanjiDict.noKanjiFound') }}</p>
     </div>
 
     <!-- Detail modal -->

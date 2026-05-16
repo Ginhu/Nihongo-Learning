@@ -1,12 +1,12 @@
 <template>
   <div class="rounded-xl p-4 space-y-4" style="background: var(--color-surface);">
-    <h3 class="font-semibold text-sm" style="color: var(--color-text-muted);">ACCURACY BY SCRIPT</h3>
+    <h3 class="font-semibold text-sm" style="color: var(--color-text-muted);">{{ $t('progress.accuracyByScript') }}</h3>
 
     <div v-for="bar in bars" :key="bar.label" class="space-y-1">
       <div class="flex justify-between text-sm">
         <span class="font-medium">{{ bar.label }}</span>
         <span style="color: var(--color-text-muted);">
-          {{ bar.acc !== null ? bar.acc + '%' : 'No data yet' }}
+          {{ bar.acc !== null ? bar.acc + '%' : $t('progress.noData') }}
         </span>
       </div>
       <div class="h-3 rounded-full overflow-hidden" style="background: var(--color-surface-2);">

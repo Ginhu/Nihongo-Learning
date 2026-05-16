@@ -11,21 +11,21 @@
       class="w-full max-w-sm rounded-2xl p-8 flex flex-col items-center gap-6"
       style="background: var(--color-surface);"
     >
-      <div id="batch-result-title" class="text-2xl font-bold text-center">Round Complete! 🎉</div>
+      <div id="batch-result-title" class="text-2xl font-bold text-center">{{ $t('batchResult.roundComplete') }}</div>
 
       <div class="w-full flex flex-col gap-3">
         <div
           class="flex items-center justify-between px-4 py-3 rounded-xl"
           style="background: var(--color-surface-2);"
         >
-          <span class="font-semibold text-green-500">✓ Known</span>
+          <span class="font-semibold text-green-500">{{ $t('batchResult.known') }}</span>
           <span class="text-2xl font-bold text-green-500">{{ batchKnown }}</span>
         </div>
         <div
           class="flex items-center justify-between px-4 py-3 rounded-xl"
           style="background: var(--color-surface-2);"
         >
-          <span class="font-semibold text-red-500">✗ Needs Practice</span>
+          <span class="font-semibold text-red-500">{{ $t('batchResult.needsPractice') }}</span>
           <span class="text-2xl font-bold text-red-500">{{ batchPractice }}</span>
         </div>
       </div>
@@ -37,14 +37,14 @@
           style="background: var(--color-primary); color: white;"
           @click="$emit('continue')"
         >
-          Continue →
+          {{ $t('batchResult.continue') }}
         </button>
         <button
           class="w-full py-3 rounded-xl font-semibold text-sm border transition-colors hover:opacity-80"
           style="border-color: var(--color-border);"
           @click="$emit('back')"
         >
-          ← Back to Selection
+          {{ $t('batchResult.backToSelection') }}
         </button>
       </div>
     </div>

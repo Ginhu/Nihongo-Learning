@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-2xl mx-auto px-4 py-6 flex flex-col gap-4">
-    <h1 class="text-2xl font-bold">Progress</h1>
+    <h1 class="text-2xl font-bold">{{ $t('progress.title') }}</h1>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <XpBar />
@@ -12,10 +12,10 @@
     <WeakCharacters />
 
     <div class="rounded-xl p-4" style="background: var(--color-surface);">
-      <h3 class="font-semibold text-sm mb-3" style="color: var(--color-text-muted);">RECENT QUIZZES</h3>
+      <h3 class="font-semibold text-sm mb-3" style="color: var(--color-text-muted);">{{ $t('progress.recentQuizzes') }}</h3>
 
       <div v-if="recentHistory.length === 0" class="text-sm" style="color: var(--color-text-muted);">
-        No quizzes completed yet. Start a quiz to see your history!
+        {{ $t('progress.noQuizzes') }}
       </div>
 
       <div v-else>

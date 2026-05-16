@@ -1,13 +1,13 @@
 <template>
   <div class="p-6 max-w-4xl mx-auto">
-    <h1 class="text-2xl font-bold mb-2">Quiz</h1>
+    <h1 class="text-2xl font-bold mb-2">{{ $t('quiz.title') }}</h1>
     <p class="mb-6 text-sm" style="color: var(--color-text-muted);">
-      Select a mode, set your options, and start.
+      {{ $t('quiz.subtitle') }}
     </p>
 
     <!-- Session length selector -->
     <div class="flex items-center gap-3 mb-6">
-      <span class="text-sm font-medium">Questions:</span>
+      <span class="text-sm font-medium">{{ $t('quiz.questions') }}</span>
       <div class="flex gap-2">
         <button
           v-for="n in (selectedMode === 'kanji' ? [15, 30, 45, 60] : [15, 30, 45, 60, 71])"
@@ -25,7 +25,7 @@
           :class="[kanjiUseAll ? 'bg-primary text-white border-primary' : 'hover:bg-primary/10']"
           style="border-color: var(--color-border);"
           @click="kanjiUseAll = true"
-        >All</button>
+        >{{ $t('quiz.all') }}</button>
       </div>
     </div>
 
@@ -52,6 +52,7 @@
 <script setup>
 import { ref, reactive, watch } from 'vue'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { useSettingsStore } from '@/stores/settings'
 import { useQuizStore } from '@/stores/quiz'
 import { generateQuestions } from '@/utils/quiz-generator'
@@ -60,6 +61,7 @@ import QuizModeCard from '@/components/quiz/QuizModeCard.vue'
 const router = useRouter()
 const settings = useSettingsStore()
 const quizStore = useQuizStore()
+const { t } = useI18n()
 
 const selectedMode = ref(null)
 const kanjiUseAll = ref(false)
@@ -71,8 +73,8 @@ watch(selectedMode, (mode) => {
 const cards = reactive([
   {
     mode: 'hiragana',
-    title: 'Hiragana',
-    description: 'Practice the 46 base + 25 voiced hiragana characters.',
+    get title() { return t('quiz.hiraganaTitle') },
+    get description() { return t('quiz.hiraganaDesc') },
     sampleChar: 'あ',
     direction: 'kana-to-romaji',
     difficulty: 'medium',
@@ -80,8 +82,8 @@ const cards = reactive([
   },
   {
     mode: 'katakana',
-    title: 'Katakana',
-    description: 'Practice the 46 base + 25 voiced katakana characters.',
+    get title() { return t('quiz.katakanaTitle') },
+    get description() { return t('quiz.katakanaDesc') },
     sampleChar: 'ア',
     direction: 'kana-to-romaji',
     difficulty: 'medium',
@@ -89,8 +91,8 @@ const cards = reactive([
   },
   {
     mode: 'kanji',
-    title: 'Kanji',
-    description: 'Test your JLPT N5 and N4 kanji knowledge.',
+    get title() { return t('quiz.kanjiTitle') },
+    get description() { return t('quiz.kanjiDesc') },
     sampleChar: '日',
     direction: 'kanji-to-meaning',
     difficulty: 'medium',

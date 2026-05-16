@@ -12,7 +12,7 @@
       >
         <div class="anim-levelup text-center px-8">
           <div class="text-5xl mb-4">⭐</div>
-          <div class="text-3xl font-black text-white mb-3">Level Up!</div>
+          <div class="text-3xl font-black text-white mb-3">{{ $t('vocabQuiz.levelUp') }}</div>
           <div class="font-black" style="font-size: 72px; line-height: 1; color: var(--color-accent);">
             {{ levelUpData.level }}
           </div>
@@ -88,18 +88,18 @@
         class="mt-4 p-3 rounded-xl text-sm text-center"
         style="background: var(--color-surface); color: var(--color-text-muted);"
       >
-        Correct: <strong style="color: var(--color-text);">{{ currentQ.correctAnswer }}</strong>
+        {{ $t('vocabQuiz.correct') }} <strong style="color: var(--color-text);">{{ currentQ.correctAnswer }}</strong>
       </div>
 
     </template>
 
     <!-- No session fallback -->
     <div v-else class="text-center py-10">
-      <p style="color: var(--color-text-muted);">No active session.</p>
+      <p style="color: var(--color-text-muted);">{{ $t('vocabQuiz.noSession') }}</p>
       <button
         class="mt-4 px-6 py-2 rounded-xl bg-primary text-white font-semibold"
         @click="router.push({ name: 'vocabulary' })"
-      >Choose a quiz</button>
+      >{{ $t('vocabQuiz.chooseQuiz') }}</button>
     </div>
 
   </div>
