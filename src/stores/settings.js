@@ -11,7 +11,8 @@ export const useSettingsStore = defineStore('settings', () => {
   const romajiVisible = ref(saved.romajiVisible ?? true)
   const soundEnabled  = ref(saved.soundEnabled  ?? true)
   const theme         = ref(saved.theme         ?? 'dark')
-  const language      = ref(saved.language      ?? 'en')
+  const VALID_LANGS = ['en', 'pt-BR']
+  const language      = ref(VALID_LANGS.includes(saved.language) ? saved.language : 'en')
 
   function applyTheme() {
     document.documentElement.classList.toggle('dark', theme.value === 'dark')
