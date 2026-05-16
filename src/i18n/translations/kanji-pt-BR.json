@@ -1,0 +1,2122 @@
+{
+  "一": {
+    "meaning": ["um", "uma"],
+    "examples": [
+      { "word": "一つ", "meaning": "uma coisa" },
+      { "word": "一月", "meaning": "janeiro" },
+      { "word": "一番", "meaning": "número um; o mais" }
+    ]
+  },
+  "二": {
+    "meaning": ["dois", "duas"],
+    "examples": [
+      { "word": "二つ", "meaning": "duas coisas" },
+      { "word": "二月", "meaning": "fevereiro" },
+      { "word": "二人", "meaning": "duas pessoas" }
+    ]
+  },
+  "三": {
+    "meaning": ["três"],
+    "examples": [
+      { "word": "三つ", "meaning": "três coisas" },
+      { "word": "三月", "meaning": "março" },
+      { "word": "三人", "meaning": "três pessoas" }
+    ]
+  },
+  "四": {
+    "meaning": ["quatro"],
+    "examples": [
+      { "word": "四つ", "meaning": "quatro coisas" },
+      { "word": "四月", "meaning": "abril" },
+      { "word": "四人", "meaning": "quatro pessoas" }
+    ]
+  },
+  "五": {
+    "meaning": ["cinco"],
+    "examples": [
+      { "word": "五つ", "meaning": "cinco coisas" },
+      { "word": "五月", "meaning": "maio" },
+      { "word": "五分", "meaning": "cinco minutos" }
+    ]
+  },
+  "六": {
+    "meaning": ["seis"],
+    "examples": [
+      { "word": "六つ", "meaning": "seis coisas" },
+      { "word": "六月", "meaning": "junho" },
+      { "word": "六時", "meaning": "seis horas" }
+    ]
+  },
+  "七": {
+    "meaning": ["sete"],
+    "examples": [
+      { "word": "七つ", "meaning": "sete coisas" },
+      { "word": "七月", "meaning": "julho" },
+      { "word": "七日", "meaning": "dia 7; sete dias" }
+    ]
+  },
+  "八": {
+    "meaning": ["oito"],
+    "examples": [
+      { "word": "八つ", "meaning": "oito coisas" },
+      { "word": "八月", "meaning": "agosto" },
+      { "word": "八百屋", "meaning": "quitanda; verdureiro" }
+    ]
+  },
+  "九": {
+    "meaning": ["nove"],
+    "examples": [
+      { "word": "九つ", "meaning": "nove coisas" },
+      { "word": "九月", "meaning": "setembro" },
+      { "word": "九時", "meaning": "nove horas" }
+    ]
+  },
+  "十": {
+    "meaning": ["dez"],
+    "examples": [
+      { "word": "十月", "meaning": "outubro" },
+      { "word": "二十歳", "meaning": "20 anos" },
+      { "word": "十分", "meaning": "dez minutos" }
+    ]
+  },
+  "百": {
+    "meaning": ["cem"],
+    "examples": [
+      { "word": "百円", "meaning": "100 ienes" },
+      { "word": "三百", "meaning": "trezentos" },
+      { "word": "何百", "meaning": "centenas; quantas centenas" }
+    ]
+  },
+  "千": {
+    "meaning": ["mil"],
+    "examples": [
+      { "word": "千円", "meaning": "1000 ienes" },
+      { "word": "三千", "meaning": "três mil" },
+      { "word": "千葉", "meaning": "Chiba (topônimo)" }
+    ]
+  },
+  "万": {
+    "meaning": ["dez mil"],
+    "examples": [
+      { "word": "一万円", "meaning": "10.000 ienes" },
+      { "word": "万年筆", "meaning": "caneta tinteiro" },
+      { "word": "万国", "meaning": "todas as nações" }
+    ]
+  },
+  "円": {
+    "meaning": ["iene; círculo"],
+    "examples": [
+      { "word": "五百円", "meaning": "500 ienes" },
+      { "word": "円い", "meaning": "redondo; circular" },
+      { "word": "円安", "meaning": "desvalorização do iene" }
+    ]
+  },
+  "何": {
+    "meaning": ["o quê; quantos"],
+    "examples": [
+      { "word": "何時", "meaning": "que horas" },
+      { "word": "何人", "meaning": "quantas pessoas" },
+      { "word": "何月", "meaning": "que mês" }
+    ]
+  },
+  "年": {
+    "meaning": ["ano"],
+    "examples": [
+      { "word": "今年", "meaning": "este ano" },
+      { "word": "来年", "meaning": "ano que vem" },
+      { "word": "毎年", "meaning": "todo ano" }
+    ]
+  },
+  "月": {
+    "meaning": ["lua; mês"],
+    "examples": [
+      { "word": "月曜日", "meaning": "segunda-feira" },
+      { "word": "今月", "meaning": "este mês" },
+      { "word": "月見", "meaning": "contemplação da lua" }
+    ]
+  },
+  "日": {
+    "meaning": ["sol; dia"],
+    "examples": [
+      { "word": "日曜日", "meaning": "domingo" },
+      { "word": "毎日", "meaning": "todo dia" },
+      { "word": "誕生日", "meaning": "aniversário" }
+    ]
+  },
+  "時": {
+    "meaning": ["tempo; horas"],
+    "examples": [
+      { "word": "何時", "meaning": "que horas" },
+      { "word": "時間", "meaning": "tempo; horas" },
+      { "word": "時々", "meaning": "às vezes" }
+    ]
+  },
+  "分": {
+    "meaning": ["minuto; parte"],
+    "examples": [
+      { "word": "五分", "meaning": "cinco minutos" },
+      { "word": "自分", "meaning": "si mesmo" },
+      { "word": "十分", "meaning": "suficiente; bastante" }
+    ]
+  },
+  "半": {
+    "meaning": ["metade"],
+    "examples": [
+      { "word": "三時半", "meaning": "três e meia" },
+      { "word": "半分", "meaning": "metade" },
+      { "word": "前半", "meaning": "primeira metade" }
+    ]
+  },
+  "週": {
+    "meaning": ["semana"],
+    "examples": [
+      { "word": "今週", "meaning": "esta semana" },
+      { "word": "来週", "meaning": "semana que vem" },
+      { "word": "毎週", "meaning": "toda semana" }
+    ]
+  },
+  "今": {
+    "meaning": ["agora; presente"],
+    "examples": [
+      { "word": "今日", "meaning": "hoje" },
+      { "word": "今年", "meaning": "este ano" },
+      { "word": "今朝", "meaning": "esta manhã" }
+    ]
+  },
+  "毎": {
+    "meaning": ["todo; cada"],
+    "examples": [
+      { "word": "毎日", "meaning": "todo dia" },
+      { "word": "毎週", "meaning": "toda semana" },
+      { "word": "毎朝", "meaning": "toda manhã" }
+    ]
+  },
+  "前": {
+    "meaning": ["antes; frente"],
+    "examples": [
+      { "word": "午前", "meaning": "manhã; AM" },
+      { "word": "名前", "meaning": "nome" },
+      { "word": "前日", "meaning": "o dia anterior" }
+    ]
+  },
+  "後": {
+    "meaning": ["depois; atrás"],
+    "examples": [
+      { "word": "午後", "meaning": "tarde; PM" },
+      { "word": "後ろ", "meaning": "atrás; parte de trás" },
+      { "word": "最後", "meaning": "último; final" }
+    ]
+  },
+  "朝": {
+    "meaning": ["manhã"],
+    "examples": [
+      { "word": "今朝", "meaning": "esta manhã" },
+      { "word": "毎朝", "meaning": "toda manhã" },
+      { "word": "朝食", "meaning": "café da manhã" }
+    ]
+  },
+  "夜": {
+    "meaning": ["noite"],
+    "examples": [
+      { "word": "今夜", "meaning": "esta noite" },
+      { "word": "夜中", "meaning": "meia-noite; madrugada" },
+      { "word": "昨夜", "meaning": "ontem à noite" }
+    ]
+  },
+  "人": {
+    "meaning": ["pessoa; pessoas"],
+    "examples": [
+      { "word": "日本人", "meaning": "japonês; pessoa japonesa" },
+      { "word": "一人", "meaning": "uma pessoa; sozinho" },
+      { "word": "大人", "meaning": "adulto" }
+    ]
+  },
+  "父": {
+    "meaning": ["pai"],
+    "examples": [
+      { "word": "父", "meaning": "(meu) pai" },
+      { "word": "父親", "meaning": "pai" },
+      { "word": "祖父", "meaning": "(meu) avô" }
+    ]
+  },
+  "母": {
+    "meaning": ["mãe"],
+    "examples": [
+      { "word": "母", "meaning": "(minha) mãe" },
+      { "word": "母親", "meaning": "mãe" },
+      { "word": "祖母", "meaning": "(minha) avó" }
+    ]
+  },
+  "男": {
+    "meaning": ["masculino; homem"],
+    "examples": [
+      { "word": "男の子", "meaning": "menino" },
+      { "word": "男性", "meaning": "homem; sexo masculino" },
+      { "word": "長男", "meaning": "filho mais velho" }
+    ]
+  },
+  "女": {
+    "meaning": ["feminino; mulher"],
+    "examples": [
+      { "word": "女の子", "meaning": "menina" },
+      { "word": "女性", "meaning": "mulher; sexo feminino" },
+      { "word": "少女", "meaning": "garota jovem" }
+    ]
+  },
+  "子": {
+    "meaning": ["criança"],
+    "examples": [
+      { "word": "子供", "meaning": "criança" },
+      { "word": "女の子", "meaning": "menina" },
+      { "word": "双子", "meaning": "gêmeos" }
+    ]
+  },
+  "先": {
+    "meaning": ["à frente; anterior; ponta"],
+    "examples": [
+      { "word": "先生", "meaning": "professor" },
+      { "word": "先週", "meaning": "semana passada" },
+      { "word": "先に", "meaning": "à frente; primeiro" }
+    ]
+  },
+  "生": {
+    "meaning": ["vida; nascimento; cru"],
+    "examples": [
+      { "word": "学生", "meaning": "estudante" },
+      { "word": "先生", "meaning": "professor" },
+      { "word": "生まれる", "meaning": "nascer" }
+    ]
+  },
+  "友": {
+    "meaning": ["amigo"],
+    "examples": [
+      { "word": "友達", "meaning": "amigo" },
+      { "word": "友人", "meaning": "amigo (formal)" },
+      { "word": "友好", "meaning": "amizade; cordialidade" }
+    ]
+  },
+  "手": {
+    "meaning": ["mão"],
+    "examples": [
+      { "word": "右手", "meaning": "mão direita" },
+      { "word": "手紙", "meaning": "carta" },
+      { "word": "手伝う", "meaning": "ajudar" }
+    ]
+  },
+  "目": {
+    "meaning": ["olho"],
+    "examples": [
+      { "word": "目玉", "meaning": "globo ocular" },
+      { "word": "一目", "meaning": "à primeira vista" },
+      { "word": "目的", "meaning": "objetivo; propósito" }
+    ]
+  },
+  "口": {
+    "meaning": ["boca"],
+    "examples": [
+      { "word": "入り口", "meaning": "entrada" },
+      { "word": "出口", "meaning": "saída" },
+      { "word": "口紅", "meaning": "batom" }
+    ]
+  },
+  "耳": {
+    "meaning": ["orelha"],
+    "examples": [
+      { "word": "耳鳴り", "meaning": "zumbido no ouvido" },
+      { "word": "耳元", "meaning": "perto do ouvido" },
+      { "word": "耳鼻科", "meaning": "otorrinolaringologia" }
+    ]
+  },
+  "足": {
+    "meaning": ["pé; perna; suficiente"],
+    "examples": [
+      { "word": "足りる", "meaning": "ser suficiente" },
+      { "word": "手足", "meaning": "mãos e pés; membros" },
+      { "word": "足音", "meaning": "som de passos" }
+    ]
+  },
+  "体": {
+    "meaning": ["corpo"],
+    "examples": [
+      { "word": "体重", "meaning": "peso corporal" },
+      { "word": "体育", "meaning": "educação física" },
+      { "word": "体温", "meaning": "temperatura corporal" }
+    ]
+  },
+  "心": {
+    "meaning": ["coração; mente"],
+    "examples": [
+      { "word": "心配", "meaning": "preocupação; inquietação" },
+      { "word": "安心", "meaning": "tranquilidade; paz de espírito" },
+      { "word": "心臓", "meaning": "coração (órgão)" }
+    ]
+  },
+  "山": {
+    "meaning": ["montanha"],
+    "examples": [
+      { "word": "富士山", "meaning": "Monte Fuji" },
+      { "word": "山登り", "meaning": "alpinismo; escalada" },
+      { "word": "火山", "meaning": "vulcão" }
+    ]
+  },
+  "川": {
+    "meaning": ["rio"],
+    "examples": [
+      { "word": "川原", "meaning": "leito do rio" },
+      { "word": "小川", "meaning": "riacho; córrego" },
+      { "word": "川沿い", "meaning": "ao longo do rio" }
+    ]
+  },
+  "海": {
+    "meaning": ["mar; oceano"],
+    "examples": [
+      { "word": "海外", "meaning": "exterior; no exterior" },
+      { "word": "海水", "meaning": "água do mar" },
+      { "word": "日本海", "meaning": "Mar do Japão" }
+    ]
+  },
+  "空": {
+    "meaning": ["céu; vazio"],
+    "examples": [
+      { "word": "空港", "meaning": "aeroporto" },
+      { "word": "青空", "meaning": "céu azul" },
+      { "word": "空気", "meaning": "ar; atmosfera" }
+    ]
+  },
+  "雨": {
+    "meaning": ["chuva"],
+    "examples": [
+      { "word": "雨天", "meaning": "tempo chuvoso" },
+      { "word": "大雨", "meaning": "chuva forte" },
+      { "word": "梅雨", "meaning": "estação das chuvas" }
+    ]
+  },
+  "木": {
+    "meaning": ["árvore; madeira"],
+    "examples": [
+      { "word": "木曜日", "meaning": "quinta-feira" },
+      { "word": "木材", "meaning": "madeira; material de construção" },
+      { "word": "木の葉", "meaning": "folha de árvore" }
+    ]
+  },
+  "花": {
+    "meaning": ["flor"],
+    "examples": [
+      { "word": "花見", "meaning": "contemplação das cerejeiras" },
+      { "word": "花火", "meaning": "fogos de artifício" },
+      { "word": "生花", "meaning": "flores frescas; ikebana" }
+    ]
+  },
+  "水": {
+    "meaning": ["água"],
+    "examples": [
+      { "word": "水曜日", "meaning": "quarta-feira" },
+      { "word": "水道", "meaning": "água encanada; abastecimento de água" },
+      { "word": "水泳", "meaning": "natação" }
+    ]
+  },
+  "火": {
+    "meaning": ["fogo"],
+    "examples": [
+      { "word": "火曜日", "meaning": "terça-feira" },
+      { "word": "火事", "meaning": "incêndio" },
+      { "word": "花火", "meaning": "fogos de artifício" }
+    ]
+  },
+  "土": {
+    "meaning": ["terra; solo"],
+    "examples": [
+      { "word": "土曜日", "meaning": "sábado" },
+      { "word": "土地", "meaning": "terreno; propriedade" },
+      { "word": "土台", "meaning": "fundação; base" }
+    ]
+  },
+  "石": {
+    "meaning": ["pedra; rocha"],
+    "examples": [
+      { "word": "石けん", "meaning": "sabão" },
+      { "word": "宝石", "meaning": "gema; joia" },
+      { "word": "石油", "meaning": "petróleo" }
+    ]
+  },
+  "国": {
+    "meaning": ["país; nação"],
+    "examples": [
+      { "word": "外国", "meaning": "país estrangeiro" },
+      { "word": "国際", "meaning": "internacional" },
+      { "word": "中国", "meaning": "China" }
+    ]
+  },
+  "学": {
+    "meaning": ["estudar; aprender"],
+    "examples": [
+      { "word": "学校", "meaning": "escola" },
+      { "word": "大学", "meaning": "universidade" },
+      { "word": "学生", "meaning": "estudante" }
+    ]
+  },
+  "校": {
+    "meaning": ["escola"],
+    "examples": [
+      { "word": "学校", "meaning": "escola" },
+      { "word": "高校", "meaning": "ensino médio" },
+      { "word": "校長", "meaning": "diretor da escola" }
+    ]
+  },
+  "会": {
+    "meaning": ["reunião; sociedade"],
+    "examples": [
+      { "word": "会社", "meaning": "empresa" },
+      { "word": "会議", "meaning": "reunião" },
+      { "word": "社会", "meaning": "sociedade" }
+    ]
+  },
+  "社": {
+    "meaning": ["empresa; santuário"],
+    "examples": [
+      { "word": "会社", "meaning": "empresa" },
+      { "word": "社長", "meaning": "presidente da empresa" },
+      { "word": "神社", "meaning": "santuário xintoísta" }
+    ]
+  },
+  "店": {
+    "meaning": ["loja; estabelecimento"],
+    "examples": [
+      { "word": "喫茶店", "meaning": "café" },
+      { "word": "本屋", "meaning": "livraria" },
+      { "word": "店員", "meaning": "atendente de loja" }
+    ]
+  },
+  "車": {
+    "meaning": ["carro; veículo; roda"],
+    "examples": [
+      { "word": "電車", "meaning": "trem" },
+      { "word": "自転車", "meaning": "bicicleta" },
+      { "word": "自動車", "meaning": "automóvel" }
+    ]
+  },
+  "電": {
+    "meaning": ["eletricidade; relâmpago"],
+    "examples": [
+      { "word": "電車", "meaning": "trem" },
+      { "word": "電話", "meaning": "telefone" },
+      { "word": "電気", "meaning": "eletricidade; luz" }
+    ]
+  },
+  "駅": {
+    "meaning": ["estação"],
+    "examples": [
+      { "word": "駅員", "meaning": "funcionário da estação" },
+      { "word": "近くの駅", "meaning": "estação próxima" },
+      { "word": "終点駅", "meaning": "estação terminal" }
+    ]
+  },
+  "東": {
+    "meaning": ["leste"],
+    "examples": [
+      { "word": "東京", "meaning": "Tóquio" },
+      { "word": "東口", "meaning": "saída leste" },
+      { "word": "中東", "meaning": "Oriente Médio" }
+    ]
+  },
+  "西": {
+    "meaning": ["oeste"],
+    "examples": [
+      { "word": "西口", "meaning": "saída oeste" },
+      { "word": "関西", "meaning": "região de Kansai" },
+      { "word": "西洋", "meaning": "Ocidente; ocidental" }
+    ]
+  },
+  "南": {
+    "meaning": ["sul"],
+    "examples": [
+      { "word": "南口", "meaning": "saída sul" },
+      { "word": "南米", "meaning": "América do Sul" },
+      { "word": "南極", "meaning": "Polo Sul; Antártica" }
+    ]
+  },
+  "北": {
+    "meaning": ["norte"],
+    "examples": [
+      { "word": "北口", "meaning": "saída norte" },
+      { "word": "北海道", "meaning": "Hokkaido" },
+      { "word": "北極", "meaning": "Polo Norte; Ártico" }
+    ]
+  },
+  "上": {
+    "meaning": ["cima; acima; topo"],
+    "examples": [
+      { "word": "上手", "meaning": "habilidoso; bom em" },
+      { "word": "以上", "meaning": "acima de; mais do que" },
+      { "word": "上る", "meaning": "subir; escalar" }
+    ]
+  },
+  "下": {
+    "meaning": ["baixo; abaixo; descida"],
+    "examples": [
+      { "word": "以下", "meaning": "abaixo de; menos do que" },
+      { "word": "地下", "meaning": "subterrâneo; metrô" },
+      { "word": "下手", "meaning": "sem habilidade; ruim em" }
+    ]
+  },
+  "中": {
+    "meaning": ["meio; dentro; durante"],
+    "examples": [
+      { "word": "中学校", "meaning": "escola de ensino fundamental II" },
+      { "word": "中心", "meaning": "centro; núcleo" },
+      { "word": "途中", "meaning": "no caminho; a meio caminho" }
+    ]
+  },
+  "外": {
+    "meaning": ["fora; estrangeiro"],
+    "examples": [
+      { "word": "外国", "meaning": "país estrangeiro" },
+      { "word": "海外", "meaning": "exterior; ultramar" },
+      { "word": "外出", "meaning": "sair; saída" }
+    ]
+  },
+  "右": {
+    "meaning": ["direita (direção)"],
+    "examples": [
+      { "word": "右手", "meaning": "mão direita" },
+      { "word": "左右", "meaning": "esquerda e direita" },
+      { "word": "右折", "meaning": "virar à direita" }
+    ]
+  },
+  "左": {
+    "meaning": ["esquerda (direção)"],
+    "examples": [
+      { "word": "左手", "meaning": "mão esquerda" },
+      { "word": "左右", "meaning": "esquerda e direita" },
+      { "word": "左折", "meaning": "virar à esquerda" }
+    ]
+  },
+  "家": {
+    "meaning": ["casa; lar; família"],
+    "examples": [
+      { "word": "家族", "meaning": "família" },
+      { "word": "家庭", "meaning": "lar; domicílio" },
+      { "word": "国家", "meaning": "nação; Estado" }
+    ]
+  },
+  "食": {
+    "meaning": ["comer; comida"],
+    "examples": [
+      { "word": "食事", "meaning": "refeição" },
+      { "word": "食べ物", "meaning": "comida; alimento" },
+      { "word": "食堂", "meaning": "refeitório; cantina" }
+    ]
+  },
+  "飲": {
+    "meaning": ["beber"],
+    "examples": [
+      { "word": "飲み物", "meaning": "bebida" },
+      { "word": "飲食", "meaning": "comer e beber" },
+      { "word": "飲み会", "meaning": "festa com bebidas" }
+    ]
+  },
+  "本": {
+    "meaning": ["livro; origem; verdadeiro"],
+    "examples": [
+      { "word": "日本", "meaning": "Japão" },
+      { "word": "本屋", "meaning": "livraria" },
+      { "word": "本当に", "meaning": "de verdade; realmente" }
+    ]
+  },
+  "語": {
+    "meaning": ["idioma; palavra; falar"],
+    "examples": [
+      { "word": "日本語", "meaning": "língua japonesa" },
+      { "word": "英語", "meaning": "língua inglesa" },
+      { "word": "物語", "meaning": "história; conto" }
+    ]
+  },
+  "読": {
+    "meaning": ["ler"],
+    "examples": [
+      { "word": "読書", "meaning": "leitura (de livros)" },
+      { "word": "音読", "meaning": "leitura em voz alta" },
+      { "word": "読み方", "meaning": "forma de ler; pronúncia" }
+    ]
+  },
+  "書": {
+    "meaning": ["escrever"],
+    "examples": [
+      { "word": "書類", "meaning": "documentos; papelada" },
+      { "word": "図書館", "meaning": "biblioteca" },
+      { "word": "書道", "meaning": "caligrafia" }
+    ]
+  },
+  "聞": {
+    "meaning": ["ouvir; perguntar; escutar"],
+    "examples": [
+      { "word": "新聞", "meaning": "jornal" },
+      { "word": "聞こえる", "meaning": "poder ser ouvido" },
+      { "word": "見聞き", "meaning": "ver e ouvir" }
+    ]
+  },
+  "話": {
+    "meaning": ["conversa; história"],
+    "examples": [
+      { "word": "電話", "meaning": "telefone" },
+      { "word": "会話", "meaning": "conversa; diálogo" },
+      { "word": "話し合い", "meaning": "discussão; debate" }
+    ]
+  },
+  "見": {
+    "meaning": ["ver; olhar; assistir"],
+    "examples": [
+      { "word": "花見", "meaning": "contemplação das cerejeiras" },
+      { "word": "見物", "meaning": "passeio turístico" },
+      { "word": "見える", "meaning": "poder ser visto; parecer" }
+    ]
+  },
+  "行": {
+    "meaning": ["ir; conduzir"],
+    "examples": [
+      { "word": "旅行", "meaning": "viagem" },
+      { "word": "銀行", "meaning": "banco" },
+      { "word": "行動", "meaning": "ação; comportamento" }
+    ]
+  },
+  "来": {
+    "meaning": ["vir"],
+    "examples": [
+      { "word": "来年", "meaning": "ano que vem" },
+      { "word": "来週", "meaning": "semana que vem" },
+      { "word": "出来る", "meaning": "poder fazer; estar pronto" }
+    ]
+  },
+  "入": {
+    "meaning": ["entrar"],
+    "examples": [
+      { "word": "入口", "meaning": "entrada" },
+      { "word": "入学", "meaning": "matrícula escolar" },
+      { "word": "輸入", "meaning": "importação" }
+    ]
+  },
+  "出": {
+    "meaning": ["sair; aparecer; tirar"],
+    "examples": [
+      { "word": "出口", "meaning": "saída" },
+      { "word": "出発", "meaning": "partida" },
+      { "word": "輸出", "meaning": "exportação" }
+    ]
+  },
+  "休": {
+    "meaning": ["descansar; folga"],
+    "examples": [
+      { "word": "休日", "meaning": "feriado; dia de folga" },
+      { "word": "夏休み", "meaning": "férias de verão" },
+      { "word": "休憩", "meaning": "pausa; descanso" }
+    ]
+  },
+  "立": {
+    "meaning": ["ficar de pé; estabelecer"],
+    "examples": [
+      { "word": "立つ", "meaning": "ficar de pé; levantar" },
+      { "word": "役立つ", "meaning": "ser útil" },
+      { "word": "独立", "meaning": "independência" }
+    ]
+  },
+  "起": {
+    "meaning": ["acordar; levantar; ocorrer"],
+    "examples": [
+      { "word": "起きる", "meaning": "acordar; levantar" },
+      { "word": "起こる", "meaning": "ocorrer; acontecer" },
+      { "word": "早起き", "meaning": "acordar cedo" }
+    ]
+  },
+  "帰": {
+    "meaning": ["voltar; ir para casa"],
+    "examples": [
+      { "word": "帰国", "meaning": "retorno ao próprio país" },
+      { "word": "帰宅", "meaning": "voltar para casa" },
+      { "word": "日帰り", "meaning": "excursão de um dia" }
+    ]
+  },
+  "言": {
+    "meaning": ["dizer; falar"],
+    "examples": [
+      { "word": "言葉", "meaning": "palavra; idioma" },
+      { "word": "言語", "meaning": "língua; linguagem" },
+      { "word": "一言", "meaning": "uma palavra; breve comentário" }
+    ]
+  },
+  "思": {
+    "meaning": ["pensar; sentir"],
+    "examples": [
+      { "word": "思い出", "meaning": "lembrança; recordação" },
+      { "word": "思想", "meaning": "pensamento; ideologia" },
+      { "word": "不思議", "meaning": "misterioso; estranho" }
+    ]
+  },
+  "知": {
+    "meaning": ["saber; conhecer"],
+    "examples": [
+      { "word": "知識", "meaning": "conhecimento" },
+      { "word": "知人", "meaning": "conhecido; colega" },
+      { "word": "通知", "meaning": "notificação; aviso" }
+    ]
+  },
+  "買": {
+    "meaning": ["comprar"],
+    "examples": [
+      { "word": "買い物", "meaning": "compras" },
+      { "word": "購買", "meaning": "compra; aquisição" },
+      { "word": "売り買い", "meaning": "compra e venda" }
+    ]
+  },
+  "大": {
+    "meaning": ["grande; vasto"],
+    "examples": [
+      { "word": "大学", "meaning": "universidade" },
+      { "word": "大切", "meaning": "importante" },
+      { "word": "大丈夫", "meaning": "tudo bem; está bem" }
+    ]
+  },
+  "小": {
+    "meaning": ["pequeno; pouco"],
+    "examples": [
+      { "word": "小学校", "meaning": "escola primária" },
+      { "word": "小説", "meaning": "romance; ficção" },
+      { "word": "小さい", "meaning": "pequeno" }
+    ]
+  },
+  "高": {
+    "meaning": ["alto; elevado; caro"],
+    "examples": [
+      { "word": "高校", "meaning": "ensino médio" },
+      { "word": "高速", "meaning": "alta velocidade; rodovia" },
+      { "word": "最高", "meaning": "o melhor; máximo" }
+    ]
+  },
+  "長": {
+    "meaning": ["longo; líder; chefe"],
+    "examples": [
+      { "word": "校長", "meaning": "diretor da escola" },
+      { "word": "長所", "meaning": "ponto forte; mérito" },
+      { "word": "社長", "meaning": "presidente da empresa" }
+    ]
+  },
+  "多": {
+    "meaning": ["muitos; muito"],
+    "examples": [
+      { "word": "多数", "meaning": "grande número; maioria" },
+      { "word": "多分", "meaning": "provavelmente; talvez" },
+      { "word": "多くの", "meaning": "muitos; a maioria de" }
+    ]
+  },
+  "少": {
+    "meaning": ["poucos; pouco; jovem"],
+    "examples": [
+      { "word": "少し", "meaning": "um pouco; alguns" },
+      { "word": "少年", "meaning": "menino; jovem" },
+      { "word": "少女", "meaning": "garota; jovem mulher" }
+    ]
+  },
+  "新": {
+    "meaning": ["novo"],
+    "examples": [
+      { "word": "新聞", "meaning": "jornal" },
+      { "word": "新幹線", "meaning": "trem-bala" },
+      { "word": "最新", "meaning": "mais recente; mais novo" }
+    ]
+  },
+  "古": {
+    "meaning": ["velho; usado"],
+    "examples": [
+      { "word": "古い", "meaning": "velho; antigo" },
+      { "word": "古典", "meaning": "clássico" },
+      { "word": "中古", "meaning": "usado; de segunda mão" }
+    ]
+  },
+  "白": {
+    "meaning": ["branco"],
+    "examples": [
+      { "word": "白い", "meaning": "branco" },
+      { "word": "白紙", "meaning": "papel em branco" },
+      { "word": "明白", "meaning": "óbvio; claro" }
+    ]
+  },
+  "黒": {
+    "meaning": ["preto"],
+    "examples": [
+      { "word": "黒い", "meaning": "preto" },
+      { "word": "黒板", "meaning": "quadro-negro" },
+      { "word": "黒字", "meaning": "lucro; superávit" }
+    ]
+  },
+  "赤": {
+    "meaning": ["vermelho"],
+    "examples": [
+      { "word": "赤い", "meaning": "vermelho" },
+      { "word": "赤ちゃん", "meaning": "bebê" },
+      { "word": "赤字", "meaning": "déficit; prejuízo" }
+    ]
+  },
+  "青": {
+    "meaning": ["azul; verde"],
+    "examples": [
+      { "word": "青い", "meaning": "azul; verde; imaturo" },
+      { "word": "青空", "meaning": "céu azul" },
+      { "word": "青年", "meaning": "jovem; juventude" }
+    ]
+  },
+  "昼": {
+    "meaning": ["dia; meio-dia"],
+    "examples": [
+      { "word": "昼ご飯", "meaning": "almoço" },
+      { "word": "昼間", "meaning": "durante o dia; período diurno" },
+      { "word": "昼休み", "meaning": "pausa para almoço" }
+    ]
+  },
+  "夕": {
+    "meaning": ["tarde; entardecer"],
+    "examples": [
+      { "word": "夕方", "meaning": "tarde; final de tarde" },
+      { "word": "夕食", "meaning": "jantar" },
+      { "word": "夕暮れ", "meaning": "crepúsculo; entardecer" }
+    ]
+  },
+  "昨": {
+    "meaning": ["ontem; anterior"],
+    "examples": [
+      { "word": "昨日", "meaning": "ontem" },
+      { "word": "昨年", "meaning": "ano passado" },
+      { "word": "昨夜", "meaning": "ontem à noite" }
+    ]
+  },
+  "去": {
+    "meaning": ["passado; partir"],
+    "examples": [
+      { "word": "去年", "meaning": "ano passado" },
+      { "word": "過去", "meaning": "o passado" },
+      { "word": "去る", "meaning": "partir; ir embora" }
+    ]
+  },
+  "近": {
+    "meaning": ["perto; próximo"],
+    "examples": [
+      { "word": "近所", "meaning": "vizinhança; bairro" },
+      { "word": "近代", "meaning": "tempos modernos" },
+      { "word": "最近", "meaning": "recentemente; ultimamente" }
+    ]
+  },
+  "遠": {
+    "meaning": ["longe; distante"],
+    "examples": [
+      { "word": "遠足", "meaning": "excursão; passeio escolar" },
+      { "word": "遠方", "meaning": "lugar distante" },
+      { "word": "遠慮", "meaning": "hesitação; reserva" }
+    ]
+  },
+  "間": {
+    "meaning": ["entre; intervalo; espaço"],
+    "examples": [
+      { "word": "時間", "meaning": "tempo; horas" },
+      { "word": "人間", "meaning": "ser humano" },
+      { "word": "週間", "meaning": "período de semana(s)" }
+    ]
+  },
+  "代": {
+    "meaning": ["geração; era; substituto"],
+    "examples": [
+      { "word": "時代", "meaning": "era; período" },
+      { "word": "代わり", "meaning": "substituto; em vez de" },
+      { "word": "年代", "meaning": "época; era; década" }
+    ]
+  },
+  "春": {
+    "meaning": ["primavera"],
+    "examples": [
+      { "word": "春休み", "meaning": "férias de primavera" },
+      { "word": "青春", "meaning": "juventude; primavera da vida" },
+      { "word": "立春", "meaning": "primeiro dia da primavera" }
+    ]
+  },
+  "夏": {
+    "meaning": ["verão"],
+    "examples": [
+      { "word": "夏休み", "meaning": "férias de verão" },
+      { "word": "真夏", "meaning": "pleno verão" },
+      { "word": "夏至", "meaning": "solstício de verão" }
+    ]
+  },
+  "秋": {
+    "meaning": ["outono"],
+    "examples": [
+      { "word": "秋分", "meaning": "equinócio de outono" },
+      { "word": "初秋", "meaning": "início do outono" },
+      { "word": "秋空", "meaning": "céu de outono" }
+    ]
+  },
+  "冬": {
+    "meaning": ["inverno"],
+    "examples": [
+      { "word": "冬休み", "meaning": "férias de inverno" },
+      { "word": "真冬", "meaning": "pleno inverno" },
+      { "word": "冬至", "meaning": "solstício de inverno" }
+    ]
+  },
+  "親": {
+    "meaning": ["pai/mãe; íntimo; gentil"],
+    "examples": [
+      { "word": "親切", "meaning": "gentileza; bondade" },
+      { "word": "両親", "meaning": "ambos os pais" },
+      { "word": "親友", "meaning": "amigo íntimo" }
+    ]
+  },
+  "兄": {
+    "meaning": ["irmão mais velho"],
+    "examples": [
+      { "word": "兄弟", "meaning": "irmãos" },
+      { "word": "お兄さん", "meaning": "irmão mais velho (polido)" },
+      { "word": "義兄", "meaning": "cunhado" }
+    ]
+  },
+  "姉": {
+    "meaning": ["irmã mais velha"],
+    "examples": [
+      { "word": "姉妹", "meaning": "irmãs" },
+      { "word": "お姉さん", "meaning": "irmã mais velha (polido)" },
+      { "word": "義姉", "meaning": "cunhada" }
+    ]
+  },
+  "弟": {
+    "meaning": ["irmão mais novo"],
+    "examples": [
+      { "word": "弟子", "meaning": "discípulo; aprendiz" },
+      { "word": "兄弟", "meaning": "irmãos" },
+      { "word": "義弟", "meaning": "cunhado (mais novo)" }
+    ]
+  },
+  "妹": {
+    "meaning": ["irmã mais nova"],
+    "examples": [
+      { "word": "姉妹", "meaning": "irmãs" },
+      { "word": "妹さん", "meaning": "irmã mais nova (polido)" },
+      { "word": "義妹", "meaning": "cunhada (mais nova)" }
+    ]
+  },
+  "夫": {
+    "meaning": ["marido; homem"],
+    "examples": [
+      { "word": "夫婦", "meaning": "casal; marido e mulher" },
+      { "word": "夫人", "meaning": "esposa; senhora" },
+      { "word": "工夫", "meaning": "engenho; criatividade" }
+    ]
+  },
+  "妻": {
+    "meaning": ["esposa"],
+    "examples": [
+      { "word": "夫婦", "meaning": "casal" },
+      { "word": "妻子", "meaning": "esposa e filhos" },
+      { "word": "後妻", "meaning": "segunda esposa" }
+    ]
+  },
+  "者": {
+    "meaning": ["pessoa; aquele que"],
+    "examples": [
+      { "word": "医者", "meaning": "médico" },
+      { "word": "記者", "meaning": "jornalista" },
+      { "word": "若者", "meaning": "jovem; pessoa jovem" }
+    ]
+  },
+  "員": {
+    "meaning": ["membro; funcionário"],
+    "examples": [
+      { "word": "会社員", "meaning": "funcionário de empresa" },
+      { "word": "店員", "meaning": "atendente de loja" },
+      { "word": "全員", "meaning": "todos os membros; todos" }
+    ]
+  },
+  "客": {
+    "meaning": ["convidado; cliente"],
+    "examples": [
+      { "word": "お客さん", "meaning": "cliente; convidado" },
+      { "word": "観客", "meaning": "público; espectadores" },
+      { "word": "旅客", "meaning": "passageiro; viajante" }
+    ]
+  },
+  "族": {
+    "meaning": ["família; clã; tribo"],
+    "examples": [
+      { "word": "家族", "meaning": "família" },
+      { "word": "民族", "meaning": "grupo étnico; povo" },
+      { "word": "水族館", "meaning": "aquário" }
+    ]
+  },
+  "部": {
+    "meaning": ["parte; departamento; clube"],
+    "examples": [
+      { "word": "部屋", "meaning": "quarto; sala" },
+      { "word": "全部", "meaning": "tudo; todos" },
+      { "word": "部活", "meaning": "atividades de clube" }
+    ]
+  },
+  "係": {
+    "meaning": ["responsável; relacionar-se com"],
+    "examples": [
+      { "word": "係員", "meaning": "responsável; encarregado" },
+      { "word": "関係", "meaning": "relação; conexão" },
+      { "word": "係わる", "meaning": "estar envolvido com" }
+    ]
+  },
+  "様": {
+    "meaning": ["maneira; senhor/senhora"],
+    "examples": [
+      { "word": "様子", "meaning": "estado; condição; aparência" },
+      { "word": "皆様", "meaning": "todos (muito polido)" },
+      { "word": "お客様", "meaning": "cliente prezado (muito polido)" }
+    ]
+  },
+  "首": {
+    "meaning": ["pescoço; cabeça; demitir"],
+    "examples": [
+      { "word": "首相", "meaning": "primeiro-ministro" },
+      { "word": "首都", "meaning": "capital" },
+      { "word": "手首", "meaning": "pulso" }
+    ]
+  },
+  "肩": {
+    "meaning": ["ombro"],
+    "examples": [
+      { "word": "肩書き", "meaning": "título; cargo" },
+      { "word": "肩こり", "meaning": "tensão nos ombros" },
+      { "word": "双肩", "meaning": "ambos os ombros" }
+    ]
+  },
+  "胸": {
+    "meaning": ["peito; coração"],
+    "examples": [
+      { "word": "胸中", "meaning": "no coração; nos pensamentos" },
+      { "word": "胸焼け", "meaning": "azia" },
+      { "word": "胸騒ぎ", "meaning": "pressentimento; mau agouro" }
+    ]
+  },
+  "指": {
+    "meaning": ["dedo; apontar para"],
+    "examples": [
+      { "word": "指輪", "meaning": "anel (joia)" },
+      { "word": "指定", "meaning": "designação; especificação" },
+      { "word": "指導", "meaning": "orientação; liderança" }
+    ]
+  },
+  "血": {
+    "meaning": ["sangue"],
+    "examples": [
+      { "word": "血液", "meaning": "sangue" },
+      { "word": "献血", "meaning": "doação de sangue" },
+      { "word": "血圧", "meaning": "pressão arterial" }
+    ]
+  },
+  "病": {
+    "meaning": ["doença; enfermidade"],
+    "examples": [
+      { "word": "病院", "meaning": "hospital" },
+      { "word": "病気", "meaning": "doença; enfermidade" },
+      { "word": "看病", "meaning": "cuidar de doente; enfermagem" }
+    ]
+  },
+  "院": {
+    "meaning": ["instituição; templo"],
+    "examples": [
+      { "word": "病院", "meaning": "hospital" },
+      { "word": "入院", "meaning": "internação" },
+      { "word": "美容院", "meaning": "salão de beleza" }
+    ]
+  },
+  "医": {
+    "meaning": ["medicina; médico"],
+    "examples": [
+      { "word": "医者", "meaning": "médico" },
+      { "word": "医学", "meaning": "medicina; ciência médica" },
+      { "word": "医院", "meaning": "consultório; clínica" }
+    ]
+  },
+  "薬": {
+    "meaning": ["remédio; medicamento"],
+    "examples": [
+      { "word": "薬局", "meaning": "farmácia" },
+      { "word": "薬剤師", "meaning": "farmacêutico" },
+      { "word": "農薬", "meaning": "pesticida; agroquímico" }
+    ]
+  },
+  "痛": {
+    "meaning": ["dor"],
+    "examples": [
+      { "word": "頭痛", "meaning": "dor de cabeça" },
+      { "word": "腹痛", "meaning": "dor de barriga" },
+      { "word": "痛み", "meaning": "dor; sofrimento" }
+    ]
+  },
+  "熱": {
+    "meaning": ["calor; febre; entusiasmo"],
+    "examples": [
+      { "word": "発熱", "meaning": "febre; temperatura elevada" },
+      { "word": "熱心", "meaning": "entusiasmo; dedicação" },
+      { "word": "熱帯", "meaning": "trópicos" }
+    ]
+  },
+  "健": {
+    "meaning": ["saudável; forte"],
+    "examples": [
+      { "word": "健康", "meaning": "saúde" },
+      { "word": "健全", "meaning": "saudável; são" },
+      { "word": "保健", "meaning": "saúde pública; higiene" }
+    ]
+  },
+  "康": {
+    "meaning": ["paz; saúde"],
+    "examples": [
+      { "word": "健康", "meaning": "saúde" },
+      { "word": "健康的", "meaning": "saudável" },
+      { "word": "健康保険", "meaning": "plano de saúde" }
+    ]
+  },
+  "森": {
+    "meaning": ["floresta"],
+    "examples": [
+      { "word": "森林", "meaning": "floresta; bosque" },
+      { "word": "森閑", "meaning": "completamente silencioso" },
+      { "word": "深森", "meaning": "floresta profunda" }
+    ]
+  },
+  "林": {
+    "meaning": ["bosque; arvoredo"],
+    "examples": [
+      { "word": "森林", "meaning": "floresta" },
+      { "word": "林業", "meaning": "silvicultura; exploração florestal" },
+      { "word": "竹林", "meaning": "bambuzal" }
+    ]
+  },
+  "島": {
+    "meaning": ["ilha"],
+    "examples": [
+      { "word": "半島", "meaning": "península" },
+      { "word": "島国", "meaning": "nação insular" },
+      { "word": "無人島", "meaning": "ilha deserta" }
+    ]
+  },
+  "岩": {
+    "meaning": ["rocha; penhasco"],
+    "examples": [
+      { "word": "岩石", "meaning": "rocha; pedra" },
+      { "word": "火岩", "meaning": "rocha ígnea" },
+      { "word": "岩場", "meaning": "área rochosa" }
+    ]
+  },
+  "草": {
+    "meaning": ["grama; plantas"],
+    "examples": [
+      { "word": "草原", "meaning": "campo; prado" },
+      { "word": "雑草", "meaning": "ervas daninhas" },
+      { "word": "草花", "meaning": "flores e plantas" }
+    ]
+  },
+  "葉": {
+    "meaning": ["folha"],
+    "examples": [
+      { "word": "落ち葉", "meaning": "folhas caídas" },
+      { "word": "言葉", "meaning": "palavras; idioma" },
+      { "word": "紅葉", "meaning": "folhas de outono; bordo" }
+    ]
+  },
+  "根": {
+    "meaning": ["raiz; base"],
+    "examples": [
+      { "word": "根本", "meaning": "raiz; base; fundamental" },
+      { "word": "屋根", "meaning": "telhado" },
+      { "word": "根拠", "meaning": "base; fundamento; razão" }
+    ]
+  },
+  "枝": {
+    "meaning": ["galho; ramo"],
+    "examples": [
+      { "word": "枝豆", "meaning": "edamame; feijão de soja verde" },
+      { "word": "木枝", "meaning": "galho de árvore" },
+      { "word": "枝分かれ", "meaning": "ramificação; bifurcação" }
+    ]
+  },
+  "鳥": {
+    "meaning": ["pássaro"],
+    "examples": [
+      { "word": "小鳥", "meaning": "passarinho" },
+      { "word": "野鳥", "meaning": "pássaro selvagem" },
+      { "word": "渡り鳥", "meaning": "ave migratória" }
+    ]
+  },
+  "馬": {
+    "meaning": ["cavalo"],
+    "examples": [
+      { "word": "馬車", "meaning": "carruagem" },
+      { "word": "乗馬", "meaning": "equitação" },
+      { "word": "競馬", "meaning": "corrida de cavalos" }
+    ]
+  },
+  "牛": {
+    "meaning": ["vaca; gado"],
+    "examples": [
+      { "word": "牛乳", "meaning": "leite" },
+      { "word": "牛肉", "meaning": "carne bovina; bife" },
+      { "word": "乳牛", "meaning": "vaca leiteira" }
+    ]
+  },
+  "虫": {
+    "meaning": ["inseto; bicho"],
+    "examples": [
+      { "word": "害虫", "meaning": "inseto nocivo; praga" },
+      { "word": "昆虫", "meaning": "inseto" },
+      { "word": "虫歯", "meaning": "cárie; dente cariado" }
+    ]
+  },
+  "地": {
+    "meaning": ["chão; terra; área"],
+    "examples": [
+      { "word": "地図", "meaning": "mapa" },
+      { "word": "地下鉄", "meaning": "metrô" },
+      { "word": "土地", "meaning": "terreno; propriedade" }
+    ]
+  },
+  "界": {
+    "meaning": ["mundo; fronteira"],
+    "examples": [
+      { "word": "世界", "meaning": "mundo" },
+      { "word": "限界", "meaning": "limite; fronteira" },
+      { "word": "業界", "meaning": "setor; mundo dos negócios" }
+    ]
+  },
+  "風": {
+    "meaning": ["vento; estilo"],
+    "examples": [
+      { "word": "台風", "meaning": "tufão" },
+      { "word": "風景", "meaning": "paisagem; cenário" },
+      { "word": "風邪", "meaning": "resfriado (doença)" }
+    ]
+  },
+  "雲": {
+    "meaning": ["nuvem"],
+    "examples": [
+      { "word": "雲海", "meaning": "mar de nuvens" },
+      { "word": "積乱雲", "meaning": "cumulonimbo" },
+      { "word": "入道雲", "meaning": "nuvem cumulo" }
+    ]
+  },
+  "星": {
+    "meaning": ["estrela"],
+    "examples": [
+      { "word": "星座", "meaning": "constelação" },
+      { "word": "火星", "meaning": "Marte" },
+      { "word": "流れ星", "meaning": "estrela cadente" }
+    ]
+  },
+  "味": {
+    "meaning": ["sabor; gosto"],
+    "examples": [
+      { "word": "味噌", "meaning": "missô" },
+      { "word": "趣味", "meaning": "hobby; passatempo" },
+      { "word": "調味料", "meaning": "tempero; condimento" }
+    ]
+  },
+  "料": {
+    "meaning": ["taxa; material; culinária"],
+    "examples": [
+      { "word": "料理", "meaning": "culinária; prato" },
+      { "word": "料金", "meaning": "taxa; tarifa" },
+      { "word": "材料", "meaning": "ingredientes; materiais" }
+    ]
+  },
+  "飯": {
+    "meaning": ["arroz cozido; refeição"],
+    "examples": [
+      { "word": "ご飯", "meaning": "arroz; refeição" },
+      { "word": "朝飯", "meaning": "café da manhã (informal)" },
+      { "word": "炊飯器", "meaning": "panela de arroz elétrica" }
+    ]
+  },
+  "茶": {
+    "meaning": ["chá"],
+    "examples": [
+      { "word": "お茶", "meaning": "chá" },
+      { "word": "喫茶店", "meaning": "café; cafeteria" },
+      { "word": "茶道", "meaning": "cerimônia do chá" }
+    ]
+  },
+  "酒": {
+    "meaning": ["álcool; saquê"],
+    "examples": [
+      { "word": "日本酒", "meaning": "saquê japonês" },
+      { "word": "居酒屋", "meaning": "izakaya; bar japonês" },
+      { "word": "禁酒", "meaning": "abstinência de álcool" }
+    ]
+  },
+  "肉": {
+    "meaning": ["carne"],
+    "examples": [
+      { "word": "牛肉", "meaning": "carne bovina" },
+      { "word": "豚肉", "meaning": "carne de porco" },
+      { "word": "肉体", "meaning": "corpo físico; carne" }
+    ]
+  },
+  "魚": {
+    "meaning": ["peixe"],
+    "examples": [
+      { "word": "金魚", "meaning": "peixinho dourado" },
+      { "word": "魚市場", "meaning": "mercado de peixe" },
+      { "word": "魚介類", "meaning": "frutos do mar" }
+    ]
+  },
+  "野": {
+    "meaning": ["campo; selvagem"],
+    "examples": [
+      { "word": "野菜", "meaning": "legumes; verduras" },
+      { "word": "野球", "meaning": "beisebol" },
+      { "word": "野原", "meaning": "campo; pradaria" }
+    ]
+  },
+  "菜": {
+    "meaning": ["vegetal; verdura"],
+    "examples": [
+      { "word": "野菜", "meaning": "legumes; verduras" },
+      { "word": "菜食", "meaning": "dieta vegetariana" },
+      { "word": "菜の花", "meaning": "flor de canola" }
+    ]
+  },
+  "米": {
+    "meaning": ["arroz (cru); EUA"],
+    "examples": [
+      { "word": "お米", "meaning": "arroz (cru)" },
+      { "word": "日米", "meaning": "Japão-Estados Unidos" },
+      { "word": "米国", "meaning": "Estados Unidos" }
+    ]
+  },
+  "豆": {
+    "meaning": ["feijão; leguminosa"],
+    "examples": [
+      { "word": "豆腐", "meaning": "tofu" },
+      { "word": "大豆", "meaning": "soja" },
+      { "word": "枝豆", "meaning": "edamame" }
+    ]
+  },
+  "皿": {
+    "meaning": ["prato; travessa"],
+    "examples": [
+      { "word": "大皿", "meaning": "prato grande; travessa" },
+      { "word": "小皿", "meaning": "prato pequeno; pires" },
+      { "word": "灰皿", "meaning": "cinzeiro" }
+    ]
+  },
+  "室": {
+    "meaning": ["quarto; câmara"],
+    "examples": [
+      { "word": "教室", "meaning": "sala de aula" },
+      { "word": "温室", "meaning": "estufa" },
+      { "word": "和室", "meaning": "quarto de estilo japonês" }
+    ]
+  },
+  "堂": {
+    "meaning": ["salão; templo; magnífico"],
+    "examples": [
+      { "word": "食堂", "meaning": "refeitório; cantina" },
+      { "word": "講堂", "meaning": "auditório" },
+      { "word": "国会議事堂", "meaning": "Parlamento Japonês" }
+    ]
+  },
+  "館": {
+    "meaning": ["edifício; salão"],
+    "examples": [
+      { "word": "図書館", "meaning": "biblioteca" },
+      { "word": "博物館", "meaning": "museu" },
+      { "word": "旅館", "meaning": "inn japonês; ryokan" }
+    ]
+  },
+  "場": {
+    "meaning": ["lugar; local; ocasião"],
+    "examples": [
+      { "word": "場所", "meaning": "lugar; localização" },
+      { "word": "工場", "meaning": "fábrica" },
+      { "word": "駐車場", "meaning": "estacionamento" }
+    ]
+  },
+  "橋": {
+    "meaning": ["ponte"],
+    "examples": [
+      { "word": "鉄橋", "meaning": "ponte de ferro; ponte ferroviária" },
+      { "word": "歩道橋", "meaning": "passarela" },
+      { "word": "橋渡し", "meaning": "mediação; intermediação" }
+    ]
+  },
+  "道": {
+    "meaning": ["estrada; caminho"],
+    "examples": [
+      { "word": "北海道", "meaning": "Hokkaido" },
+      { "word": "道路", "meaning": "estrada; rodovia" },
+      { "word": "道具", "meaning": "ferramenta; instrumento" }
+    ]
+  },
+  "角": {
+    "meaning": ["esquina; ângulo; chifre"],
+    "examples": [
+      { "word": "角を曲がる", "meaning": "virar a esquina" },
+      { "word": "三角", "meaning": "triângulo" },
+      { "word": "四角", "meaning": "quadrado; retângulo" }
+    ]
+  },
+  "工": {
+    "meaning": ["trabalho; construção; indústria"],
+    "examples": [
+      { "word": "工場", "meaning": "fábrica" },
+      { "word": "工業", "meaning": "indústria; manufatura" },
+      { "word": "工事", "meaning": "construção; obras" }
+    ]
+  },
+  "農": {
+    "meaning": ["agricultura; cultivo"],
+    "examples": [
+      { "word": "農業", "meaning": "agricultura; agropecuária" },
+      { "word": "農家", "meaning": "família de agricultor; fazendeiro" },
+      { "word": "農産物", "meaning": "produtos agrícolas" }
+    ]
+  },
+  "産": {
+    "meaning": ["produzir; dar à luz; bens"],
+    "examples": [
+      { "word": "産業", "meaning": "indústria" },
+      { "word": "生産", "meaning": "produção; fabricação" },
+      { "word": "土産", "meaning": "lembrança; souvenir" }
+    ]
+  },
+  "業": {
+    "meaning": ["negócio; indústria; carma"],
+    "examples": [
+      { "word": "卒業", "meaning": "formatura" },
+      { "word": "授業", "meaning": "aula; lição" },
+      { "word": "職業", "meaning": "ocupação; profissão" }
+    ]
+  },
+  "都": {
+    "meaning": ["capital; metrópole"],
+    "examples": [
+      { "word": "東京都", "meaning": "Metrópole de Tóquio" },
+      { "word": "首都", "meaning": "capital" },
+      { "word": "都市", "meaning": "cidade; área urbana" }
+    ]
+  },
+  "市": {
+    "meaning": ["cidade; mercado"],
+    "examples": [
+      { "word": "市場", "meaning": "mercado; feira" },
+      { "word": "市民", "meaning": "cidadão" },
+      { "word": "都市", "meaning": "cidade; área urbana" }
+    ]
+  },
+  "村": {
+    "meaning": ["aldeia; vila"],
+    "examples": [
+      { "word": "農村", "meaning": "aldeia rural; zona rural" },
+      { "word": "村人", "meaning": "aldeão; morador da vila" },
+      { "word": "市町村", "meaning": "municípios" }
+    ]
+  },
+  "町": {
+    "meaning": ["cidade pequena; bairro"],
+    "examples": [
+      { "word": "町中", "meaning": "centro da cidade; no meio da cidade" },
+      { "word": "町内", "meaning": "bairro; distrito da cidade" },
+      { "word": "下町", "meaning": "shitamachi; cidade baixa" }
+    ]
+  },
+  "乗": {
+    "meaning": ["subir; embarcar; multiplicar"],
+    "examples": [
+      { "word": "乗り換え", "meaning": "baldeação; transferência" },
+      { "word": "乗り場", "meaning": "ponto de embarque; parada" },
+      { "word": "乗客", "meaning": "passageiro" }
+    ]
+  },
+  "降": {
+    "meaning": ["descer; sair (de veículo); chover"],
+    "examples": [
+      { "word": "降りる", "meaning": "descer; sair do veículo" },
+      { "word": "降水量", "meaning": "precipitação" },
+      { "word": "以降", "meaning": "desde então; a partir de" }
+    ]
+  },
+  "着": {
+    "meaning": ["chegar; vestir; prender"],
+    "examples": [
+      { "word": "到着", "meaning": "chegada" },
+      { "word": "着物", "meaning": "quimono" },
+      { "word": "着替え", "meaning": "troca de roupa" }
+    ]
+  },
+  "発": {
+    "meaning": ["partir; emitir; começar"],
+    "examples": [
+      { "word": "出発", "meaning": "partida" },
+      { "word": "発表", "meaning": "anúncio; apresentação" },
+      { "word": "発展", "meaning": "desenvolvimento; crescimento" }
+    ]
+  },
+  "通": {
+    "meaning": ["passar; deslocar-se; rua"],
+    "examples": [
+      { "word": "交通", "meaning": "trânsito; transporte" },
+      { "word": "通勤", "meaning": "deslocamento ao trabalho" },
+      { "word": "通り", "meaning": "rua; avenida" }
+    ]
+  },
+  "運": {
+    "meaning": ["carregar; sorte; destino"],
+    "examples": [
+      { "word": "運転", "meaning": "condução; operação" },
+      { "word": "運動", "meaning": "exercício; movimento" },
+      { "word": "運命", "meaning": "destino; fado" }
+    ]
+  },
+  "転": {
+    "meaning": ["rolar; virar; mudar"],
+    "examples": [
+      { "word": "自転車", "meaning": "bicicleta" },
+      { "word": "運転", "meaning": "condução; dirigir" },
+      { "word": "転居", "meaning": "mudança de endereço" }
+    ]
+  },
+  "急": {
+    "meaning": ["súbito; apressar; íngreme"],
+    "examples": [
+      { "word": "急行", "meaning": "expresso (trem)" },
+      { "word": "急ぐ", "meaning": "apressar-se" },
+      { "word": "緊急", "meaning": "emergência; urgente" }
+    ]
+  },
+  "特": {
+    "meaning": ["especial; particular"],
+    "examples": [
+      { "word": "特急", "meaning": "expresso limitado" },
+      { "word": "特別", "meaning": "especial" },
+      { "word": "特に", "meaning": "especialmente; particularmente" }
+    ]
+  },
+  "図": {
+    "meaning": ["diagrama; mapa; plano"],
+    "examples": [
+      { "word": "地図", "meaning": "mapa" },
+      { "word": "図書館", "meaning": "biblioteca" },
+      { "word": "図形", "meaning": "figura; forma geométrica" }
+    ]
+  },
+  "港": {
+    "meaning": ["porto"],
+    "examples": [
+      { "word": "空港", "meaning": "aeroporto" },
+      { "word": "港町", "meaning": "cidade portuária" },
+      { "word": "出港", "meaning": "partida do porto" }
+    ]
+  },
+  "旅": {
+    "meaning": ["viagem; jornada"],
+    "examples": [
+      { "word": "旅行", "meaning": "viagem" },
+      { "word": "旅館", "meaning": "inn japonês" },
+      { "word": "旅費", "meaning": "despesas de viagem" }
+    ]
+  },
+  "研": {
+    "meaning": ["polir; estudar; pesquisar"],
+    "examples": [
+      { "word": "研究", "meaning": "pesquisa; estudo" },
+      { "word": "研修", "meaning": "treinamento; programa de estudo" },
+      { "word": "研磨", "meaning": "polimento; esmerilamento" }
+    ]
+  },
+  "究": {
+    "meaning": ["pesquisar; investigar"],
+    "examples": [
+      { "word": "研究", "meaning": "pesquisa" },
+      { "word": "究極", "meaning": "definitivo; final" },
+      { "word": "追究", "meaning": "investigação; inquérito" }
+    ]
+  },
+  "試": {
+    "meaning": ["tentar; testar; experimentar"],
+    "examples": [
+      { "word": "試験", "meaning": "prova; exame" },
+      { "word": "試合", "meaning": "partida; jogo; competição" },
+      { "word": "試着", "meaning": "experimentar roupa" }
+    ]
+  },
+  "験": {
+    "meaning": ["efeito; resultado; exame"],
+    "examples": [
+      { "word": "試験", "meaning": "prova; exame" },
+      { "word": "経験", "meaning": "experiência" },
+      { "word": "実験", "meaning": "experimento" }
+    ]
+  },
+  "文": {
+    "meaning": ["frase; literatura; padrão"],
+    "examples": [
+      { "word": "文法", "meaning": "gramática" },
+      { "word": "文化", "meaning": "cultura" },
+      { "word": "作文", "meaning": "redação; composição" }
+    ]
+  },
+  "法": {
+    "meaning": ["lei; método; maneira"],
+    "examples": [
+      { "word": "文法", "meaning": "gramática" },
+      { "word": "方法", "meaning": "método; maneira" },
+      { "word": "法律", "meaning": "lei" }
+    ]
+  },
+  "習": {
+    "meaning": ["aprender; praticar; hábito"],
+    "examples": [
+      { "word": "習慣", "meaning": "hábito; costume" },
+      { "word": "予習", "meaning": "preparação prévia" },
+      { "word": "復習", "meaning": "revisão de conteúdo" }
+    ]
+  },
+  "練": {
+    "meaning": ["praticar; amassar; treinar"],
+    "examples": [
+      { "word": "練習", "meaning": "prática; treino" },
+      { "word": "訓練", "meaning": "treinamento; instrução" },
+      { "word": "熟練", "meaning": "habilidade; maestria" }
+    ]
+  },
+  "教": {
+    "meaning": ["ensinar; religião"],
+    "examples": [
+      { "word": "教育", "meaning": "educação" },
+      { "word": "教師", "meaning": "professor" },
+      { "word": "宗教", "meaning": "religião" }
+    ]
+  },
+  "授": {
+    "meaning": ["ensinar; conceder; premiar"],
+    "examples": [
+      { "word": "授業", "meaning": "aula; lição" },
+      { "word": "教授", "meaning": "professor universitário" },
+      { "word": "授与", "meaning": "entrega; conferir" }
+    ]
+  },
+  "卒": {
+    "meaning": ["formar; soldado; morrer"],
+    "examples": [
+      { "word": "卒業", "meaning": "formatura" },
+      { "word": "卒業生", "meaning": "formado; ex-aluno" },
+      { "word": "卒論", "meaning": "tese de conclusão" }
+    ]
+  },
+  "科": {
+    "meaning": ["departamento; disciplina; ramo"],
+    "examples": [
+      { "word": "科学", "meaning": "ciência" },
+      { "word": "外科", "meaning": "cirurgia; departamento cirúrgico" },
+      { "word": "教科書", "meaning": "livro didático" }
+    ]
+  },
+  "専": {
+    "meaning": ["especializar; concentrar"],
+    "examples": [
+      { "word": "専門", "meaning": "especialidade; campo principal" },
+      { "word": "専攻", "meaning": "especialização; habilitação" },
+      { "word": "専用", "meaning": "uso exclusivo; dedicado" }
+    ]
+  },
+  "始": {
+    "meaning": ["começar; iniciar"],
+    "examples": [
+      { "word": "開始", "meaning": "início; começo" },
+      { "word": "始業", "meaning": "início das aulas/trabalho" },
+      { "word": "始末", "meaning": "gestão; resolução" }
+    ]
+  },
+  "終": {
+    "meaning": ["terminar; finalizar"],
+    "examples": [
+      { "word": "終了", "meaning": "fim; conclusão" },
+      { "word": "最終", "meaning": "último; final" },
+      { "word": "終点", "meaning": "terminal; última parada" }
+    ]
+  },
+  "決": {
+    "meaning": ["decidir; determinar"],
+    "examples": [
+      { "word": "決定", "meaning": "decisão; determinação" },
+      { "word": "解決", "meaning": "resolução; solução" },
+      { "word": "決勝", "meaning": "final; partida decisiva" }
+    ]
+  },
+  "変": {
+    "meaning": ["mudar; estranho"],
+    "examples": [
+      { "word": "変化", "meaning": "mudança; variação" },
+      { "word": "大変", "meaning": "terrível; muito" },
+      { "word": "変わる", "meaning": "mudar; ser diferente" }
+    ]
+  },
+  "増": {
+    "meaning": ["aumentar; mais"],
+    "examples": [
+      { "word": "増加", "meaning": "aumento" },
+      { "word": "増える", "meaning": "aumentar" },
+      { "word": "増税", "meaning": "aumento de imposto" }
+    ]
+  },
+  "減": {
+    "meaning": ["diminuir; menos"],
+    "examples": [
+      { "word": "削減", "meaning": "redução; corte" },
+      { "word": "減少", "meaning": "diminuição; redução" },
+      { "word": "節減", "meaning": "economizar; poupar" }
+    ]
+  },
+  "集": {
+    "meaning": ["reunir; coletar"],
+    "examples": [
+      { "word": "集中", "meaning": "concentração; foco" },
+      { "word": "収集", "meaning": "coleção; coleta" },
+      { "word": "編集", "meaning": "edição; compilação" }
+    ]
+  },
+  "別": {
+    "meaning": ["separado; diferente; especial"],
+    "examples": [
+      { "word": "特別", "meaning": "especial" },
+      { "word": "別々", "meaning": "separadamente; individualmente" },
+      { "word": "区別", "meaning": "distinção; diferenciação" }
+    ]
+  },
+  "続": {
+    "meaning": ["continuar; seguir"],
+    "examples": [
+      { "word": "継続", "meaning": "continuação" },
+      { "word": "連続", "meaning": "consecutivo; sequencial" },
+      { "word": "続き", "meaning": "continuação; sequência" }
+    ]
+  },
+  "止": {
+    "meaning": ["parar; cessar"],
+    "examples": [
+      { "word": "禁止", "meaning": "proibição; veto" },
+      { "word": "中止", "meaning": "suspensão; cancelamento" },
+      { "word": "停止", "meaning": "parada; suspensão" }
+    ]
+  },
+  "動": {
+    "meaning": ["mover; movimento; ação"],
+    "examples": [
+      { "word": "運動", "meaning": "exercício; movimento" },
+      { "word": "活動", "meaning": "atividade; ação" },
+      { "word": "動物", "meaning": "animal" }
+    ]
+  },
+  "働": {
+    "meaning": ["trabalhar; labor"],
+    "examples": [
+      { "word": "労働", "meaning": "trabalho; labor" },
+      { "word": "働き", "meaning": "trabalho; função; ganho" },
+      { "word": "働き者", "meaning": "trabalhador dedicado" }
+    ]
+  },
+  "使": {
+    "meaning": ["usar; empregar; mensageiro"],
+    "examples": [
+      { "word": "使用", "meaning": "uso; aplicação" },
+      { "word": "大使", "meaning": "embaixador" },
+      { "word": "使い方", "meaning": "como usar; modo de uso" }
+    ]
+  },
+  "送": {
+    "meaning": ["enviar; acompanhar"],
+    "examples": [
+      { "word": "送料", "meaning": "frete; taxa de envio" },
+      { "word": "放送", "meaning": "transmissão; broadcast" },
+      { "word": "見送り", "meaning": "despedida; farewell" }
+    ]
+  },
+  "受": {
+    "meaning": ["receber; aceitar; tomar"],
+    "examples": [
+      { "word": "受付", "meaning": "recepção; balcão de atendimento" },
+      { "word": "受験", "meaning": "fazer um exame" },
+      { "word": "受け取る", "meaning": "receber; aceitar" }
+    ]
+  },
+  "取": {
+    "meaning": ["pegar; obter"],
+    "examples": [
+      { "word": "取り出す", "meaning": "tirar; retirar" },
+      { "word": "受け取る", "meaning": "receber" },
+      { "word": "取引", "meaning": "transação; negócio" }
+    ]
+  },
+  "持": {
+    "meaning": ["segurar; carregar; ter"],
+    "examples": [
+      { "word": "持ち物", "meaning": "pertences" },
+      { "word": "持続", "meaning": "continuação; persistência" },
+      { "word": "気持ち", "meaning": "sentimento; humor" }
+    ]
+  },
+  "置": {
+    "meaning": ["colocar; deixar"],
+    "examples": [
+      { "word": "位置", "meaning": "posição; localização" },
+      { "word": "放置", "meaning": "deixar de lado; negligência" },
+      { "word": "措置", "meaning": "medida; providência" }
+    ]
+  },
+  "落": {
+    "meaning": ["cair; despencar; sair"],
+    "examples": [
+      { "word": "落ち着く", "meaning": "acalmar; estabilizar" },
+      { "word": "落第", "meaning": "reprovação; chumbar" },
+      { "word": "滝", "meaning": "cachoeira" }
+    ]
+  },
+  "直": {
+    "meaning": ["consertar; honesto; direto"],
+    "examples": [
+      { "word": "正直", "meaning": "honesto; honestidade" },
+      { "word": "直接", "meaning": "direto; imediato" },
+      { "word": "直ちに", "meaning": "imediatamente; de imediato" }
+    ]
+  },
+  "壊": {
+    "meaning": ["quebrar; demolir; destruir"],
+    "examples": [
+      { "word": "破壊", "meaning": "destruição; demolição" },
+      { "word": "崩壊", "meaning": "colapso; desintegração" },
+      { "word": "壊れる", "meaning": "quebrar; estar quebrado" }
+    ]
+  },
+  "消": {
+    "meaning": ["apagar; extinguir; desaparecer"],
+    "examples": [
+      { "word": "消える", "meaning": "desaparecer; se apagar" },
+      { "word": "消費", "meaning": "consumo" },
+      { "word": "消防", "meaning": "combate a incêndio; bombeiros" }
+    ]
+  },
+  "付": {
+    "meaning": ["anexar; acompanhar"],
+    "examples": [
+      { "word": "気付く", "meaning": "perceber; notar" },
+      { "word": "受け付ける", "meaning": "aceitar; receber" },
+      { "word": "付近", "meaning": "vizinhança; arredores" }
+    ]
+  },
+  "開": {
+    "meaning": ["abrir; começar; realizar"],
+    "examples": [
+      { "word": "開発", "meaning": "desenvolvimento" },
+      { "word": "開始", "meaning": "início; começo" },
+      { "word": "公開", "meaning": "aberto ao público; lançamento" }
+    ]
+  },
+  "閉": {
+    "meaning": ["fechar; encerrar"],
+    "examples": [
+      { "word": "閉まる", "meaning": "fechar (intransitivo)" },
+      { "word": "閉店", "meaning": "fechamento da loja" },
+      { "word": "閉会", "meaning": "encerramento de reunião" }
+    ]
+  },
+  "選": {
+    "meaning": ["escolher; selecionar"],
+    "examples": [
+      { "word": "選択", "meaning": "escolha; seleção" },
+      { "word": "選手", "meaning": "atleta; jogador" },
+      { "word": "選挙", "meaning": "eleição" }
+    ]
+  },
+  "並": {
+    "meaning": ["enfileirar; comum; médio"],
+    "examples": [
+      { "word": "並木", "meaning": "árvores à beira da estrada; alameda" },
+      { "word": "並べる", "meaning": "enfileirar; organizar" },
+      { "word": "大並み", "meaning": "onda grande" }
+    ]
+  },
+  "比": {
+    "meaning": ["comparar; proporção"],
+    "examples": [
+      { "word": "比べる", "meaning": "comparar" },
+      { "word": "比率", "meaning": "proporção; razão" },
+      { "word": "日比", "meaning": "Japão-Filipinas" }
+    ]
+  },
+  "調": {
+    "meaning": ["investigar; tom; preparar"],
+    "examples": [
+      { "word": "調べる", "meaning": "investigar; verificar" },
+      { "word": "調査", "meaning": "investigação; pesquisa" },
+      { "word": "調理", "meaning": "culinária; preparo de alimentos" }
+    ]
+  },
+  "笑": {
+    "meaning": ["rir; sorrir"],
+    "examples": [
+      { "word": "笑顔", "meaning": "rosto sorridente" },
+      { "word": "苦笑", "meaning": "sorriso amarelo; riso forçado" },
+      { "word": "大笑い", "meaning": "gargalhar; rir muito" }
+    ]
+  },
+  "泣": {
+    "meaning": ["chorar"],
+    "examples": [
+      { "word": "泣く", "meaning": "chorar" },
+      { "word": "号泣", "meaning": "choro alto; pranto" },
+      { "word": "泣き声", "meaning": "voz de choro" }
+    ]
+  },
+  "怒": {
+    "meaning": ["ficar com raiva; fúria"],
+    "examples": [
+      { "word": "怒る", "meaning": "ficar com raiva" },
+      { "word": "激怒", "meaning": "fúria; raiva intensa" },
+      { "word": "怒鳴る", "meaning": "gritar com raiva; berrar" }
+    ]
+  },
+  "安": {
+    "meaning": ["barato; seguro; paz"],
+    "examples": [
+      { "word": "安全", "meaning": "segurança; seguro" },
+      { "word": "安心", "meaning": "tranquilidade; alívio" },
+      { "word": "不安", "meaning": "ansiedade; inquietação" }
+    ]
+  },
+  "危": {
+    "meaning": ["perigoso"],
+    "examples": [
+      { "word": "危険", "meaning": "perigo; risco" },
+      { "word": "危機", "meaning": "crise" },
+      { "word": "危ない", "meaning": "perigoso; cuidado!" }
+    ]
+  },
+  "強": {
+    "meaning": ["forte; poderoso"],
+    "examples": [
+      { "word": "強力", "meaning": "poderoso; forte" },
+      { "word": "強調", "meaning": "ênfase; destaque" },
+      { "word": "勉強", "meaning": "estudo; dedicação" }
+    ]
+  },
+  "弱": {
+    "meaning": ["fraco; débil"],
+    "examples": [
+      { "word": "弱点", "meaning": "ponto fraco; fraqueza" },
+      { "word": "弱気", "meaning": "fraco de vontade; pessimista" },
+      { "word": "弱める", "meaning": "enfraquecer" }
+    ]
+  },
+  "深": {
+    "meaning": ["profundo; fundo"],
+    "examples": [
+      { "word": "深夜", "meaning": "madrugada; noite avançada" },
+      { "word": "深呼吸", "meaning": "respiração profunda" },
+      { "word": "奥深い", "meaning": "profundo; aprofundado" }
+    ]
+  },
+  "浅": {
+    "meaning": ["raso; superficial"],
+    "examples": [
+      { "word": "浅い", "meaning": "raso; superficial" },
+      { "word": "浅草", "meaning": "Asakusa (bairro)" },
+      { "word": "浅知恵", "meaning": "sabedoria superficial" }
+    ]
+  },
+  "細": {
+    "meaning": ["fino; estreito; detalhe"],
+    "examples": [
+      { "word": "詳細", "meaning": "detalhes; particulares" },
+      { "word": "細かい", "meaning": "fino; detalhado; pequeno" },
+      { "word": "繊細", "meaning": "delicado; sensível" }
+    ]
+  },
+  "太": {
+    "meaning": ["gordo; grosso; negrito"],
+    "examples": [
+      { "word": "太い", "meaning": "grosso; gordo" },
+      { "word": "太陽", "meaning": "sol" },
+      { "word": "丸太", "meaning": "tronco; madeira roliça" }
+    ]
+  },
+  "厚": {
+    "meaning": ["espesso; gentil; quente"],
+    "examples": [
+      { "word": "厚い", "meaning": "espesso; generoso" },
+      { "word": "厚手", "meaning": "espesso (tecido/material)" },
+      { "word": "親厚", "meaning": "amizade próxima" }
+    ]
+  },
+  "薄": {
+    "meaning": ["fino; claro; pálido; fraco"],
+    "examples": [
+      { "word": "薄い", "meaning": "fino; pálido; claro (cor)" },
+      { "word": "薄着", "meaning": "vestir roupas leves" },
+      { "word": "希薄", "meaning": "fino; esparso; diluído" }
+    ]
+  },
+  "丁": {
+    "meaning": ["polido; número par; quarteirão"],
+    "examples": [
+      { "word": "丁寧", "meaning": "polido; cuidadoso" },
+      { "word": "丁度", "meaning": "exatamente; justo" },
+      { "word": "一丁目", "meaning": "1º quarteirão (endereço)" }
+    ]
+  },
+  "寧": {
+    "meaning": ["tranquilo; de preferência"],
+    "examples": [
+      { "word": "丁寧", "meaning": "polido; cuidadoso; criterioso" },
+      { "word": "安寧", "meaning": "paz; ordem pública" },
+      { "word": "寧ろ", "meaning": "de preferência; ao invés" }
+    ]
+  },
+  "正": {
+    "meaning": ["correto; certo; honesto"],
+    "examples": [
+      { "word": "正直", "meaning": "honesto" },
+      { "word": "正確", "meaning": "preciso; exato" },
+      { "word": "正式", "meaning": "formal; oficial" }
+    ]
+  },
+  "自": {
+    "meaning": ["si mesmo; de"],
+    "examples": [
+      { "word": "自分", "meaning": "si mesmo" },
+      { "word": "自由", "meaning": "liberdade" },
+      { "word": "自然", "meaning": "natureza; natural" }
+    ]
+  },
+  "由": {
+    "meaning": ["razão; causa; liberdade"],
+    "examples": [
+      { "word": "自由", "meaning": "liberdade" },
+      { "word": "理由", "meaning": "motivo; causa" },
+      { "word": "由来", "meaning": "origem; história; fonte" }
+    ]
+  },
+  "必": {
+    "meaning": ["certamente; inevitável; necessário"],
+    "examples": [
+      { "word": "必要", "meaning": "necessário; preciso" },
+      { "word": "必ず", "meaning": "certamente; sem falta" },
+      { "word": "必死", "meaning": "desesperado; com todo empenho" }
+    ]
+  },
+  "要": {
+    "meaning": ["necessitar; ponto principal; essencial"],
+    "examples": [
+      { "word": "必要", "meaning": "necessário" },
+      { "word": "重要", "meaning": "importante; significativo" },
+      { "word": "要求", "meaning": "exigência; requisito" }
+    ]
+  }
+}

@@ -6,13 +6,15 @@
     @click="settings.toggleTheme()"
   >
     <span class="text-lg">{{ isDark ? '☀️' : '🌙' }}</span>
-    <span>{{ isDark ? 'Light Mode' : 'Dark Mode' }}</span>
+    <span>{{ isDark ? $t('theme.light') : $t('theme.dark') }}</span>
   </button>
 </template>
 
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useSettingsStore } from '@/stores/settings'
+const { t: $t } = useI18n()
 const settings = useSettingsStore()
 const isDark = computed(() => settings.theme === 'dark')
 </script>

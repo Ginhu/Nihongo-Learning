@@ -16,7 +16,7 @@
 
     <!-- Direction selector -->
     <div class="flex flex-col gap-1">
-      <label class="text-xs font-semibold uppercase tracking-wide" style="color: var(--color-text-muted);">Direction</label>
+      <label class="text-xs font-semibold uppercase tracking-wide" style="color: var(--color-text-muted);">{{ $t('quiz.direction') }}</label>
       <div class="flex gap-2">
         <button
           v-for="d in directions"
@@ -33,7 +33,7 @@
 
     <!-- JLPT filter (kanji only) -->
     <div v-if="mode === 'kanji'" class="flex flex-col gap-1">
-      <label class="text-xs font-semibold uppercase tracking-wide" style="color: var(--color-text-muted);">JLPT Level</label>
+      <label class="text-xs font-semibold uppercase tracking-wide" style="color: var(--color-text-muted);">{{ $t('quiz.jlptLevel') }}</label>
       <div class="flex gap-2">
         <button
           v-for="lvl in ['all', 'N5', 'N4']"
@@ -44,13 +44,13 @@
             : 'hover:bg-primary/10']"
           style="border-color: var(--color-border);"
           @click.stop="$emit('update:modelJlpt', lvl)"
-        >{{ lvl === 'all' ? 'All' : lvl }}</button>
+        >{{ lvl === 'all' ? $t('quiz.all') : lvl }}</button>
       </div>
     </div>
 
     <!-- Difficulty selector -->
     <div class="flex flex-col gap-1">
-      <label class="text-xs font-semibold uppercase tracking-wide" style="color: var(--color-text-muted);">Difficulty</label>
+      <label class="text-xs font-semibold uppercase tracking-wide" style="color: var(--color-text-muted);">{{ $t('quiz.difficulty') }}</label>
       <div class="flex gap-2">
         <button
           v-for="d in difficulties"
@@ -70,12 +70,15 @@
       v-if="selected"
       class="w-full py-3 rounded-xl bg-primary text-white font-bold text-lg mt-2 hover:bg-primary/90 transition-colors"
       @click.stop="$emit('start')"
-    >Start Quiz</button>
+    >{{ $t('quiz.startQuiz') }}</button>
   </div>
 </template>
 
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const props = defineProps({
   mode:            { type: String, required: true },
@@ -90,20 +93,20 @@ const props = defineProps({
 
 defineEmits(['select', 'start', 'update:modelDirection', 'update:modelDifficulty', 'update:modelJlpt'])
 
-const difficulties = [
-  { value: 'easy',   label: 'Easy (2)' },
-  { value: 'medium', label: 'Medium (4)' },
-  { value: 'hard',   label: 'Hard (6)' }
-]
+const difficulties = computed(() => [
+  { value: 'easy',   label: t('quiz.easy') },
+  { value: 'medium', label: t('quiz.medium') },
+  { value: 'hard',   label: t('quiz.hard') },
+])
 
 const directions = computed(() => props.mode === 'kanji'
   ? [
-      { value: 'kanji-to-meaning', label: 'Kanji → Meaning' },
-      { value: 'kanji-to-reading', label: 'Kanji → Reading' }
+      { value: 'kanji-to-meaning', label: t('quiz.kanjiToMeaning') },
+      { value: 'kanji-to-reading', label: t('quiz.meaningToKanji') },
     ]
   : [
-      { value: 'kana-to-romaji', label: 'Kana → Rōmaji' },
-      { value: 'romaji-to-kana', label: 'Rōmaji → Kana' }
+      { value: 'kana-to-romaji', label: t('quiz.kanaToRomaji') },
+      { value: 'romaji-to-kana', label: t('quiz.romajiToKana') },
     ]
 )
 </script>

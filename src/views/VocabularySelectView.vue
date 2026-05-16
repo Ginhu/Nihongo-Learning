@@ -2,15 +2,15 @@
   <div class="max-w-lg mx-auto px-4 py-6 flex flex-col gap-8">
 
     <div>
-      <h1 class="text-2xl font-bold mb-1">Vocabulary Quiz</h1>
+      <h1 class="text-2xl font-bold mb-1">{{ $t('vocabQuiz.title') }}</h1>
       <p class="text-sm" style="color: var(--color-text-muted);">
-        Test your knowledge. Guess the meaning — or the word.
+        {{ $t('vocabQuiz.subtitle') }}
       </p>
     </div>
 
     <!-- Type -->
     <div>
-      <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">Type</div>
+      <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">{{ $t('vocabQuiz.type') }}</div>
       <div class="flex gap-3">
         <button
           v-for="t in types"
@@ -25,7 +25,7 @@
 
     <!-- Level -->
     <div>
-      <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">Level</div>
+      <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">{{ $t('vocabQuiz.level') }}</div>
       <div class="flex gap-2 flex-wrap">
         <button
           v-for="lvl in levelOptions"
@@ -40,7 +40,7 @@
 
     <!-- Direction -->
     <div>
-      <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">Direction</div>
+      <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">{{ $t('vocabQuiz.direction') }}</div>
       <div class="flex gap-3">
         <button
           v-for="d in directions"
@@ -55,7 +55,7 @@
 
     <!-- Difficulty -->
     <div>
-      <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">Difficulty</div>
+      <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">{{ $t('vocabQuiz.difficulty') }}</div>
       <div class="flex gap-3">
         <button
           v-for="d in difficulties"
@@ -67,14 +67,14 @@
         >{{ d.label }}</button>
       </div>
       <div class="text-xs mt-2" style="color: var(--color-text-muted);">
-        Easy: 2 options · Normal: 4 options · Hard: 6 options
+        {{ $t('vocabQuiz.difficultyHint') }}
       </div>
     </div>
 
     <!-- Categories (vocab N5/N4 only) -->
     <div v-if="showCategories">
       <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">
-        Categories <span class="normal-case font-normal">(optional)</span>
+        {{ $t('vocabQuiz.categories') }} <span class="normal-case font-normal">({{ $t('vocabQuiz.optional') }})</span>
       </div>
       <div class="flex flex-wrap gap-2">
         <button
@@ -90,7 +90,7 @@
 
     <!-- Count (hidden for favorites) -->
     <div v-if="!isFavoritesMode">
-      <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">Questions per round</div>
+      <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">{{ $t('vocabQuiz.count') }}</div>
       <div class="flex gap-2 flex-wrap">
         <button
           v-for="opt in countOptions"
@@ -109,7 +109,7 @@
       style="background: var(--color-primary); color: white;"
       :disabled="poolSize < minPoolForDifficulty"
       @click="startSession"
-    >Start →</button>
+    >{{ $t('vocabQuiz.start') }}</button>
 
   </div>
 </template>
@@ -117,6 +117,7 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { useProgressStore } from '@/stores/progress'
 import n5Vocabulary from '@/data/n5_vocabulary.js'
 import n4Vocabulary from '@/data/n4_vocabulary.js'
@@ -124,6 +125,7 @@ import kanjiN5Data from '@/data/n5_kanji.js'
 import kanjiN4Data from '@/data/n4_kanji.js'
 
 const router   = useRouter()
+const { t }    = useI18n()
 const progress = useProgressStore()
 
 const selectedType       = ref('vocab')
@@ -133,21 +135,21 @@ const selectedDifficulty = ref('normal')
 const selectedCategories = ref([])
 const selectedCount      = ref('all')
 
-const types = [
-  { value: 'vocab', label: 'Vocabulary' },
-  { value: 'kanji', label: 'Kanji' },
-]
+const types = computed(() => [
+  { value: 'vocab', label: t('vocabQuiz.vocabulary') },
+  { value: 'kanji', label: t('vocabQuiz.kanji') },
+])
 
-const directions = [
-  { value: 'word-meaning', label: 'Word → Meaning' },
-  { value: 'meaning-word', label: 'Meaning → Word' },
-]
+const directions = computed(() => [
+  { value: 'word-meaning', label: t('vocabQuiz.wordMeaning') },
+  { value: 'meaning-word', label: t('vocabQuiz.meaningWord') },
+])
 
-const difficulties = [
-  { value: 'easy',   label: 'Easy' },
-  { value: 'normal', label: 'Normal' },
-  { value: 'hard',   label: 'Hard' },
-]
+const difficulties = computed(() => [
+  { value: 'easy',   label: t('vocabQuiz.easy') },
+  { value: 'normal', label: t('vocabQuiz.normal') },
+  { value: 'hard',   label: t('vocabQuiz.hard') },
+])
 
 const hasFavorites      = computed(() => progress.favoritedVocabulary.length > 0)
 const hasKanjiFavorites = computed(() => progress.favoritedKanji.length > 0)
@@ -158,15 +160,15 @@ const isFavoritesMode = computed(() =>
 
 const levelOptions = computed(() => {
   const base = [
-    { value: 'all', label: 'All' },
+    { value: 'all', label: t('vocabQuiz.all') },
     { value: 'N5',  label: 'N5' },
     { value: 'N4',  label: 'N4' },
   ]
   if (selectedType.value === 'vocab' && hasFavorites.value) {
-    base.push({ value: 'favorites', label: '★ Favorites' })
+    base.push({ value: 'favorites', label: t('vocabQuiz.favorites') })
   }
   if (selectedType.value === 'kanji' && hasKanjiFavorites.value) {
-    base.push({ value: 'kanji-favorites', label: '★ Favorites' })
+    base.push({ value: 'kanji-favorites', label: t('vocabQuiz.favorites') })
   }
   return base
 })
@@ -220,7 +222,7 @@ const countOptions = computed(() => {
   for (let i = 10; i < n && i <= 50; i += 10) {
     opts.push({ label: String(i), value: i })
   }
-  opts.push({ label: `All (${n})`, value: 'all' })
+  opts.push({ label: t('vocabQuiz.allCount', { n }), value: 'all' })
   return opts
 })
 

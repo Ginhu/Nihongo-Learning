@@ -38,24 +38,24 @@
           <span
             class="text-xs px-2 py-1 rounded-full"
             style="background: var(--color-surface-2); color: var(--color-text-muted);"
-          >{{ kanji.strokeCount }} strokes</span>
+          >{{ kanji.strokeCount }} {{ $t('kanjiDict.strokes') }}</span>
         </div>
 
         <!-- Readings -->
         <div class="space-y-2 mb-4 text-sm">
           <div v-if="kanji.onyomi?.length">
-            <span class="font-semibold">On'yomi: </span>
+            <span class="font-semibold">{{ $t('kanjiDict.onyomi') }} </span>
             <span style="color: var(--color-text-muted);">{{ kanji.onyomi.join('、') }}</span>
           </div>
           <div v-if="kanji.kunyomi?.length">
-            <span class="font-semibold">Kun'yomi: </span>
+            <span class="font-semibold">{{ $t('kanjiDict.kunyomi') }} </span>
             <span style="color: var(--color-text-muted);">{{ kanji.kunyomi.join('、') }}</span>
           </div>
         </div>
 
         <!-- Example words -->
         <div v-if="kanji.examples?.length" class="mb-4">
-          <div class="text-sm font-semibold mb-2">Examples</div>
+          <div class="text-sm font-semibold mb-2">{{ $t('kanjiDict.examples') }}</div>
           <div class="space-y-2">
             <div
               v-for="ex in kanji.examples"
@@ -78,7 +78,7 @@
             : 'bg-primary text-white hover:bg-primary/90 border-primary'"
           @click="$emit('toggle-favorite')"
         >
-          {{ isFavorited ? '★ Remove from Flashcard Deck' : '☆ Add to Flashcard Deck' }}
+          {{ isFavorited ? $t('kanjiDict.removeFromFlashcards') : $t('kanjiDict.addToFlashcards') }}
         </button>
       </div>
     </div>

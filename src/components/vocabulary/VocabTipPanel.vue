@@ -16,7 +16,7 @@
         style="border-color: var(--color-border);"
         @click="onUseTip"
       >
-        Tip {{ i + 1 }}
+        {{ $t('vocabQuiz.tip') }} {{ i + 1 }}
       </button>
     </div>
 

@@ -22,13 +22,13 @@
     <!-- Score -->
     <div class="text-center">
       <div class="text-4xl font-bold">{{ score }} / {{ total }}</div>
-      <div class="text-lg mt-1" style="color: var(--color-text-muted);">{{ percentage }}% correct</div>
-      <div class="text-sm mt-1" style="color: var(--color-text-muted);">Time: {{ formattedTime }}</div>
+      <div class="text-lg mt-1" style="color: var(--color-text-muted);">{{ percentage }}{{ $t('endScreen.percentCorrect') }}</div>
+      <div class="text-sm mt-1" style="color: var(--color-text-muted);">{{ $t('endScreen.time') }} {{ formattedTime }}</div>
     </div>
 
     <!-- XP gained -->
     <div class="px-4 py-2 rounded-full text-sm font-semibold" style="background: var(--color-surface); color: var(--color-accent);">
-      +{{ xpGained }} XP earned
+      {{ $t('endScreen.xpEarned', { xp: xpGained }) }}
     </div>
 
     <!-- Buttons -->
@@ -37,11 +37,11 @@
         class="px-6 py-3 rounded-xl border font-semibold transition-colors hover:bg-primary/10"
         style="border-color: var(--color-border);"
         @click="$emit('home')"
-      >Home</button>
+      >{{ $t('endScreen.home') }}</button>
       <button
         class="px-6 py-3 rounded-xl bg-primary text-white font-semibold hover:bg-primary/90 transition-colors"
         @click="$emit('retry')"
-      >Retry</button>
+      >{{ $t('endScreen.retry') }}</button>
     </div>
   </div>
 </template>

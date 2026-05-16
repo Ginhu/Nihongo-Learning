@@ -12,7 +12,7 @@
       style="color: inherit;"
     >
       <span class="text-xl">{{ link.icon }}</span>
-      {{ link.label }}
+      {{ $t(link.labelKey) }}
     </RouterLink>
   </nav>
 </template>
@@ -23,11 +23,11 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 
 const links = [
-  { name: 'home',             to: '/',                  icon: '🏠', label: 'Home' },
-  { name: 'quiz-select',      to: '/quiz',               icon: '🎯', label: 'Quiz' },
-  { name: 'flashcards',       to: '/flashcards',         icon: '🃏', label: 'Cards' },
-  { name: 'vocabulary',       to: '/vocabulary',         icon: '🎮', label: 'Words' },
-  { name: 'kanji-dictionary', to: '/kanji-dictionary',   icon: '📖', label: 'Kanji' },
-  { name: 'progress',         to: '/progress',           icon: '📊', label: 'Progress' },
+  { name: 'home',             to: '/',                 icon: '🏠', labelKey: 'nav.home'     },
+  { name: 'quiz-select',      to: '/quiz',             icon: '🎯', labelKey: 'nav.quiz'     },
+  { name: 'flashcards',       to: '/flashcards',       icon: '🃏', labelKey: 'nav.cards'    },
+  { name: 'vocabulary',       to: '/vocabulary',       icon: '🎮', labelKey: 'nav.words'    },
+  { name: 'kanji-dictionary', to: '/kanji-dictionary', icon: '📖', labelKey: 'nav.kanji'   },
+  { name: 'progress',         to: '/progress',         icon: '📊', labelKey: 'nav.progress' },
 ]
 </script>

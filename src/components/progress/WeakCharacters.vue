@@ -1,9 +1,9 @@
 <template>
   <div class="rounded-xl p-4" style="background: var(--color-surface);">
-    <h3 class="font-semibold text-sm mb-3" style="color: var(--color-text-muted);">WEAK CHARACTERS</h3>
+    <h3 class="font-semibold text-sm mb-3" style="color: var(--color-text-muted);">{{ $t('progress.weakCharacters') }}</h3>
 
     <div v-if="weakChars.length === 0" class="text-sm" style="color: var(--color-text-muted);">
-      Keep practicing — weak characters appear after 3+ attempts on each.
+      {{ $t('progress.weakCharactersTip') }}
     </div>
 
     <div v-else class="grid grid-cols-5 gap-2">

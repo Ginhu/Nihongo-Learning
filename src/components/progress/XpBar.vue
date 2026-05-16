@@ -2,11 +2,11 @@
   <div class="rounded-xl p-4" style="background: var(--color-surface);">
     <div class="flex justify-between items-baseline mb-2">
       <div>
-        <span class="text-lg font-bold">Level {{ progress.level }}</span>
+        <span class="text-lg font-bold">{{ $t('progress.level') }} {{ progress.level }}</span>
         <span class="ml-2 text-sm" style="color: var(--color-text-muted);">{{ progress.levelTitle }}</span>
       </div>
       <span class="text-sm" style="color: var(--color-text-muted);">
-        {{ isMaxLevel ? 'MAX' : `${xpInLevel} / 500 XP` }}
+        {{ isMaxLevel ? $t('progress.max') : $t('progress.xpProgress', { xp: xpInLevel }) }}
       </span>
     </div>
 
@@ -19,7 +19,7 @@
     </div>
 
     <div class="mt-1 text-xs text-right" style="color: var(--color-text-muted);">
-      {{ progress.xp }} XP total
+      {{ $t('progress.xpTotal', { xp: progress.xp }) }}
     </div>
   </div>
 </template>

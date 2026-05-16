@@ -2,15 +2,15 @@
   <div class="max-w-lg mx-auto px-4 py-6 flex flex-col gap-8">
 
     <div>
-      <h1 class="text-2xl font-bold mb-1">Flashcards</h1>
+      <h1 class="text-2xl font-bold mb-1">{{ $t('flashcards.title') }}</h1>
       <p class="text-sm" style="color: var(--color-text-muted);">
-        Choose your deck and start practicing.
+        {{ $t('flashcards.subtitle') }}
       </p>
     </div>
 
     <!-- Type -->
     <div>
-      <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">Type</div>
+      <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">{{ $t('flashcards.type') }}</div>
       <div class="flex gap-3">
         <button
           v-for="t in types"
@@ -25,7 +25,7 @@
 
     <!-- Level -->
     <div>
-      <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">Level</div>
+      <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">{{ $t('flashcards.level') }}</div>
       <div class="flex gap-2 flex-wrap">
         <button
           v-for="lvl in levelOptions"
@@ -40,7 +40,7 @@
 
     <!-- Count (hidden for favorites) -->
     <div v-if="!isFavoritesMode">
-      <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">Cards per round</div>
+      <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">{{ $t('flashcards.cardsPerRound') }}</div>
       <div class="flex gap-2 flex-wrap">
         <button
           v-for="opt in countOptions"
@@ -56,7 +56,7 @@
     <!-- Categories (inline, vocab + N5/N4 only) -->
     <div v-if="showCategories">
       <div class="text-xs font-semibold mb-3 uppercase tracking-wide" style="color: var(--color-text-muted);">
-        Categories <span class="normal-case font-normal">(optional)</span>
+        {{ $t('flashcards.categories') }} <span class="normal-case font-normal">({{ $t('flashcards.optional') }})</span>
       </div>
       <div class="flex flex-wrap gap-2">
         <button
@@ -75,7 +75,7 @@
       class="w-full py-4 rounded-xl font-bold text-lg transition-opacity hover:opacity-90"
       style="background: var(--color-primary); color: white;"
       @click="startSession"
-    >Start →</button>
+    >{{ $t('flashcards.start') }}</button>
 
   </div>
 </template>
@@ -83,6 +83,7 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { useProgressStore } from '@/stores/progress'
 import n5Vocabulary from '@/data/n5_vocabulary.js'
 import n4Vocabulary from '@/data/n4_vocabulary.js'
@@ -90,6 +91,7 @@ import kanjiN5Data from '@/data/n5_kanji.js'
 import kanjiN4Data from '@/data/n4_kanji.js'
 
 const router = useRouter()
+const { t } = useI18n()
 const progress = useProgressStore()
 
 const selectedType       = ref('vocab')  // 'vocab' | 'kanji'
@@ -97,10 +99,10 @@ const selectedLevel      = ref('all')    // 'all' | 'N5' | 'N4' | 'favorites' | 
 const selectedCategories = ref([])
 const selectedCount      = ref('all')   // number | 'all'
 
-const types = [
-  { value: 'vocab', label: 'Vocabulary' },
-  { value: 'kanji', label: 'Kanji' },
-]
+const types = computed(() => [
+  { value: 'vocab', label: t('flashcards.vocabulary') },
+  { value: 'kanji', label: t('flashcards.kanji') },
+])
 
 const hasFavorites = computed(() => progress.favoritedVocabulary.length > 0)
 const hasKanjiFavorites = computed(() => progress.favoritedKanji.length > 0)
@@ -111,15 +113,15 @@ const isFavoritesMode = computed(() =>
 
 const levelOptions = computed(() => {
   const base = [
-    { value: 'all', label: 'All' },
+    { value: 'all', label: t('flashcards.all') },
     { value: 'N5',  label: 'N5' },
     { value: 'N4',  label: 'N4' },
   ]
   if (selectedType.value === 'vocab' && hasFavorites.value) {
-    base.push({ value: 'favorites', label: '★ Favorites' })
+    base.push({ value: 'favorites', label: t('flashcards.favorites') })
   }
   if (selectedType.value === 'kanji' && hasKanjiFavorites.value) {
-    base.push({ value: 'kanji-favorites', label: '★ Favorites' })
+    base.push({ value: 'kanji-favorites', label: t('flashcards.favorites') })
   }
   return base
 })
@@ -166,7 +168,7 @@ const countOptions = computed(() => {
   for (let i = 10; i < n && i <= 50; i += 10) {
     opts.push({ label: String(i), value: i })
   }
-  opts.push({ label: `All (${n})`, value: 'all' })
+  opts.push({ label: t('flashcards.allCount', { n }), value: 'all' })
   return opts
 })
 
