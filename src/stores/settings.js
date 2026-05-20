@@ -1,18 +1,14 @@
 import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
-
-const STORAGE_KEY = 'nihongo-settings'
+import api from '@/composables/useApi'
 
 export const useSettingsStore = defineStore('settings', () => {
-  let saved = {}
-  try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') } catch { /* use defaults */ }
-
-  const quizLength    = ref(saved.quizLength    ?? 10)
-  const romajiVisible = ref(saved.romajiVisible ?? true)
-  const soundEnabled  = ref(saved.soundEnabled  ?? true)
-  const theme         = ref(saved.theme         ?? 'dark')
-  const VALID_LANGS = ['en', 'pt-BR']
-  const language      = ref(VALID_LANGS.includes(saved.language) ? saved.language : 'en')
+  const quizLength    = ref(10)
+  const romajiVisible = ref(true)
+  const soundEnabled  = ref(true)
+  const theme         = ref('dark')
+  const VALID_LANGS   = ['en', 'pt-BR']
+  const language      = ref('en')
 
   function applyTheme() {
     document.documentElement.classList.toggle('dark', theme.value === 'dark')
@@ -27,17 +23,32 @@ export const useSettingsStore = defineStore('settings', () => {
     language.value = lang
   }
 
-  function persist() {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({
-      quizLength:    quizLength.value,
-      romajiVisible: romajiVisible.value,
-      soundEnabled:  soundEnabled.value,
-      theme:         theme.value,
-      language:      language.value
-    }))
+  async function init() {
+    try {
+      const { data } = await api.get('/settings')
+      if (data.quiz_length    != null) quizLength.value    = data.quiz_length
+      if (data.romaji_visible != null) romajiVisible.value = data.romaji_visible
+      if (data.sound_enabled  != null) soundEnabled.value  = data.sound_enabled
+      if (data.theme          != null) theme.value         = data.theme
+      if (data.language != null && VALID_LANGS.includes(data.language)) language.value = data.language
+    } catch (err) {
+      console.error('[settings] init failed, using defaults:', err)
+    }
   }
 
-  watch([quizLength, romajiVisible, soundEnabled, theme, language], persist, { deep: true })
+  let debounceTimer = null
+  watch([quizLength, romajiVisible, soundEnabled, theme, language], () => {
+    clearTimeout(debounceTimer)
+    debounceTimer = setTimeout(() => {
+      api.patch('/settings', {
+        quiz_length:    quizLength.value,
+        romaji_visible: romajiVisible.value,
+        sound_enabled:  soundEnabled.value,
+        theme:          theme.value,
+        language:       language.value
+      }).catch(err => console.error('[settings] patch failed:', err))
+    }, 500)
+  }, { deep: true })
 
-  return { quizLength, romajiVisible, soundEnabled, theme, language, applyTheme, toggleTheme, setLanguage }
+  return { quizLength, romajiVisible, soundEnabled, theme, language, applyTheme, toggleTheme, setLanguage, init }
 })

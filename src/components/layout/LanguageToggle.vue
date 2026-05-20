@@ -12,13 +12,16 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 import { useSettingsStore } from '@/stores/settings'
+import { useContentStore } from '@/stores/content'
 
 const { locale } = useI18n()
 const settings = useSettingsStore()
+const contentStore = useContentStore()
 
 function toggle() {
   const next = locale.value === 'en' ? 'pt-BR' : 'en'
   locale.value = next
   settings.setLanguage(next)
+  contentStore.refetchLang(next)
 }
 </script>

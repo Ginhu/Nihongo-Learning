@@ -1,40 +1,26 @@
-import { useI18n } from 'vue-i18n'
-import vocabN5PT from '@/i18n/translations/vocab-n5-pt-BR.json'
-import vocabN4PT from '@/i18n/translations/vocab-n4-pt-BR.json'
-import kanjiPT   from '@/i18n/translations/kanji-pt-BR.json'
+// useLocaleData.js — simplified: API returns data in active language already
+// getMeaning, getFirstMeaning, getExampleMeaning all just read item.meaning directly
 
 export function useLocaleData() {
-  const { locale } = useI18n()
-
   function getVocabMeaning(item) {
-    if (locale.value !== 'pt-BR') return item.meaning
-    const key = `${item.expression}::${item.reading}`
-    return vocabN5PT[key] ?? vocabN4PT[key] ?? item.meaning
+    return item.meaning
   }
 
   function getKanjiMeanings(item) {
-    if (locale.value !== 'pt-BR') return item.meaning
-    return kanjiPT[item.kanji]?.meaning ?? item.meaning
+    return item.meaning  // already array from API
   }
 
   function getFirstMeaning(item, type) {
-    if (type === 'kanji') {
-      const m = getKanjiMeanings(item)
-      return Array.isArray(m) ? m[0] : m
-    }
-    return getVocabMeaning(item)
+    const m = type === 'kanji' ? item.meaning : item.meaning
+    return Array.isArray(m) ? m[0] : m
   }
 
   function getMeaning(item, type) {
-    return type === 'kanji' ? getKanjiMeanings(item) : getVocabMeaning(item)
+    return type === 'kanji' ? item.meaning : item.meaning
   }
 
-  function getExampleMeaning(example, kanjiChar) {
-    if (locale.value !== 'pt-BR') return example.meaning
-    const entry = kanjiPT[kanjiChar]
-    if (!entry?.examples) return example.meaning
-    const ptEx = entry.examples.find(e => e.word === example.word)
-    return ptEx?.meaning ?? example.meaning
+  function getExampleMeaning(example) {
+    return example.meaning
   }
 
   return { getMeaning, getFirstMeaning, getExampleMeaning }

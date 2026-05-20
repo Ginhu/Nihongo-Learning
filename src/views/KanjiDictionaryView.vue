@@ -60,45 +60,37 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { useProgressStore } from '@/stores/progress'
-import { useLocaleData } from '@/composables/useLocaleData'
-import kanjiData from '@/data/kanji.js'
+import { useContentStore } from '@/stores/content'
 import KanjiCard from '@/components/vocabulary/KanjiCard.vue'
 import KanjiDetailModal from '@/components/vocabulary/KanjiDetailModal.vue'
 
 const progress = useProgressStore()
-const { locale } = useI18n()
-const { getMeaning, getExampleMeaning } = useLocaleData()
+const contentStore = useContentStore()
 
 const search = ref('')
 const jlptFilter = ref('all')
 const selectedKanji = ref(null)
 
 const filteredKanji = computed(() => {
-  let list = kanjiData
+  let list = contentStore.kanji
   if (jlptFilter.value !== 'all') {
     list = list.filter(k => k.jlpt === jlptFilter.value)
   }
   const q = search.value.trim().toLowerCase()
   if (q) {
-    list = list.filter(k =>
-      k.kanji.includes(q) ||
-      k.meaning.some(m => m.toLowerCase().includes(q))
-    )
+    list = list.filter(k => {
+      if (k.kanji.includes(q)) return true
+      const m = k.meaning
+      return Array.isArray(m)
+        ? m.some(s => s.toLowerCase().includes(q))
+        : String(m).toLowerCase().includes(q)
+    })
   }
   return list
 })
 
-const localizedSelectedKanji = computed(() => {
-  if (!selectedKanji.value || locale.value !== 'pt-BR') return selectedKanji.value
-  const meaning = getMeaning(selectedKanji.value, 'kanji')
-  const examples = selectedKanji.value.examples?.map(ex => ({
-    ...ex,
-    meaning: getExampleMeaning(ex, selectedKanji.value.kanji)
-  }))
-  return { ...selectedKanji.value, meaning, examples }
-})
+const localizedSelectedKanji = computed(() => selectedKanji.value)
 
 function onToggleFavorite() {
   if (!selectedKanji.value) return

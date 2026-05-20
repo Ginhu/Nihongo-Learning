@@ -106,21 +106,15 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
 import { useProgressStore } from '@/stores/progress'
-import { useLocaleData } from '@/composables/useLocaleData'
-import n5Vocabulary from '@/data/n5_vocabulary.js'
-import n4Vocabulary from '@/data/n4_vocabulary.js'
-import kanjiN5Data from '@/data/n5_kanji.js'
-import kanjiN4Data from '@/data/n4_kanji.js'
+import { useContentStore } from '@/stores/content'
 import FlashCard from '@/components/flashcard/FlashCard.vue'
 import BatchResultModal from '@/components/flashcard/BatchResultModal.vue'
 
 const route = useRoute()
 const router = useRouter()
 const progress = useProgressStore()
-const { locale } = useI18n()
-const { getMeaning } = useLocaleData()
+const contentStore = useContentStore()
 
 const isConfigValid = !!route.query.type
 
@@ -160,25 +154,32 @@ function fisherYates(arr) {
 }
 
 function buildPool() {
+  const allKanji = contentStore.kanji
+  const allVocab = contentStore.vocabulary
+  const kanjiN5 = allKanji.filter(k => k.jlpt === 'N5')
+  const kanjiN4 = allKanji.filter(k => k.jlpt === 'N4')
+  const vocabN5 = allVocab.filter(w => w.jlpt === 'N5')
+  const vocabN4 = allVocab.filter(w => w.jlpt === 'N4')
+
   if (queryLevel === 'kanji-favorites') {
-    return fisherYates([...kanjiN5Data, ...kanjiN4Data].filter(k =>
+    return fisherYates(allKanji.filter(k =>
       progress.favoritedKanji.includes(k.kanji)
     ))
   }
   if (queryLevel === 'favorites') {
-    return fisherYates([...n5Vocabulary, ...n4Vocabulary].filter(w =>
+    return fisherYates(allVocab.filter(w =>
       progress.favoritedVocabulary.includes(`${w.expression}::${w.reading}`)
     ))
   }
   if (isKanji) {
-    const pool = queryLevel === 'N5' ? [...kanjiN5Data]
-               : queryLevel === 'N4' ? [...kanjiN4Data]
-               : [...kanjiN5Data, ...kanjiN4Data]
+    const pool = queryLevel === 'N5' ? [...kanjiN5]
+               : queryLevel === 'N4' ? [...kanjiN4]
+               : [...kanjiN5, ...kanjiN4]
     return fisherYates(pool)
   }
-  let words = queryLevel === 'N5' ? [...n5Vocabulary]
-            : queryLevel === 'N4' ? [...n4Vocabulary]
-            : [...n5Vocabulary, ...n4Vocabulary]
+  let words = queryLevel === 'N5' ? [...vocabN5]
+            : queryLevel === 'N4' ? [...vocabN4]
+            : [...vocabN5, ...vocabN4]
   if (queryCategories.length > 0) {
     words = words.filter(w => queryCategories.includes(w.category))
   }
@@ -198,11 +199,7 @@ const hasMore = computed(() =>
 
 const currentCard = computed(() => currentBatch.value[currentIndex.value])
 
-const localizedCurrentCard = computed(() => {
-  if (!currentCard.value || locale.value !== 'pt-BR') return currentCard.value
-  const meaning = getMeaning(currentCard.value, deckType)
-  return { ...currentCard.value, meaning }
-})
+const localizedCurrentCard = computed(() => currentCard.value)
 
 function cardId(card) {
   if (isKanji) return card.kanji

@@ -1,7 +1,6 @@
 import { defineStore } from 'pinia'
-import { ref, computed, watch } from 'vue'
-
-const STORAGE_KEY = 'nihongo-progress'
+import { ref, computed } from 'vue'
+import api from '@/composables/useApi'
 
 const LEVEL_TITLES = [
   '', 'Beginner', 'Student', 'Apprentice', 'Learner', 'Practitioner',
@@ -9,18 +8,15 @@ const LEVEL_TITLES = [
 ]
 
 export const useProgressStore = defineStore('progress', () => {
-  let saved = {}
-  try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') } catch { /* use defaults */ }
-
-  const xp = ref(saved.xp ?? 0)
-  const level = ref(Math.min(Math.floor((saved.xp ?? 0) / 500) + 1, 10))
-  const streak = ref(saved.streak ?? 0)
-  const lastPlayedDate = ref(saved.lastPlayedDate ?? null)
-  const quizHistory = ref(saved.quizHistory ?? [])
-  const characterStats = ref(saved.characterStats ?? {})
-  const flashcardKnown = ref(saved.flashcardKnown ?? [])
-  const favoritedKanji = ref(saved.favoritedKanji ?? [])
-  const favoritedVocabulary = ref(saved.favoritedVocabulary ?? [])
+  const xp = ref(0)
+  const level = ref(1)
+  const streak = ref(0)
+  const lastPlayedDate = ref(null)
+  const quizHistory = ref([])
+  const characterStats = ref({})
+  const flashcardKnown = ref([])
+  const favoritedKanji = ref([])
+  const favoritedVocabulary = ref([])
 
   const levelTitle = computed(() => LEVEL_TITLES[Math.min(level.value, 10)])
 
@@ -46,13 +42,46 @@ export const useProgressStore = defineStore('progress', () => {
     return level.value > prevLevel ? level.value : null
   }
 
+  async function init() {
+    const [progressRes, historyRes, charStatsRes, flashcardRes, favoritesRes] = await Promise.all([
+      api.get('/progress'),
+      api.get('/progress/history'),
+      api.get('/progress/character-stats'),
+      api.get('/flashcards/known'),
+      api.get('/favorites')
+    ])
+
+    xp.value = progressRes.data.xp ?? 0
+    level.value = progressRes.data.level ?? computeLevel(progressRes.data.xp ?? 0)
+    streak.value = progressRes.data.streak ?? 0
+    lastPlayedDate.value = progressRes.data.last_played_date ?? null
+
+    quizHistory.value = (historyRes.data ?? []).map(h => ({
+      mode: h.mode,
+      score: h.score,
+      total: h.total,
+      xpGained: h.xp_gained,
+      date: h.played_at
+    }))
+
+    const stats = {}
+    for (const entry of (charStatsRes.data ?? [])) {
+      stats[entry.char_key] = { correct: entry.correct, incorrect: entry.incorrect }
+    }
+    characterStats.value = stats
+
+    flashcardKnown.value = (flashcardRes.data ?? [])
+      .filter(f => f.known)
+      .map(f => f.card_id)
+
+    favoritedKanji.value = favoritesRes.data?.kanji ?? []
+    favoritedVocabulary.value = favoritesRes.data?.vocabulary ?? []
+  }
+
   function recordQuizResult(mode, score, total, answers) {
+    // Optimistic local update
     quizHistory.value.unshift({ mode, score, total, date: new Date().toISOString() })
     if (quizHistory.value.length > 50) quizHistory.value.pop()
-
-    let xpGained = score * 10
-    if (score === total) xpGained += 50
-    const newLevel = addXp(xpGained)
 
     for (const a of answers) {
       const key = a.question
@@ -61,70 +90,76 @@ export const useProgressStore = defineStore('progress', () => {
       else characterStats.value[key].incorrect++
     }
 
-    checkStreak()
+    let xpGained = score * 10
+    if (score === total) xpGained += 50
+    const newLevel = addXp(xpGained)
+
+    // Fire-and-forget API call
+    api.post('/progress/quiz', {
+      mode,
+      score,
+      total,
+      answers: answers.map(a => ({ char_key: a.question, was_correct: a.wasCorrect }))
+    }).catch(console.error)
+
     return { xpGained, newLevel }
   }
 
   function recordVocabQuizResult(mode, score, total, xpTotal) {
+    // Optimistic local update
     quizHistory.value.unshift({ mode, score, total, date: new Date().toISOString() })
     if (quizHistory.value.length > 50) quizHistory.value.pop()
+
     const newLevel = addXp(xpTotal)
-    checkStreak()
+
+    // Fire-and-forget API call
+    api.post('/progress/vocab-quiz', { mode, score, total, xp_total: xpTotal })
+      .catch(console.error)
+
     return { xpGained: xpTotal, newLevel }
   }
 
   function recordFlashcardKnown(id, known) {
+    // Optimistic local update
     if (known) {
       if (!flashcardKnown.value.includes(id)) flashcardKnown.value.push(id)
     } else {
       flashcardKnown.value = flashcardKnown.value.filter(k => k !== id)
     }
+
+    // Fire-and-forget API call
+    api.put(`/flashcards/known/${id}`, { known })
+      .catch(console.error)
   }
 
   function toggleFavoriteKanji(kanji) {
+    // Optimistic local toggle
     const idx = favoritedKanji.value.indexOf(kanji)
     if (idx === -1) favoritedKanji.value.push(kanji)
     else favoritedKanji.value.splice(idx, 1)
+
+    // Fire-and-forget API call
+    api.post(`/favorites/kanji/${kanji}`)
+      .catch(console.error)
   }
 
-  function toggleFavoriteVocabulary(expression) {
-    const idx = favoritedVocabulary.value.indexOf(expression)
-    if (idx === -1) favoritedVocabulary.value.push(expression)
+  function toggleFavoriteVocabulary(key) {
+    // key is 'expression::reading'
+    // Optimistic local toggle
+    const idx = favoritedVocabulary.value.indexOf(key)
+    if (idx === -1) favoritedVocabulary.value.push(key)
     else favoritedVocabulary.value.splice(idx, 1)
-  }
 
-  function checkStreak() {
-    const today = new Date().toISOString().slice(0, 10)
-    if (lastPlayedDate.value === today) return
-    const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10)
-    streak.value = lastPlayedDate.value === yesterday ? streak.value + 1 : 1
-    lastPlayedDate.value = today
+    // Fire-and-forget API call
+    api.post(`/favorites/vocabulary/${encodeURIComponent(key)}`)
+      .catch(console.error)
   }
-
-  function persist() {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({
-      xp: xp.value,
-      level: level.value,
-      streak: streak.value,
-      lastPlayedDate: lastPlayedDate.value,
-      quizHistory: quizHistory.value,
-      characterStats: characterStats.value,
-      flashcardKnown: flashcardKnown.value,
-      favoritedKanji: favoritedKanji.value,
-      favoritedVocabulary: favoritedVocabulary.value
-    }))
-  }
-
-  watch(
-    [xp, level, streak, lastPlayedDate, quizHistory, characterStats, flashcardKnown, favoritedKanji, favoritedVocabulary],
-    persist,
-    { deep: true }
-  )
 
   return {
     xp, level, streak, lastPlayedDate,
     quizHistory, characterStats, flashcardKnown, favoritedKanji, favoritedVocabulary,
     levelTitle, weakCharacters,
-    addXp, recordQuizResult, recordVocabQuizResult, recordFlashcardKnown, toggleFavoriteKanji, toggleFavoriteVocabulary, checkStreak
+    addXp, recordQuizResult, recordVocabQuizResult, recordFlashcardKnown,
+    toggleFavoriteKanji, toggleFavoriteVocabulary, init
   }
 })

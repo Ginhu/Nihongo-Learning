@@ -108,13 +108,9 @@
 <script setup>
 import { ref, computed, onUnmounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import { useI18n } from 'vue-i18n'
 import { useProgressStore } from '@/stores/progress'
+import { useContentStore } from '@/stores/content'
 import { useLocaleData } from '@/composables/useLocaleData'
-import n5Vocabulary from '@/data/n5_vocabulary.js'
-import n4Vocabulary from '@/data/n4_vocabulary.js'
-import kanjiN5Data from '@/data/n5_kanji.js'
-import kanjiN4Data from '@/data/n4_kanji.js'
 import QuizAnswerGrid from '@/components/quiz/QuizAnswerGrid.vue'
 import QuizEndScreen   from '@/components/quiz/QuizEndScreen.vue'
 import VocabQuestionCard from '@/components/vocabulary/VocabQuestionCard.vue'
@@ -123,7 +119,7 @@ import VocabTipPanel     from '@/components/vocabulary/VocabTipPanel.vue'
 const router   = useRouter()
 const route    = useRoute()
 const progress = useProgressStore()
-const { locale } = useI18n()
+const contentStore = useContentStore()
 const { getFirstMeaning, getExampleMeaning } = useLocaleData()
 
 // ── Read query params ──────────────────────────────────────────────────────
@@ -158,23 +154,30 @@ function optionCount(difficulty) {
 }
 
 function buildPool() {
+  const allKanji = contentStore.kanji
+  const allVocab = contentStore.vocabulary
+  const kanjiN5 = allKanji.filter(k => k.jlpt === 'N5')
+  const kanjiN4 = allKanji.filter(k => k.jlpt === 'N4')
+  const vocabN5 = allVocab.filter(w => w.jlpt === 'N5')
+  const vocabN4 = allVocab.filter(w => w.jlpt === 'N4')
+
   if (qType === 'kanji') {
     if (qLevel === 'kanji-favorites') {
       const favSet = new Set(progress.favoritedKanji)
-      return [...kanjiN5Data, ...kanjiN4Data].filter(k => favSet.has(k.kanji))
+      return allKanji.filter(k => favSet.has(k.kanji))
     }
-    if (qLevel === 'N5') return kanjiN5Data
-    if (qLevel === 'N4') return kanjiN4Data
-    return [...kanjiN5Data, ...kanjiN4Data]
+    if (qLevel === 'N5') return kanjiN5
+    if (qLevel === 'N4') return kanjiN4
+    return [...kanjiN5, ...kanjiN4]
   }
   // vocab
   if (qLevel === 'favorites') {
     const favSet = new Set(progress.favoritedVocabulary)
-    return [...n5Vocabulary, ...n4Vocabulary].filter(w => favSet.has(w.expression))
+    return allVocab.filter(w => favSet.has(w.expression))
   }
-  let words = qLevel === 'N5' ? n5Vocabulary
-            : qLevel === 'N4' ? n4Vocabulary
-            : [...n5Vocabulary, ...n4Vocabulary]
+  let words = qLevel === 'N5' ? vocabN5
+            : qLevel === 'N4' ? vocabN4
+            : [...vocabN5, ...vocabN4]
   if (qCategories.length > 0) {
     words = words.filter(w => qCategories.includes(w.category))
   }
@@ -239,10 +242,9 @@ const currentQ = computed(() => questions.value[currentIndex.value])
 
 const localizedExamples = computed(() => {
   if (!currentQ.value?.item?.examples) return []
-  if (locale.value !== 'pt-BR') return currentQ.value.item.examples
   return currentQ.value.item.examples.map(ex => ({
     ...ex,
-    meaning: getExampleMeaning(ex, currentQ.value.item.kanji)
+    meaning: getExampleMeaning(ex)
   }))
 })
 
