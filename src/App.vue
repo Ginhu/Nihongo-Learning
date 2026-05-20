@@ -31,23 +31,34 @@
 <script setup>
 import { onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useAuthStore } from '@/stores/auth'
 import { useSettingsStore } from '@/stores/settings'
 import { useProgressStore } from '@/stores/progress'
+import { useContentStore } from '@/stores/content'
 import AppSidebar from '@/components/layout/AppSidebar.vue'
 import AppBottomNav from '@/components/layout/AppBottomNav.vue'
 
 const { locale } = useI18n()
+const authStore = useAuthStore()
 const settings = useSettingsStore()
-const progress = useProgressStore()
+const progressStore = useProgressStore()
+const contentStore = useContentStore()
 
 function toggleLanguage() {
   const next = locale.value === 'en' ? 'pt-BR' : 'en'
   locale.value = next
   settings.setLanguage(next)
+  contentStore.refetchLang(next)
 }
 
-onMounted(() => {
+onMounted(async () => {
   settings.applyTheme()
-  progress.checkStreak()
+  await authStore.checkSession()
+  if (authStore.isAuthenticated) {
+    await settings.init()
+    settings.applyTheme()
+    await contentStore.fetchAll(settings.language)
+    await progressStore.init()
+  }
 })
 </script>

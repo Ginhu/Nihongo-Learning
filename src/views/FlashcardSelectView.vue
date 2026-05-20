@@ -85,14 +85,17 @@ import { ref, computed, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useProgressStore } from '@/stores/progress'
-import n5Vocabulary from '@/data/n5_vocabulary.js'
-import n4Vocabulary from '@/data/n4_vocabulary.js'
-import kanjiN5Data from '@/data/n5_kanji.js'
-import kanjiN4Data from '@/data/n4_kanji.js'
+import { useContentStore } from '@/stores/content'
 
 const router = useRouter()
 const { t } = useI18n()
 const progress = useProgressStore()
+const contentStore = useContentStore()
+
+const n5Vocabulary = computed(() => contentStore.vocabulary.filter(w => w.jlpt === 'N5'))
+const n4Vocabulary = computed(() => contentStore.vocabulary.filter(w => w.jlpt === 'N4'))
+const kanjiN5Data  = computed(() => contentStore.kanji.filter(k => k.jlpt === 'N5'))
+const kanjiN4Data  = computed(() => contentStore.kanji.filter(k => k.jlpt === 'N4'))
 
 const selectedType       = ref('vocab')  // 'vocab' | 'kanji'
 const selectedLevel      = ref('all')    // 'all' | 'N5' | 'N4' | 'favorites' | 'kanji-favorites'
@@ -132,13 +135,13 @@ const showCategories = computed(() =>
 
 const availableCategories = computed(() => {
   if (!showCategories.value) return []
-  const words = selectedLevel.value === 'N5' ? n5Vocabulary : n4Vocabulary
+  const words = selectedLevel.value === 'N5' ? n5Vocabulary.value : n4Vocabulary.value
   return [...new Set(words.map(w => w.category))].sort()
 })
 
 const categoryCounts = computed(() => {
   if (!showCategories.value) return {}
-  const words = selectedLevel.value === 'N5' ? n5Vocabulary : n4Vocabulary
+  const words = selectedLevel.value === 'N5' ? n5Vocabulary.value : n4Vocabulary.value
   return words.reduce((acc, w) => {
     acc[w.category] = (acc[w.category] ?? 0) + 1
     return acc
@@ -149,13 +152,13 @@ const poolSize = computed(() => {
   if (selectedLevel.value === 'kanji-favorites') return progress.favoritedKanji.length
   if (selectedLevel.value === 'favorites')       return progress.favoritedVocabulary.length
   if (selectedType.value === 'kanji') {
-    return selectedLevel.value === 'N5' ? kanjiN5Data.length
-         : selectedLevel.value === 'N4' ? kanjiN4Data.length
-         : kanjiN5Data.length + kanjiN4Data.length
+    return selectedLevel.value === 'N5' ? kanjiN5Data.value.length
+         : selectedLevel.value === 'N4' ? kanjiN4Data.value.length
+         : kanjiN5Data.value.length + kanjiN4Data.value.length
   }
-  let words = selectedLevel.value === 'N5' ? n5Vocabulary
-            : selectedLevel.value === 'N4' ? n4Vocabulary
-            : [...n5Vocabulary, ...n4Vocabulary]
+  let words = selectedLevel.value === 'N5' ? n5Vocabulary.value
+            : selectedLevel.value === 'N4' ? n4Vocabulary.value
+            : [...n5Vocabulary.value, ...n4Vocabulary.value]
   if (selectedCategories.value.length > 0) {
     words = words.filter(w => selectedCategories.value.includes(w.category))
   }

@@ -22,6 +22,13 @@
       </RouterLink>
     </nav>
     <div class="p-3 border-t space-y-1" style="border-color: var(--color-border);">
+      <!-- user avatar + name → /profile -->
+      <RouterLink v-if="authStore.isAuthenticated" to="/profile" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm hover:bg-primary/10" style="color: inherit;">
+        <span class="w-7 h-7 rounded-full bg-primary text-white text-xs flex items-center justify-center font-bold">
+          {{ authStore.user?.username?.[0]?.toUpperCase() ?? '?' }}
+        </span>
+        <span class="truncate">{{ authStore.user?.username }}</span>
+      </RouterLink>
       <LanguageToggle />
       <ThemeToggle />
     </div>
@@ -32,8 +39,10 @@
 import { useRoute } from 'vue-router'
 import ThemeToggle    from './ThemeToggle.vue'
 import LanguageToggle from './LanguageToggle.vue'
+import { useAuthStore } from '@/stores/auth'
 
 const route = useRoute()
+const authStore = useAuthStore()
 
 const links = [
   { name: 'home',             to: '/',                 icon: '🏠', labelKey: 'nav.home'            },

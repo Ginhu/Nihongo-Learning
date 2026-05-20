@@ -23,15 +23,10 @@
 <script setup>
 import { computed } from 'vue'
 import { useProgressStore } from '@/stores/progress'
-import hiraganaData from '@/data/hiragana.js'
-import katakanaData from '@/data/katakana.js'
-import kanjiData    from '@/data/kanji.js'
+import { useContentStore } from '@/stores/content'
 
 const progress = useProgressStore()
-
-const hiraganaSet = new Set(hiraganaData.map(h => h.kana))
-const katakanaSet = new Set(katakanaData.map(k => k.kana))
-const kanjiSet    = new Set(kanjiData.map(k => k.kanji))
+const contentStore = useContentStore()
 
 function groupAccuracy(charSet) {
   let correct = 0, total = 0
@@ -44,9 +39,14 @@ function groupAccuracy(charSet) {
   return total === 0 ? null : Math.round((correct / total) * 100)
 }
 
-const bars = computed(() => [
-  { label: 'Hiragana', acc: groupAccuracy(hiraganaSet) },
-  { label: 'Katakana', acc: groupAccuracy(katakanaSet) },
-  { label: 'Kanji',    acc: groupAccuracy(kanjiSet)    },
-])
+const bars = computed(() => {
+  const hiraganaSet = new Set(contentStore.kana.filter(k => k.type === 'hiragana').map(k => k.kana))
+  const katakanaSet = new Set(contentStore.kana.filter(k => k.type === 'katakana').map(k => k.kana))
+  const kanjiSet    = new Set(contentStore.kanji.map(k => k.kanji))
+  return [
+    { label: 'Hiragana', acc: groupAccuracy(hiraganaSet) },
+    { label: 'Katakana', acc: groupAccuracy(katakanaSet) },
+    { label: 'Kanji',    acc: groupAccuracy(kanjiSet)    },
+  ]
+})
 </script>

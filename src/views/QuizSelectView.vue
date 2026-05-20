@@ -55,12 +55,14 @@ import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useSettingsStore } from '@/stores/settings'
 import { useQuizStore } from '@/stores/quiz'
+import { useContentStore } from '@/stores/content'
 import { generateQuestions } from '@/utils/quiz-generator'
 import QuizModeCard from '@/components/quiz/QuizModeCard.vue'
 
 const router = useRouter()
 const settings = useSettingsStore()
 const quizStore = useQuizStore()
+const contentStore = useContentStore()
 const { t } = useI18n()
 
 const selectedMode = ref(null)
@@ -107,7 +109,9 @@ function startQuiz(card) {
     direction: card.direction,
     difficulty: card.difficulty,
     jlptFilter: card.jlpt,
-    length
+    length,
+    kana: contentStore.kana,
+    kanji: contentStore.kanji,
   })
 
   if (questions.length === 0) return

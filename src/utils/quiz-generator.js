@@ -1,7 +1,3 @@
-import hiragana from '@/data/hiragana.js'
-import katakana from '@/data/katakana.js'
-import kanji from '@/data/kanji.js'
-
 function shuffle(arr) {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -43,16 +39,18 @@ function buildKanjiQuestions(data, direction, optionCount, jlptFilter, length) {
 
     if (direction === 'kanji-to-meaning') {
       prompt = item.kanji
-      correct = item.meaning[0]
-      wrongPool = data.filter(k => k.kanji !== item.kanji).map(k => k.meaning[0])
+      correct = Array.isArray(item.meaning) ? item.meaning[0] : item.meaning
+      wrongPool = data.filter(k => k.kanji !== item.kanji).map(k =>
+        Array.isArray(k.meaning) ? k.meaning[0] : k.meaning
+      )
     } else {
       prompt = item.kanji
-      const readings = [...item.onyomi, ...item.kunyomi]
-      correct = readings[0] ?? item.meaning[0]
+      const readings = [...(item.onyomi ?? []), ...(item.kunyomi ?? [])]
+      correct = readings[0] ?? (Array.isArray(item.meaning) ? item.meaning[0] : item.meaning)
       wrongPool = [...new Set(
         data
           .filter(k => k.kanji !== item.kanji)
-          .flatMap(k => [...k.onyomi, ...k.kunyomi])
+          .flatMap(k => [...(k.onyomi ?? []), ...(k.kunyomi ?? [])])
       )]
     }
 
@@ -67,11 +65,24 @@ function buildKanjiQuestions(data, direction, optionCount, jlptFilter, length) {
   })
 }
 
-export function generateQuestions({ mode, direction, difficulty, jlptFilter, length }) {
+/**
+ * @param {{ mode, direction, difficulty, jlptFilter, length, kana, kanji }} opts
+ *   kana  — flat array from contentStore.kana (has .type 'hiragana'|'katakana')
+ *   kanji — array from contentStore.kanji
+ */
+export function generateQuestions({ mode, direction, difficulty, jlptFilter, length, kana, kanji }) {
   const optionCount = { easy: 2, medium: 4, hard: 6 }[difficulty] ?? 4
 
-  if (mode === 'hiragana') return buildKanaQuestions(hiragana, direction, optionCount, length)
-  if (mode === 'katakana') return buildKanaQuestions(katakana, direction, optionCount, length)
-  if (mode === 'kanji')    return buildKanjiQuestions(kanji, direction, optionCount, jlptFilter, length)
+  if (mode === 'hiragana') {
+    const data = kana.filter(k => k.type === 'hiragana')
+    return buildKanaQuestions(data, direction, optionCount, length)
+  }
+  if (mode === 'katakana') {
+    const data = kana.filter(k => k.type === 'katakana')
+    return buildKanaQuestions(data, direction, optionCount, length)
+  }
+  if (mode === 'kanji') {
+    return buildKanjiQuestions(kanji, direction, optionCount, jlptFilter, length)
+  }
   return []
 }

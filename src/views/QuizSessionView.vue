@@ -82,6 +82,7 @@ import { useI18n } from 'vue-i18n'
 import { useQuizStore } from '@/stores/quiz'
 import { useProgressStore } from '@/stores/progress'
 import { useSettingsStore } from '@/stores/settings'
+import { useContentStore } from '@/stores/content'
 import { playCorrect, playWrong, playLevelUp } from '@/utils/sound'
 import { generateQuestions } from '@/utils/quiz-generator'
 import QuizQuestion from '@/components/quiz/QuizQuestion.vue'
@@ -93,6 +94,7 @@ const { t } = useI18n()
 const quizStore = useQuizStore()
 const progressStore = useProgressStore()
 const settings = useSettingsStore()
+const contentStore = useContentStore()
 
 const answered = ref(false)
 const selectedAnswer = ref(null)
@@ -170,7 +172,9 @@ function handleRetry() {
     direction: quizStore.direction,
     difficulty: quizStore.difficulty,
     jlptFilter: quizStore.jlptFilter,
-    length: settings.quizLength
+    length: settings.quizLength,
+    kana: contentStore.kana,
+    kanji: contentStore.kanji,
   })
 
   quizStore.startSession({
