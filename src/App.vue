@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useAuthStore } from '@/stores/auth'
 import { useSettingsStore } from '@/stores/settings'
@@ -51,14 +51,24 @@ function toggleLanguage() {
   contentStore.refetchLang(next)
 }
 
+async function initUserSession() {
+  await settings.init()
+  settings.applyTheme()
+  await contentStore.fetchAll(settings.language)
+  await progressStore.init()
+}
+
+watch(() => authStore.user, async (user) => {
+  if (user && !contentStore.loaded) {
+    await initUserSession()
+  }
+})
+
 onMounted(async () => {
   settings.applyTheme()
   await authStore.checkSession()
   if (authStore.isAuthenticated) {
-    await settings.init()
-    settings.applyTheme()
-    await contentStore.fetchAll(settings.language)
-    await progressStore.init()
+    await initUserSession()
   }
 })
 </script>
